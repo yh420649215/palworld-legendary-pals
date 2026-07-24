@@ -1,0 +1,72 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+}
+
+const { title, description, ogImage = '/images/og-default.png' } = Astro.props;
+const fullOgImage = ogImage.startsWith('http') ? ogImage : new URL(ogImage, Astro.site || Astro.url).href;
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | Palworld Legendary Pals</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={fullOgImage} />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:site_name" content="Palworld Legendary Pals" />
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={fullOgImage} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <!-- Umami Analytics -->
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="YOUR_UMAMI_ID"></script>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_GA4_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YOUR_GA4_ID');
+    </script>
+  </head>
+  <body class="bg-[#171717] text-[#fafafa] antialiased min-h-screen font-sans">
+    <header class="border-b border-[#2e2e2e] sticky top-0 bg-[#171717]/95 backdrop-blur-sm z-50">
+      <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="/" class="text-base font-medium tracking-tight text-[#3ecf8e] hover:text-[#00c573] transition-colors">
+          Legendary Pals
+        </a>
+        <div class="flex gap-8 text-sm font-medium text-[#b4b4b4]">
+          <a href="/" class="hover:text-[#fafafa] transition-colors">Home</a>
+          <a href="#pals" class="hover:text-[#fafafa] transition-colors">All Pals</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-12">
+      <slot />
+    </main>
+
+    <footer class="border-t border-[#2e2e2e] mt-24">
+      <div class="max-w-6xl mx-auto px-6 py-10 text-center">
+        <p class="text-xs text-[#62666d]">
+          &copy; 2026 Palworld Legendary Pals Guide
+        </p>
+        <p class="text-xs text-[#4d4d4d] mt-1">
+          Fan-made. Not affiliated with Pocketpair.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

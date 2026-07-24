@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://palworld-legendary-pals.com/sitemap.xml

@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import ShareButtons from '../../modules/seo/ShareButtons.astro';
+
+export async function getStaticPaths() {
+  const pals = await getCollection('pals');
+  return pals.map((pal) => ({
+    params: { slug: pal.slug }, // Astro auto-generates slug from filename
+    props: { pal },
+  }));
+}
+
+const { pal } = Astro.props;
+const { Content } = await pal.render();
+---
+
+<BaseLayout
+  title={`${pal.data.name} Location & Guide — Palworld 1.0 Legendary Pal`}
+  description={`Where to find ${pal.data.name} in Palworld 1.0. Legendary ${pal.data.type} Pal location, capture strategy, stats, drops, and partner skill.`}
+>
+  <article class="max-w-3xl mx-auto">
+    <div class="flex items-center gap-3 mb-8">
+      <span class="bg-[#3ecf8e]/20 text-[#3ecf8e] text-xs px-3 py-1 rounded-full font-medium">
+        {pal.data.type}
+      </span>
+      <span class="text-sm text-[#898989] font-medium">Legendary &middot; Lv. {pal.data.level}</span>
+    </div>
+
+    <h1 class="text-4xl font-semibold mb-3" style="letter-spacing: -0.02em;">
+      {pal.data.name}
+    </h1>
+
+    <div class="w-full h-64 bg-[#141414] border border-[#2e2e2e] rounded-xl overflow-hidden mb-8">
+      <img
+        src={`/images/${pal.slug}.png`}
+        alt={pal.data.name}
+        class="w-full h-full object-contain"
+        onerror="this.src='/images/placeholder.svg'"
+        loading="eager"
+      />
+    </div>
+
+    <p class="text-lg text-[#b4b4b4] mb-6 leading-relaxed">
+      Complete guide to finding and capturing {pal.data.name} in Palworld 1.0. Location, stats, drops, and strategy.
+    </p>
+
+    <div class="mb-8">
+      <ShareButtons title={`${pal.data.name} Location & Guide — Palworld 1.0 Legendary Pal`} />
+    </div>
+
+    <div class="prose prose-invert max-w-none
+      prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-[#2e2e2e]
+      prose-p:text-[#b4b4b4] prose-p:leading-relaxed
+      prose-strong:text-[#fafafa]
+      prose-li:text-[#b4b4b4] prose-li:leading-relaxed
+      prose-code:text-[#3ecf8e] prose-code:bg-[#1a1a1a] prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
+      prose-table:rounded-lg prose-table:overflow-hidden
+      prose-th:bg-[#1a1a1a] prose-th:text-[#898989] prose-th:text-xs prose-th:font-medium prose-th:uppercase prose-th:tracking-wider prose-th:px-4 prose-th:py-3
+      prose-td:text-[#fafafa] prose-td:px-4 prose-td:py-3 prose-td:bg-[#171717] prose-td:border-b prose-td:border-[#2e2e2e]
+      prose-hr:border-[#2e2e2e]
+      prose-a:text-[#00c573] prose-a:no-underline hover:prose-a:underline">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,128 @@
+[
+  {
+    "name": "Jetragon",
+    "slug": "jetragon",
+    "no": "202",
+    "elements": [
+      "Dragon"
+    ],
+    "drops_raw": "10 {{i|Soralite",
+    "partner_skill": "",
+    "ride_speed": "",
+    "stamina": "",
+    "food": "",
+    "breed_power": "",
+    "hp": "115",
+    "attack": "140",
+    "defense": "120",
+    "availability": "=== Wild Spawn ===\nSpawns on the far end of Mount Obsidian, closet to the Wildlife Sanctuary.\n\nAs of 1.0 it can be found at the southeastern part of Sunreach, directly under the portal; The coordinates for its spawn point is -555 -1331.\n<div class=\"mw-collapsible mw-collapsed\">",
+    "drops_section": "",
+    "partner_skill_section": "",
+    "raw_length": 4828
+  },
+  {
+    "name": "Frostallion",
+    "slug": "frostallion",
+    "no": "200",
+    "elements": [
+      "Ice"
+    ],
+    "drops_raw": "10 {{i|Ice Organ",
+    "partner_skill": "",
+    "ride_speed": "",
+    "stamina": "",
+    "food": "",
+    "breed_power": "",
+    "hp": "140",
+    "attack": "140",
+    "defense": "120",
+    "availability": "=== Wild Spawn ===\n* Frostallion can only be found in the wild as a Level 60 Alpha Pal.\n<div class=\"mw-collapsible mw-collapsed\">",
+    "drops_section": "",
+    "partner_skill_section": "",
+    "raw_length": 4117
+  },
+  {
+    "name": "Frostallion Noct",
+    "slug": "frostallion-noct",
+    "no": "200B",
+    "elements": [
+      "Dark"
+    ],
+    "drops_raw": "1 {{i|Diamond",
+    "partner_skill": "",
+    "ride_speed": "",
+    "stamina": "",
+    "food": "",
+    "breed_power": "",
+    "hp": "140",
+    "attack": "140",
+    "defense": "135",
+    "availability": "=== Wild Spawn ===\nIn a dungeon in the Feybreak realm.\n<div class=\"mw-collapsible mw-collapsed\">",
+    "drops_section": "",
+    "partner_skill_section": "",
+    "raw_length": 4007
+  },
+  {
+    "name": "Paladius",
+    "slug": "paladius",
+    "no": "198",
+    "elements": [
+      "Neutral"
+    ],
+    "drops_raw": "10 {{i|Hexolite",
+    "partner_skill": "",
+    "ride_speed": "",
+    "stamina": "",
+    "food": "",
+    "breed_power": "",
+    "hp": "130",
+    "attack": "120",
+    "defense": "145",
+    "availability": "=== Wild Spawn ===\nMissing Information.\n<div class=\"mw-collapsible mw-collapsed\">",
+    "drops_section": "",
+    "partner_skill_section": "",
+    "raw_length": 2954
+  },
+  {
+    "name": "Necromus",
+    "slug": "necromus",
+    "no": "199",
+    "elements": [
+      "Dark"
+    ],
+    "drops_raw": "10 {{i|Hexolite",
+    "partner_skill": "",
+    "ride_speed": "",
+    "stamina": "",
+    "food": "",
+    "breed_power": "",
+    "hp": "130",
+    "attack": "145",
+    "defense": "120",
+    "availability": "=== Wild Spawn ===\nMissing Information.\n<div class=\"mw-collapsible mw-collapsed\">",
+    "drops_section": "",
+    "partner_skill_section": "",
+    "raw_length": 3051
+  },
+  {
+    "name": "Neptilius",
+    "slug": "neptilius",
+    "no": "201",
+    "elements": [
+      "Water"
+    ],
+    "drops_raw": "10 {{i|Coralum Ore",
+    "partner_skill": "",
+    "ride_speed": "",
+    "stamina": "",
+    "food": "",
+    "breed_power": "",
+    "hp": "105",
+    "attack": "145",
+    "defense": "125",
+    "availability": "=== Wild Spawn ===\n* Isle of the Glacial Core (Boss)",
+    "drops_section": "",
+    "partner_skill_section": "",
+    "raw_length": 2741
+  }
+]

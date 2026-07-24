@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import ShareButtons from '../modules/seo/ShareButtons.astro';
+
+const pals = await getCollection('pals');
+
+const typeColors: Record<string, string> = {
+  Dragon: 'border-[#3ecf8e]/30 bg-[#3ecf8e]/10 text-[#3ecf8e]',
+  Ice: 'border-[#7dd3fc]/30 bg-[#7dd3fc]/10 text-[#7dd3fc]',
+  Dark: 'border-[#a78bfa]/30 bg-[#a78bfa]/10 text-[#a78bfa]',
+  Neutral: 'border-[#facc15]/30 bg-[#facc15]/10 text-[#facc15]',
+  Water: 'border-[#38bdf8]/30 bg-[#38bdf8]/10 text-[#38bdf8]',
+};
+---
+
+<BaseLayout
+  title="All 6 Legendary Pal Locations — Palworld 1.0 Guide"
+  description="Complete guide to finding and capturing every Legendary Pal in Palworld 1.0. Locations, stats, drops, and breeding for Jetragon, Frostallion, Necromus, and more."
+>
+  <section class="text-center mb-16">
+    <h1 class="text-5xl font-semibold mb-4 tracking-tight">
+      Palworld 1.0 <span class="text-[#3ecf8e]">Legendary Pal</span> Locations
+    </h1>
+    <p class="text-lg text-[#b4b4b4] max-w-2xl mx-auto mb-8 leading-relaxed">
+      There are only 6 Legendary Pals in Palworld 1.0. Here's exactly where to find them,
+      how to catch them, and what makes each one worth the hunt.
+    </p>
+    <div class="flex justify-center gap-3 text-xs font-medium">
+      <span class="border border-[#3ecf8e]/20 bg-[#3ecf8e]/10 text-[#3ecf8e] px-3 py-1.5 rounded-full">
+        Updated for 1.0
+      </span>
+      <span class="border border-[#2e2e2e] bg-[#1a1a1a] text-[#898989] px-3 py-1.5 rounded-full">
+        6 Legendary Pals
+      </span>
+    </div>
+  </section>
+
+  <section>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {
+        pals.map((pal) => (
+          <a
+            href={`/pals/${pal.slug}`}
+            class="group block bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl overflow-hidden
+                   hover:border-[#3ecf8e]/30 hover:bg-[#1e1e1e] transition-all duration-200"
+          >
+            <div class="h-44 bg-[#141414] flex items-center justify-center overflow-hidden">
+              <img
+                src={`/images/${pal.slug}.png`}
+                alt={pal.data.name}
+                class="w-full h-full object-contain opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+                onerror="this.src='/images/placeholder.svg'"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-3">
+                <span class={`text-xs px-2.5 py-1 rounded-full border font-medium ${typeColors[pal.data.type] || 'border-[#2e2e2e] bg-[#1a1a1a] text-[#898989]'}`}>
+                  {pal.data.type}
+                </span>
+                <span class="text-xs text-[#62666d] font-medium">Lv. {pal.data.level}</span>
+              </div>
+              <h2 class="text-lg font-semibold text-[#fafafa] group-hover:text-[#3ecf8e] transition-colors">
+                {pal.data.name}
+              </h2>
+              <p class="text-sm text-[#898989] mt-1.5 leading-relaxed">
+                Location, capture strategy &amp; full stats
+              </p>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="mt-20 bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl p-10 text-center">
+    <h2 class="text-2xl font-semibold mb-3">Still hunting?</h2>
+    <p class="text-[#b4b4b4] max-w-lg mx-auto mb-6 leading-relaxed">
+      Each Legendary Pal has unique spawn conditions, drop tables, and partner skills.
+      Click any Pal above for the full guide.
+    </p>
+    <div class="flex justify-center mb-4">
+      <ShareButtons title="Palworld 1.0 Legendary Pal Locations — Complete Guide" />
+    </div>
+    <p class="text-xs text-[#62666d]">Bookmark this page for quick reference during your Palworld 1.0 playthrough.</p>
+  </section>
+</BaseLayout>
