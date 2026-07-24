@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import ShareButtons from '../../modules/seo/ShareButtons.astro';
+import AdSlot from '../../modules/ads/AdSlot.astro';
 
 export async function getStaticPaths() {
   const pals = await getCollection('pals');
@@ -63,5 +64,8 @@ const { Content } = await pal.render();
       prose-a:text-[#00c573] prose-a:no-underline hover:prose-a:underline">
       <Content />
     </div>
+
+    <AdSlot />
+
   </article>
 </BaseLayout>
