@@ -13,7 +13,6 @@ export async function getStaticPaths() {
 
 const { pal } = Astro.props;
 const { Content } = await pal.render();
-const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout
@@ -35,7 +34,7 @@ const base = import.meta.env.BASE_URL;
 
     <div class="w-full h-64 bg-[#141414] border border-[#2e2e2e] rounded-xl overflow-hidden mb-8">
       <img
-        src={`${base}/images/${pal.slug}.png`}
+        src={`/images/${pal.slug}.webp`}
         alt={pal.data.name}
         class="w-full h-full object-contain"
         onerror="this.src='/images/placeholder.svg'"

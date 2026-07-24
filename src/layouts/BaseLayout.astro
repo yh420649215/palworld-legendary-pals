@@ -8,9 +8,7 @@ export interface Props {
 }
 
 const { title, description, ogImage = '/images/jetragon.webp' } = Astro.props;
-const base = import.meta.env.BASE_URL;
-const ogPath = ogImage.startsWith('/') ? base + ogImage : ogImage;
-const fullOgImage = ogPath.startsWith('http') ? ogPath : new URL(ogPath, Astro.site || Astro.url).href;
+const fullOgImage = ogImage.startsWith('http') ? ogImage : new URL(ogImage, Astro.site || Astro.url).href;
 ---
 
 <!doctype html>

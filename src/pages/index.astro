@@ -3,8 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import ShareButtons from '../modules/seo/ShareButtons.astro';
 
-const base = import.meta.env.BASE_URL;
-
 const pals = await getCollection('pals');
 
 const typeColors: Record<string, string> = {
@@ -43,13 +41,13 @@ const typeColors: Record<string, string> = {
       {
         pals.map((pal) => (
           <a
-            href={`${base}/pals/${pal.slug}`}
+            href={`/pals/${pal.slug}`}
             class="group block bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl overflow-hidden
                    hover:border-[#3ecf8e]/30 hover:bg-[#1e1e1e] transition-all duration-200"
           >
             <div class="h-44 bg-[#141414] flex items-center justify-center overflow-hidden">
               <img
-                src={`${base}/images/${pal.slug}.webp`}
+                src={`/images/${pal.slug}.webp`}
                 alt={pal.data.name}
                 class="w-full h-full object-contain opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
                 onerror="this.src='/images/placeholder.svg'"
