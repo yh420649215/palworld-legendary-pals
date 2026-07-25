@@ -1,0 +1,506 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ShareButtons from '../modules/seo/ShareButtons.astro';
+
+const speedPassives = [
+  { passive: 'Swift', boost: '+30%', rank: '4', wiki: '30% increase to movement speed. Rank 4.' },
+  { passive: 'Runner', boost: '+20%', rank: '3', wiki: '20% increase to movement speed. Rank 3.' },
+  { passive: 'Nimble', boost: '+10%', rank: '1', wiki: '10% increase to movement speed. Rank 1.' },
+  { passive: 'Legend', boost: '+15%', rank: '4', wiki: 'Attack +20%, Defense +20%, Movement Speed +15%. Rank 4.' },
+];
+
+const speedStacks = [
+  { combo: 'No passives', total: '100%', note: 'Base speed — slow as dirt' },
+  { combo: 'Nimble only', total: '110%', note: 'Better than nothing, but barely' },
+  { combo: 'Runner only', total: '120%', note: 'Noticeable improvement on any mount' },
+  { combo: 'Swift only', total: '130%', note: 'Strong single passive, solid foundation' },
+  { combo: 'Swift + Runner', total: '150%', note: 'The bread-and-butter speed combo' },
+  { combo: 'Swift + Runner + Nimble', total: '160%', note: 'Max speed for non-legendary Pals' },
+  { combo: 'Swift + Runner + Nimble + Legend', total: '175%', note: '<span class="text-[#3ecf8e] font-semibold">Full speed build — legendary-tier only</span>' },
+];
+
+const legendaryBuilds = [
+  {
+    name: 'Jetragon',
+    slug: 'jetragon',
+    role: 'Fastest flying mount in the game',
+    build: 'Legend, Swift, Runner, Nimble',
+    notes: 'Jetragon is already blistering fast out of the box. Stacking all four speed passives makes it cross the entire map in seconds. Drop Divine Dragon — it only buffs Dragon-type attack damage, not speed. Serenity is the combat alternative if you want a mixed build, but for pure speed, go all-in on movement.',
+  },
+  {
+    name: 'Frostallion',
+    slug: 'frostallion',
+    role: 'Best all-around legendary ride',
+    build: 'Legend, Swift, Runner, Nimble',
+    notes: 'Frostallion has the highest Breed Power (120) among legendaries, which means breeding it takes longer but the payoff is worth it. Like Jetragon, drop Ice Emperor for speed passives. Frostallion doubles as a strong combat mount, so you could swap Nimble for Serenity if you want a balanced build that still moves fast.',
+  },
+  {
+    name: 'Frostallion Noct',
+    slug: 'frostallion-noct',
+    role: 'Dark-type speed demon',
+    build: 'Legend, Swift, Runner, Nimble',
+    notes: 'Breeding Frostallion Noct is unique — you need Frostallion + Helzephyr, not two Nocts. This is actually an advantage: the Helzephyr parent can carry speed passives into the gene pool. Catch a wild Helzephyr with Swift or Runner and pair it with a Frostallion that has Legend. Faster than starting from scratch with two Nocts.',
+
+  },
+  {
+    name: 'Necromus',
+    slug: 'necromus',
+    role: 'Ground-speed king',
+    build: 'Legend, Swift, Runner, Serenity',
+    notes: 'Necromus is a ground mount, so Nimble\'s 10% makes less impact here than on a flyer. Swap Nimble for Serenity (Active skill cooldown -30%, Attack +10%) and you get a combat-ready speedster that tears through overworld enemies. Pure speed is still Legend + Swift + Runner + Nimble if you just want to sprint.',
+  },
+  {
+    name: 'Paladius',
+    slug: 'paladius',
+    role: 'Tanky speed mount',
+    build: 'Legend, Swift, Runner, Serenity',
+    notes: 'Paladius pairs with Necromus in the overworld and shares the same ground-mount logic. Go Legend + Swift + Runner + Serenity for a durable fighter that still moves fast. Paladius has solid defensive stats, so it survives hits that would drop lighter mounts.',
+  },
+];
+
+const faqItems = [
+  {
+    q: 'Can I breed two different legendary Pals together?',
+    a: 'No — except Frostallion Noct. All other legendaries (Jetragon, Frostallion, Necromus, Paladius, Neptilius) require two of the same species to produce an egg. Drop two Jetragons in the Breeding Farm and you\'ll get a Jetragon egg. Drop a Jetragon and a Frostallion and nothing happens. Frostallion Noct is the only exception — it\'s bred from Frostallion + Helzephyr, not two Nocts.',
+  },
+  {
+    q: 'What\'s the fastest way to get Swift onto a legendary Pal?',
+    a: 'Breed a non-legendary Pal that has Swift (like a Direhowl or Rayhound caught in the wild) with the legendary\'s opposite-gender counterpart until Swift passes down onto a baby legendary. This can take multiple egg cycles. Once you have one legendary with Swift, breed it with your main legendary and use the empty-slot strategy to increase inheritance odds. Skip to Section 5 for step-by-step builds.',
+  },
+  {
+    q: 'Does Philanthropist affect egg hatching time?',
+    a: 'No. Philanthropist only speeds up how fast the Breeding Farm produces eggs — it doubles egg production speed (100% boost). It does not affect incubation time. The egg still takes ~2 hours to hatch on default settings regardless of Philanthropist. Use it on a dedicated breeding pair kept in the farm while you\'re out catching other Pals or farming resources.',
+  },
+  {
+    q: 'What are "Rainbow Passives" and should I use them for speed?',
+    a: 'Rainbow passives are the highest-tier (Rank 4) passives including Legend, Swift, and the elemental Emperor/Lord skills. For speed builds, only Legend and Swift matter from the rainbow tier. The elemental passives like Divine Dragon or Ice Emperor boost type-specific damage — they do nothing for movement speed. You want all four slots occupied by speed-related passives on a pure speed build.',
+  },
+];
+---
+
+<BaseLayout
+  title="Palworld Speed Breeding Guide: Fastest Legendary Pals & Passive Inheritance"
+  description="Learn how to breed the fastest Pals in Palworld 1.0. Complete speed breeding guide covering passive skill inheritance, Philanthropist strategy, and step-by-step legendary breeding paths."
+>
+  <!-- HEADER / HERO -->
+  <section class="mb-10">
+    <div class="flex items-baseline justify-between flex-wrap gap-2 mb-2">
+      <h1 class="text-[28px] font-semibold tracking-tight leading-tight">
+        Palworld <span class="text-[#3ecf8e]">Speed Breeding</span> Guide
+      </h1>
+      <div class="flex items-center gap-2 text-xs font-medium">
+        <span class="border border-[#3ecf8e]/20 bg-[#3ecf8e]/10 text-[#3ecf8e] px-2.5 py-1 rounded-full">Palworld 1.0</span>
+        <span class="border border-[#2e2e2e] bg-[#1a1a1a] text-[#898989] px-2.5 py-1 rounded-full">Speed Breeding</span>
+      </div>
+    </div>
+    <p class="text-[15px] text-[#b4b4b4] leading-relaxed max-w-3xl">
+      You want a Jetragon that crosses the map before the world finishes loading. A Frostallion that leaves wild Pals in the dust. This guide breaks down exactly how to breed the fastest legendary mounts in Palworld 1.0 — which passives to chase, how inheritance works, and the Philanthropist trick that doubles your egg output.
+    </p>
+  </section>
+
+  <!-- ===== SECTION 1: WHY SPEED BREEDING MATTERS ===== -->
+  <section class="mb-12">
+    <h2 class="text-[20px] font-semibold text-[#fafafa] mb-4 pb-2 border-b border-[#2e2e2e]">
+      1. Why Speed Breeding Matters
+    </h2>
+    <div class="space-y-4 text-[15px] text-[#b4b4b4] leading-relaxed">
+      <p>
+        Palworld 1.0 is a big map. Even with fast travel points scattered around, you spend a huge chunk of playtime just moving from point A to point B. Farming bosses, hitting ore nodes, running dungeons — every trip burns minutes you could spend actually playing the game.
+      </p>
+      <p>
+        A fully speed-bred Jetragon covers the distance from the starting plateau to Mount Obsidian in under 30 seconds. That same trip on a default Jetragon takes over a minute. Multiply that across a hundred play sessions and you're looking at hours saved.
+      </p>
+      <p>
+        Speed breeding isn't just about convenience. In combat, movement speed determines how fast your mount strafes, how quickly it closes gaps, and how easily you dodge boss attacks. A fast Frostallion doesn't just get you there faster — it keeps you alive once you arrive.
+      </p>
+      <p>
+        The demand for speed-bred legendaries is real. Check any Palworld trading server or Discord and you'll see players offering rare items and other bred Pals for Jetragons and Frostallions with Swift + Runner. Learning to breed these yourself means you control the supply chain.
+      </p>
+    </div>
+
+    <!-- Callout: speed matters -->
+    <div class="mt-5 bg-[#0d0d0d] border border-[#3ecf8e]/20 rounded-lg p-5">
+      <div class="flex items-start gap-3">
+        <span class="text-[#3ecf8e] text-lg mt-0.5 shrink-0">⚡</span>
+        <div>
+          <p class="text-sm text-[#fafafa] font-semibold mb-1">Speed is the only stat you can't fix with levels.</p>
+          <p class="text-xs text-[#898989] leading-relaxed">
+            Attack, Defense, and HP scale with level-ups and condensing. Movement speed does not. The only way to make a Pal faster is through passives. That's why speed-bred mounts hold their value — they're the one upgrade you can't grind for normally.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 2: BREEDING BASICS ===== -->
+  <section class="mb-12">
+    <h2 class="text-[20px] font-semibold text-[#fafafa] mb-4 pb-2 border-b border-[#2e2e2e]">
+      2. Breeding Basics: Farm Setup & Cake
+    </h2>
+    <div class="space-y-4 text-[15px] text-[#b4b4b4] leading-relaxed">
+      <p>
+        Before you think about passives, get your infrastructure right. The Breeding Farm unlocks at level 19 in the Technology tree and costs 100 Wood, 20 Stone, and 50 Fiber. Build it somewhere flat with room for Cake production nearby. You'll thank yourself later.
+      </p>
+      <p>
+        Every breeding session consumes one Cake. Yes, every single egg. If you're planning to hatch 50+ eggs chasing the perfect speed roll, you need 50+ Cakes. Here's what one Cake costs:
+      </p>
+
+      <!-- Cake table -->
+      <div class="overflow-x-auto rounded-lg border border-[#2e2e2e] bg-[#1a1a1a] my-5">
+        <table class="w-full text-sm text-left border-collapse">
+          <thead>
+            <tr class="bg-[#1a1a1a] border-b border-[#2e2e2e]">
+              <th class="px-4 py-2.5 text-xs font-medium text-[#898989] uppercase tracking-wider">Ingredient</th>
+              <th class="px-4 py-2.5 text-xs font-medium text-[#898989] uppercase tracking-wider">Quantity</th>
+              <th class="px-4 py-2.5 text-xs font-medium text-[#898989] uppercase tracking-wider">Source</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[#2e2e2e]">
+            <tr class="bg-[#171717]"><td class="px-4 py-2.5 text-[#fafafa]">Flour</td><td class="px-4 py-2.5">×5</td><td class="px-4 py-2.5 text-[#898989]">Mill (Wheat Plantation)</td></tr>
+            <tr class="bg-[#1a1a1a]"><td class="px-4 py-2.5 text-[#fafafa]">Red Berries</td><td class="px-4 py-2.5">×8</td><td class="px-4 py-2.5 text-[#898989]">Berry Plantation</td></tr>
+            <tr class="bg-[#171717]"><td class="px-4 py-2.5 text-[#fafafa]">Milk</td><td class="px-4 py-2.5">×7</td><td class="px-4 py-2.5 text-[#898989]">Mozzarina (Ranch)</td></tr>
+            <tr class="bg-[#1a1a1a]"><td class="px-4 py-2.5 text-[#fafafa]">Egg</td><td class="px-4 py-2.5">×8</td><td class="px-4 py-2.5 text-[#898989]">Chikipi (Ranch)</td></tr>
+            <tr class="bg-[#171717]"><td class="px-4 py-2.5 text-[#fafafa]">Honey</td><td class="px-4 py-2.5">×2</td><td class="px-4 py-2.5 text-[#898989]">Beegarde (Ranch) or wild Cinnamoth drops</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        The bottleneck is usually Honey and Milk. Get at least two Beegardes and two Mozzarinas in your Ranch before you start serious breeding. A full Ranch with 4 of each keeps Cake production running while you're out exploring. Use a Kindling Pal (Jormuntide Ignis is best) at the Cooking Pot — higher Kindling skill means faster Cake cooking.
+      </p>
+      <p>
+        Pro tip: build the Breeding Farm, Ranch for ingredients, Mill, and Cooking Pot in a tight cluster. The less your Pals have to pathfind, the more eggs you produce. Put a Feed Box in the middle so nobody starves mid-session.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3: PASSIVE SKILL INHERITANCE ===== -->
+  <section class="mb-12">
+    <h2 class="text-[20px] font-semibold text-[#fafafa] mb-4 pb-2 border-b border-[#2e2e2e]">
+      3. How Passive Skill Inheritance Works
+    </h2>
+    <div class="space-y-4 text-[15px] text-[#b4b4b4] leading-relaxed">
+      <p>
+        When two Pals breed, the game picks passives for the baby from a combined pool of both parents' passives. It's not a 50/50 split from each parent — it's a weighted roll across the merged list, with some randomness baked in. The baby can inherit 0 to 4 passives total.
+      </p>
+
+      <!-- Inheritance probability table -->
+      <div class="overflow-x-auto rounded-lg border border-[#2e2e2e] bg-[#1a1a1a] my-5">
+        <table class="w-full text-sm text-left border-collapse">
+          <thead>
+            <tr class="bg-[#1a1a1a] border-b border-[#2e2e2e]">
+              <th class="px-4 py-2.5 text-xs font-medium text-[#898989] uppercase tracking-wider">Parent Setup</th>
+              <th class="px-4 py-2.5 text-xs font-medium text-[#898989] uppercase tracking-wider">Unique Passives in Pool</th>
+              <th class="px-4 py-2.5 text-xs font-medium text-[#898989] uppercase tracking-wider">Chance per Desired Passive</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[#2e2e2e]">
+            <tr class="bg-[#171717]">
+              <td class="px-4 py-2.5 text-[#fafafa] font-medium">Both parents have 4 passives (full)</td>
+              <td class="px-4 py-2.5">8 max, fewer if overlapping</td>
+              <td class="px-4 py-2.5 text-[#facc15]">Low — pool is diluted</td>
+            </tr>
+            <tr class="bg-[#1a1a1a]">
+              <td class="px-4 py-2.5 text-[#fafafa] font-medium">One parent with desired passives, other empty</td>
+              <td class="px-4 py-2.5">Up to 4</td>
+              <td class="px-4 py-2.5 text-[#3ecf8e] font-semibold">High — concentrated pool</td>
+            </tr>
+            <tr class="bg-[#171717]">
+              <td class="px-4 py-2.5 text-[#fafafa] font-medium">Both parents empty except 1 desired each</td>
+              <td class="px-4 py-2.5">2</td>
+              <td class="px-4 py-2.5 text-[#3ecf8e] font-semibold">Highest — minimal pool, fast targeting</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        Here's the key insight most guides miss: <strong class="text-[#fafafa]">empty passive slots on parents increase your odds</strong>. A parent with only Swift in its passive list and three empty slots only contributes Swift to the pool. A parent stuffed with four random passives contributes four entries — three of which are garbage you don't want.
+      </p>
+
+      <!-- Strategy callout -->
+      <div class="bg-[#0d0d0d] border border-[#3ecf8e]/20 rounded-lg p-5 my-5">
+        <div class="flex items-start gap-3">
+          <span class="text-[#3ecf8e] text-lg mt-0.5 shrink-0">🎯</span>
+          <div>
+            <p class="text-sm text-[#fafafa] font-semibold mb-1">The Empty-Slot Strategy</p>
+            <p class="text-xs text-[#898989] leading-relaxed">
+              Catch or breed intermediate Pals that have <em>only</em> the passive you want and nothing else. Use these "clean" Pals as parents. The baby's inheritance pool stays small and focused. This matters most when you're stacking four specific passives — every random filler passive in the pool adds noise that can push out Swift or Runner.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p>
+        Passive inheritance also respects a hidden mechanic: higher-rank passives (Rank 3–4, including Swift, Legend, Runner) have slightly better odds of passing down than Rank 1–2 filler passives. It's not documented officially, but the breeding community has tracked enough data to confirm it. This tilts the odds in your favor when chasing speed — Swift and Legend are both Rank 4, meaning they get a small inheritability edge.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 4: BEST SPEED PASSIVES ===== -->
+  <section class="mb-12">
+    <h2 class="text-[20px] font-semibold text-[#fafafa] mb-4 pb-2 border-b border-[#2e2e2e]">
+      4. Best Speed Passives for Mounts
+    </h2>
+    <div class="space-y-4 text-[15px] text-[#b4b4b4] leading-relaxed">
+      <p>
+        Four passives directly increase movement speed. Here's the breakdown with exact numbers from the Palworld wiki:
+      </p>
+
+      <!-- Speed passives table -->
+      <div class="overflow-x-auto rounded-lg border border-[#2e2e2e] bg-[#1a1a1a] my-5">
+        <table class="w-full text-sm text-left border-collapse">
+          <thead>
+            <tr class="bg-[#1a1a1a] border-b border-[#2e2e2e]">
+              <th class="px-4 py-2.5 text-xs font-medium text-[#898989] uppercase tracking-wider">Passive</th>
+              <th class="px-4 py-2.5 text-xs font-medium text-[#898989] uppercase tracking-wider">Speed Boost</th>
+              <th class="px-4 py-2.5 text-xs font-medium text-[#898989] uppercase tracking-wider">Rank</th>
+              <th class="px-4 py-2.5 text-xs font-medium text-[#898989] uppercase tracking-wider">Best Source</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[#2e2e2e]">
+            <tr class="bg-[#171717]">
+              <td class="px-4 py-2.5"><span class="text-[#3ecf8e] font-semibold">Swift</span></td>
+              <td class="px-4 py-2.5 text-[#fafafa] font-mono font-semibold">+30%</td>
+              <td class="px-4 py-2.5"><span class="text-xs bg-[#3ecf8e]/20 text-[#3ecf8e] px-2 py-0.5 rounded-full">Rank 4</span></td>
+              <td class="px-4 py-2.5 text-[#898989]">Wild Direhowl, Rayhound, Fenglope</td>
+            </tr>
+            <tr class="bg-[#1a1a1a]">
+              <td class="px-4 py-2.5"><span class="text-[#3ecf8e] font-semibold">Runner</span></td>
+              <td class="px-4 py-2.5 text-[#fafafa] font-mono font-semibold">+20%</td>
+              <td class="px-4 py-2.5"><span class="text-xs bg-[#3ecf8e]/20 text-[#3ecf8e] px-2 py-0.5 rounded-full">Rank 3</span></td>
+              <td class="px-4 py-2.5 text-[#898989]">Wild Direhowl, Univolt, Pyrin</td>
+            </tr>
+            <tr class="bg-[#171717]">
+              <td class="px-4 py-2.5"><span class="text-[#3ecf8e] font-semibold">Nimble</span></td>
+              <td class="px-4 py-2.5 text-[#fafafa] font-mono font-semibold">+10%</td>
+              <td class="px-4 py-2.5"><span class="text-xs bg-[#3ecf8e]/20 text-[#3ecf8e] px-2 py-0.5 rounded-full">Rank 1</span></td>
+              <td class="px-4 py-2.5 text-[#898989]">Common on many wild Pals, easy to find</td>
+            </tr>
+            <tr class="bg-[#1a1a1a]">
+              <td class="px-4 py-2.5"><span class="text-[#3ecf8e] font-semibold">Legend</span></td>
+              <td class="px-4 py-2.5 text-[#fafafa] font-mono font-semibold">+15%</td>
+              <td class="px-4 py-2.5"><span class="text-xs bg-[#3ecf8e]/20 text-[#3ecf8e] px-2 py-0.5 rounded-full">Rank 4</span></td>
+              <td class="px-4 py-2.5 text-[#898989]">Wild legendary Pals only (guaranteed)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        <strong class="text-[#fafafa]">Legend</strong> is the sleeper here. Most players think of it as a combat passive because of the +20% Attack and +20% Defense, but the +15% movement speed is what makes it mandatory for speed builds. Every legendary Pal spawns with Legend guaranteed — you can't lose it unless you deliberately breed it out. That means every speed build starts with a free 15% speed boost right out of the box.
+      </p>
+      <p>
+        <strong class="text-[#fafafa]">Swift</strong> at 30% is the biggest single speed injection you can get. If you only have time to breed one passive onto your legendary, make it Swift. The difference between a default legendary and a Swift legendary is immediately obvious — you'll notice it the second you mount up.
+      </p>
+
+      <!-- Speed comparison data table -->
+      <div class="overflow-x-auto rounded-lg border border-[#2e2e2e] bg-[#1a1a1a] my-5">
+        <table class="w-full text-sm text-left border-collapse">
+          <thead>
+            <tr class="bg-[#1a1a1a] border-b border-[#2e2e2e]">
+              <th class="px-4 py-2.5 text-xs font-medium text-[#898989] uppercase tracking-wider">Passive Combo</th>
+              <th class="px-4 py-2.5 text-xs font-medium text-[#898989] uppercase tracking-wider">Total Speed</th>
+              <th class="px-4 py-2.5 text-xs font-medium text-[#898989] uppercase tracking-wider">Gain Over Base</th>
+              <th class="px-4 py-2.5 text-xs font-medium text-[#898989] uppercase tracking-wider">Notes</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[#2e2e2e]">
+            {speedStacks.map((row, i) => (
+              <tr class={`${i % 2 === 0 ? 'bg-[#171717]' : 'bg-[#1a1a1a]'} ${row.combo.includes('Legend') ? 'border-l-2 border-l-[#3ecf8e]' : ''}`}>
+                <td class="px-4 py-2.5 text-[#fafafa] font-medium">{row.combo}</td>
+                <td class="px-4 py-2.5"><span class={`font-mono font-semibold ${row.total === '175%' ? 'text-[#3ecf8e]' : 'text-[#fafafa]'}`}>{row.total}</span></td>
+                <td class="px-4 py-2.5 text-[#898989]">{row.total === '100%' ? '—' : `+${parseInt(row.total) - 100}%`}</td>
+                <td class="px-4 py-2.5 text-[#898989] text-xs" set:html={row.note} />
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        The full stack — Swift + Runner + Nimble + Legend — hits 175% movement speed. That's 75% faster than a Pal with no speed passives. On a Jetragon, this is the difference between "fast" and "teleporting."
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 5: LEGENDARY SPEED BUILDS ===== -->
+  <section class="mb-12">
+    <h2 class="text-[20px] font-semibold text-[#fafafa] mb-4 pb-2 border-b border-[#2e2e2e]">
+      5. Step-by-Step Legendary Speed Builds
+    </h2>
+    <div class="space-y-4 text-[15px] text-[#b4b4b4] leading-relaxed">
+      <p>
+        Each legendary Pal needs a slightly different approach. The core loop is the same — get speed passives onto a breeding parent, then chain-breed until they land on the legendary offspring — but the parent sourcing and priority order changes per Pal.
+      </p>
+
+      {legendaryBuilds.map((pal) => (
+        <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-lg p-5 my-5">
+          <div class="flex items-center gap-3 mb-3">
+            <img
+              src={`/images/${pal.slug}.webp`}
+              alt={pal.name}
+              class="w-10 h-10 rounded object-contain bg-[#141414]"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+            <div>
+              <h3 class="text-[16px] font-semibold text-[#fafafa]">
+                <a href={`/pals/${pal.slug}/`} class="text-[#3ecf8e] hover:text-[#00c573] transition-colors">{pal.name}</a>
+                <span class="text-sm font-normal text-[#898989] ml-2">{pal.role}</span>
+              </h3>
+            </div>
+          </div>
+          <p class="text-xs text-[#898989] mb-2">
+            <span class="text-[#b4b4b4] font-medium">Target build:</span>
+            <code class="text-[#3ecf8e] bg-[#0a0a0a] px-1.5 py-0.5 rounded text-xs ml-2">{pal.build}</code>
+          </p>
+          <p class="text-xs text-[#b4b4b4] leading-relaxed">{pal.notes}</p>
+        </div>
+      ))}
+
+      <div class="bg-[#0d0d0d] border border-[#3ecf8e]/20 rounded-lg p-5 mt-6">
+        <div class="flex items-start gap-3">
+          <span class="text-[#3ecf8e] text-lg mt-0.5 shrink-0">🔄</span>
+          <div>
+            <p class="text-sm text-[#fafafa] font-semibold mb-1">General breeding loop for all legendaries:</p>
+            <ol class="text-xs text-[#898989] leading-relaxed space-y-1 list-decimal list-inside">
+              <li>Catch two copies of your target legendary (one male, one female)</li>
+              <li>Catch or breed a non-legendary Pal with <strong class="text-[#b4b4b4]">Swift</strong> as its only passive (empty-slot strategy)</li>
+              <li>Chain-breed that Swift carrier through intermediate species until it reaches a Pal that can breed with your legendary (check the <a href="/breeding-cheat-sheet/" class="text-[#00c573] hover:underline">Breeding Cheat Sheet</a> for compatible paths)</li>
+              <li>Breed until Swift lands on a legendary offspring with zero to one other passives</li>
+              <li>Repeat the process for Runner, Nimble, and Legend (Legend is already on the legendary, so you just need to avoid breeding it out)</li>
+              <li>Once you have parents carrying the right passives in clean slots, breed them together for the 4-passive speed stack</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 6: PHILANTHROPIST STRATEGY ===== -->
+  <section class="mb-12">
+    <h2 class="text-[20px] font-semibold text-[#fafafa] mb-4 pb-2 border-b border-[#2e2e2e]">
+      6. Philanthropist Strategy: Double Your Egg Output
+    </h2>
+    <div class="space-y-4 text-[15px] text-[#b4b4b4] leading-relaxed">
+      <p>
+        Philanthropist is a Rank 3 passive that doubles breeding speed when the Pal is assigned to a Breeding Farm. The wiki confirms: <strong class="text-[#fafafa]">100% increase to egg production speed</strong>. Two parents with Philanthropist each contribute their own 100% boost, and they stack — meaning a Philanthropist pair produces eggs four times faster than a standard pair.
+      </p>
+
+      <!-- Philanthropist WARNING callout -->
+      <div class="bg-[#0d0d0d] border border-[#facc15]/30 rounded-lg p-5 my-5">
+        <div class="flex items-start gap-3">
+          <span class="text-[#facc15] text-lg mt-0.5 shrink-0">⚠️</span>
+          <div>
+            <p class="text-sm text-[#fafafa] font-semibold mb-1">Philanthropist eats a passive slot. Plan around it.</p>
+            <p class="text-xs text-[#898989] leading-relaxed">
+              Philanthropist takes up one of your four passive slots. On your <em>final speed build</em>, you cannot fit Philanthropist — you need all four slots for Swift, Runner, Nimble, and Legend. Philanthropist belongs on a <strong class="text-[#b4b4b4]">dedicated breeding pair</strong> kept permanently in the farm. Use them to mass-produce eggs, then swap the eggs into an incubator. The babies inherit passives from the breeding pair, so make sure your Philanthropist breeders also carry the speed passives you want to pass down.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p>
+        The optimal setup: maintain two breeding pairs. <strong class="text-[#fafafa]">Pair A</strong> is your Philanthropist speed factory — both parents carry Philanthropist + up to three speed passives. They pump out eggs at 4x speed. <strong class="text-[#fafafa]">Pair B</strong> is your precision breeding pair — no Philanthropist, clean passive slots, focused on landing the exact 4-passive combination you want.
+      </p>
+      <p>
+        Pair A gives you volume. Pair B gives you quality. When Pair A produces a baby with the right passive spread, move that baby into Pair B's gene pool. This doubles your odds of hitting the perfect roll without slowing down your egg pipeline.
+      </p>
+
+      <!-- Strategy callout -->
+      <div class="bg-[#0d0d0d] border border-[#3ecf8e]/20 rounded-lg p-5 mt-5">
+        <div class="flex items-start gap-3">
+          <span class="text-[#3ecf8e] text-lg mt-0.5 shrink-0">💡</span>
+          <div>
+            <p class="text-sm text-[#fafafa] font-semibold mb-1">Where to get Philanthropist</p>
+            <p class="text-xs text-[#898989] leading-relaxed">
+              Philanthropist can appear on wild Pals and is also available through the passive skill modification NPC in 1.0. The easiest route: catch a bunch of low-level Pals near the starting area until one spawns with Philanthropist, then breed it upward through the chain to your legendary. Philanthropist has a decent spawn rate on common Pals like Lamball and Chikipi — you'll usually find one within 20–30 catches.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 7: ADVANCED TIPS ===== -->
+  <section class="mb-12">
+    <h2 class="text-[20px] font-semibold text-[#fafafa] mb-4 pb-2 border-b border-[#2e2e2e]">
+      7. Advanced Tips: Condensing, IVs & Rainbow Passives
+    </h2>
+    <div class="space-y-4 text-[15px] text-[#b4b4b4] leading-relaxed">
+      <h3 class="text-[16px] font-semibold text-[#fafafa] mt-5">Condensing and Speed</h3>
+      <p>
+        Condensing (using the Pal Essence Condenser) increases a Pal's Partner Skill level and base stats — but it does <em>not</em> affect movement speed. The speed from passives is a flat multiplier applied after everything else. This means your speed-bred Jetragon at 0-star condensation is already faster than a 4-star condensed Jetragon without speed passives. Get the passives right first, then condense for the stat boosts.
+      </p>
+      <p>
+        When condensing, use your failed breeding rejects as fodder. Every egg that hatches without the right passives still has value — feed it to the condenser. By the time you've bred a perfect 4-passive speed Pal, you'll usually have enough rejects to take it straight to 2-star or higher.
+      </p>
+
+      <h3 class="text-[16px] font-semibold text-[#fafafa] mt-5">IVs (Individual Values)</h3>
+      <p>
+        IVs are hidden stat modifiers that give each Pal slightly different base stats. Two Jetragons with identical passives can have different HP, Attack, and Defense due to IV variance. For pure speed builds, IVs barely matter — movement speed isn't affected by IVs at all. Don't waste time chasing perfect IVs on a speed mount. If you also want combat performance, IVs start to matter, and at that point you're looking at a much longer breeding project.
+      </p>
+
+      <h3 class="text-[16px] font-semibold text-[#fafafa] mt-5">Rainbow Passives</h3>
+      <p>
+        "Rainbow passive" is community slang for Rank 4 (the highest tier) passives. Legend and Swift are both Rainbow-tier and both boost speed. The elemental Rainbow passives — Divine Dragon, Ice Emperor, Lord of the Underworld, Celestial Emperor — are also Rank 4 but have zero speed benefit. They boost elemental damage only.
+      </p>
+      <p>
+        On a speed build, you don't want any elemental Rainbow passives taking up slots. A Jetragon with Legend + Divine Dragon + Swift is fast, but a Jetragon with Legend + Swift + Runner + Nimble is <em>faster</em>. The elemental passives are for combat builds. Speed builds want speed passives, full stop.
+      </p>
+
+      <h3 class="text-[16px] font-semibold text-[#fafafa] mt-5">Incubation Speed Settings</h3>
+      <p>
+        If you're breeding at scale, turn down the egg incubation timer in world settings. The default ~2 hours per Huge Egg means roughly 12 eggs per day if you're watching the incubator constantly. Dropping it to zero (instant hatch) lets you iterate through generations in minutes instead of days. No shame in using the setting — even hardcore breeders run instant incubation during aggressive breeding sessions.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 8: FAQ ===== -->
+  <section class="mb-12">
+    <h2 class="text-[20px] font-semibold text-[#fafafa] mb-4 pb-2 border-b border-[#2e2e2e]">
+      8. FAQ
+    </h2>
+    <div class="space-y-3">
+      {faqItems.map((item) => (
+        <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-lg p-5">
+          <h3 class="text-[16px] font-semibold text-[#fafafa] mb-2">{item.q}</h3>
+          <p class="text-sm text-[#b4b4b4] leading-relaxed">{item.a}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- RELATED LINKS -->
+  <section class="mt-10 border-t border-[#2e2e2e] pt-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <a href="/breeding-cheat-sheet/" class="block bg-[#1a1a1a] border border-[#2e2e2e] rounded-lg p-5 hover:border-[#3ecf8e]/30 hover:bg-[#1e1e1e] transition-all group">
+        <p class="text-sm font-semibold text-[#fafafa] group-hover:text-[#3ecf8e] transition-colors mb-1">
+          📋 Legendary Pal Breeding Cheat Sheet →
+        </p>
+        <p class="text-xs text-[#898989] leading-relaxed">
+          Quick reference table with breed power, exclusive passives, partner skills, and breeding rules for all 6 legendaries.
+        </p>
+      </a>
+      <a href="/pals/" class="block bg-[#1a1a1a] border border-[#2e2e2e] rounded-lg p-5 hover:border-[#3ecf8e]/30 hover:bg-[#1e1e1e] transition-all group">
+        <p class="text-sm font-semibold text-[#fafafa] group-hover:text-[#3ecf8e] transition-colors mb-1">
+          🗺️ All Legendary Pal Guides →
+        </p>
+        <p class="text-xs text-[#898989] leading-relaxed">
+          Individual location, stats, drops, and breeding guides for Jetragon, Frostallion, Necromus, and more.
+        </p>
+      </a>
+    </div>
+  </section>
+
+  <!-- SHARE SECTION -->
+  <div class="mt-10 bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl p-8 text-center">
+    <h2 class="text-lg font-semibold mb-2">Found this speed breeding guide useful?</h2>
+    <p class="text-sm text-[#898989] mb-5">Share it with your guild. Save someone 50 hours of breeding trial and error.</p>
+    <div class="flex justify-center">
+      <ShareButtons title="Palworld Speed Breeding Guide: Fastest Legendary Pals & Passive Inheritance" />
+    </div>
+    <p class="text-[10px] text-[#4d4d4d] mt-4">Bookmark this page. Send it to your breeding partner. They'll thank you.</p>
+  </div>
+</BaseLayout>
