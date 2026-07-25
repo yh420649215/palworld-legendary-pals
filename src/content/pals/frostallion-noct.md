@@ -52,6 +52,9 @@ Frostallion Noct's Partner Skill is **Black Steed**. While riding, your attacks 
 
 Frostallion Noct breaks the usual legendary rule. You need a regular Frostallion and a Helzephyr in the breeding ranch. Two Frostallion Nocts won't produce an egg. One upside: Helzephyr can pass down the Lucky passive, which gives +15% Attack and +15% Work Speed. That means Frostallion Noct is the only legendary that can hatch with Lucky without trait modification.
 
+
+→ [View full Breeding Cheat Sheet →](/breeding-cheat-sheet/)
+
 ## Passive Skills
 
 - **Legend** — Attack +20%, Defense +20%, Movement Speed +15%. Standard legendary passive.

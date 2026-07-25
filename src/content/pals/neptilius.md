@@ -52,6 +52,9 @@ Neptilius's Partner Skill is **Sentinel of the Great Sea**. While riding, your s
 
 Neptilius follows standard legendary breeding: same species only. It produces a Huge Damp Egg. It was added in 0.6.0 and its breed power ties with Jetragon at 90, putting it among the higher-tier legendaries for breeding calculations.
 
+
+→ [View full Breeding Cheat Sheet →](/breeding-cheat-sheet/)
+
 ## Passive Skills
 
 - **Legend** — Attack +20%, Defense +20%, Movement Speed +15%. Universal legendary combat passive.

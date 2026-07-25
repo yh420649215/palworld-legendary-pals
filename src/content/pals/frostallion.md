@@ -52,6 +52,9 @@ Frostallion's Partner Skill is **Ice Steed**. While riding Frostallion, your att
 
 Frostallion is species-locked for breeding. Pair two Frostallions together and you get a Huge Frozen Egg. The 2-hour hatch timer is standard for legendaries. Breeding lets you chase perfect IVs or swap passives. That said, the guaranteed Legend and Ice Emperor combo is already solid out of the box.
 
+
+→ [View full Breeding Cheat Sheet →](/breeding-cheat-sheet/)
+
 ## Passive Skills
 
 - **Legend** — Attack +20%, Defense +20%, Movement Speed +15%. Core combat steroid every legendary gets.

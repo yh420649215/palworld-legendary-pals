@@ -54,6 +54,9 @@ Necromus's Partner Skill is **Dark Knight of the Abyss**. While riding, you can 
 
 Necromus follows the standard legendary breeding restriction: same species pairs only. It produces a Huge Dark Egg. Necromus has the lowest breed power among the legendaries. That only matters for breeding calculations though, not combat performance.
 
+
+→ [View full Breeding Cheat Sheet →](/breeding-cheat-sheet/)
+
 ## Passive Skills
 
 - **Legend** — Attack +20%, Defense +20%, Movement Speed +15%. Standard legendary combat passive.

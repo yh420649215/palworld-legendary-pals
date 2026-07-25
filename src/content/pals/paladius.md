@@ -48,6 +48,9 @@ Paladius's Partner Skill is **Holy Knight of the Firmament**. While riding, your
 
 Paladius follows standard legendary breeding rules: same species only. The egg type is Huge Common, which fits its Neutral element. Breeding is worth it if you want to stack defense-focused passives on top of its already massive 145 base Defense.
 
+
+→ [View full Breeding Cheat Sheet →](/breeding-cheat-sheet/)
+
 ## Passive Skills
 
 - **Legend** — Attack +20%, Defense +20%, Movement Speed +15%. Universal legendary passive.

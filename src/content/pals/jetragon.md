@@ -53,6 +53,9 @@ Jetragon's Partner Skill is **Aerial Missile**. While riding Jetragon, you can l
 
 Jetragon sits at the top of the breeding chain. You can't crossbreed it with anything else. Drop two Jetragons in the ranch and wait. The egg takes about 2 hours to hatch on normal settings. Worth it if you want to roll for better IVs or pass down combat passives.
 
+
+→ [View full Breeding Cheat Sheet →](/breeding-cheat-sheet/)
+
 ## Passive Skills
 
 - **Legend** — Attack +20%, Defense +20%, Movement Speed +15%. Every legendary Pal gets this. It's the best all-around combat passive in the game.
