@@ -39,3 +39,19 @@ The data doesn't specify a partner skill for Paladius. It likely has a unique ri
 - Use Pals with **stun or freeze** abilities to lock it down for a few seconds.
 - If you're struggling, level up a few Dark-type Pals to 45+ first. The damage bonus stacks.
 - Stock up on healing items and ammo before the fight. It's a resource check.
+
+## Breeding
+
+- Breed Power: 80
+- Legendary rule: can ONLY breed with same species. Paladius + Paladius = Paladius. No crossbreeding.
+- Exclusive passives: Legend, Celestial Emperor
+- Average breeding time: ~2 hours per egg (Huge Common Egg)
+
+Paladius follows standard legendary breeding rules: same species only. The egg type is Huge Common, which fits its Neutral element. Breeding is worth it if you want to stack defense-focused passives on top of its already massive 145 base Defense.
+
+## Passive Skills
+
+- **Legend** — Attack +20%, Defense +20%, Movement Speed +15%. Universal legendary passive.
+- **Celestial Emperor** — 20% increase to Neutral attack damage. Stacks with Legend for 40% total Attack on Neutral moves. Exclusive to Paladius.
+
+Both passives are guaranteed on wild Alpha catches. Paladius has the highest base Defense in the game (145), so Legend's 20% Defense boost makes it an absolute wall. Pair with Burly Body or Stronghold Strategist through breeding for an unkillable tank.

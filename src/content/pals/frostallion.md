@@ -43,3 +43,19 @@ Frostallion's Partner Skill is **Ice Wing**. While mounted, your attacks deal Ic
 - The double jump from its Partner Skill is great for getting out of tight spots. Use it to dodge the ice beam attack.
 - If you're farming Ice Organs, just kill Frostallion and wait for the respawn. Catching it is harder and not worth the sphere cost if you only want organs.
 - This Pal is a top-tier mount for late-game exploration. Its speed and double jump make it better than Jetragon in some situations, especially in icy biomes.
+
+## Breeding
+
+- Breed Power: 120
+- Legendary rule: can ONLY breed with same species. Frostallion + Frostallion = Frostallion. No crossbreeding allowed.
+- Exclusive passives: Legend, Ice Emperor
+- Average breeding time: ~2 hours per egg (Huge Frozen Egg)
+
+Frostallion is species-locked for breeding. Pair two Frostallions together and you get a Huge Frozen Egg. The 2-hour hatch timer is standard for legendaries. Breeding lets you chase perfect IVs or swap passives. That said, the guaranteed Legend and Ice Emperor combo is already solid out of the box.
+
+## Passive Skills
+
+- **Legend** — Attack +20%, Defense +20%, Movement Speed +15%. Core combat steroid every legendary gets.
+- **Ice Emperor** — 20% increase to Ice attack damage. Stacks with Legend for a total 40% Attack on Ice moves. Exclusive to Frostallion.
+
+Both passives are guaranteed on every wild-caught Frostallion. If you're breeding for combat, keep Ice Emperor — it's the whole reason Frostallion hits as hard as it does with Blizzard Spike and Crystal Wing.

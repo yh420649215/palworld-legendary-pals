@@ -43,3 +43,19 @@ No partner skill data available. Neptilius doesn't have a ride skill or any spec
 - Don't bother breeding Neptilius. The breeding power isn't listed, and the boss spawn is easier to farm.
 - If you're farming Coralum Ore, kill the boss, fast travel away, come back. The respawn timer is about 15 minutes in-game.
 - Neptilius is weak to status effects. Poison or burn it to speed up the fight.
+
+## Breeding
+
+- Breed Power: 90
+- Legendary rule: can ONLY breed with same species. Neptilius + Neptilius = Neptilius. No crossbreeding works.
+- Exclusive passives: Legend, Lunker
+- Average breeding time: ~2 hours per egg (Huge Damp Egg)
+
+Neptilius follows standard legendary breeding: same species only. It produces a Huge Damp Egg. It was added in 0.6.0 and its breed power ties with Jetragon at 90, putting it among the higher-tier legendaries for breeding calculations.
+
+## Passive Skills
+
+- **Legend** — Attack +20%, Defense +20%, Movement Speed +15%. Universal legendary combat passive.
+- **Lunker** — 20% increase to Water attack damage, 20% increase to Ice attack damage, and 20% increase to Defense. One of the strongest hybrid passives in the game. Exclusive to Neptilius.
+
+Both passives are guaranteed on every wild-caught Neptilius. Lunker is exceptional: it buffs two elements and Defense at the same time. Combined with Legend, Neptilius gets a 40% Water/Ice damage boost and a 40% total Defense increase. That makes it tanky and hard-hitting right out of the egg.

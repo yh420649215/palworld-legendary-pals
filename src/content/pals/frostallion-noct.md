@@ -43,3 +43,19 @@ The partner skill is not listed in the data, but from gameplay it's likely a Dar
 - The Diamond drop is useful for crafting high-tier spheres, so farm this dungeon if you need them.
 - Don't rely on it for tanking—swap it out if you're taking heavy hits.
 - Bring a Fire-type Pal to counter its Dark attacks if you're fighting it.
+
+## Breeding
+
+- Breed Power: 100
+- Breeding combo: Frostallion + Helzephyr = Frostallion Noct. This is the ONLY way to breed it. You can't pair two Frostallion Nocts together.
+- Exclusive passives: Legend, Lord of the Underworld
+- Average breeding time: ~2 hours per egg (Huge Dark Egg)
+
+Frostallion Noct breaks the usual legendary rule. You need a regular Frostallion and a Helzephyr in the breeding ranch. Two Frostallion Nocts won't produce an egg. One upside: Helzephyr can pass down the Lucky passive, which gives +15% Attack and +15% Work Speed. That means Frostallion Noct is the only legendary that can hatch with Lucky without trait modification.
+
+## Passive Skills
+
+- **Legend** — Attack +20%, Defense +20%, Movement Speed +15%. Standard legendary passive.
+- **Lord of the Underworld** — 20% increase to Dark attack damage. Stacks with Legend for 40% total Attack on Dark moves. Shared with Necromus.
+
+Both passives come guaranteed on wild-caught Alpha Frostallion Nocts. Through breeding, you can also inherit Lucky from the Helzephyr parent — a unique trait no other legendary can get naturally.

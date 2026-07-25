@@ -43,3 +43,19 @@ Jetragon's Partner Skill is not fully detailed in the game data, but it's known 
 - Save before engaging. If you fail to catch it, reload and try again.
 - Jetragon's high Attack means you'll want to dodge its charged moves. Keep moving during the fight.
 - Farm Soralite by defeating Jetragon multiple times after catching one—it respawns at the same spot.
+
+## Breeding
+
+- Breed Power: 90
+- Legendary rule: can ONLY breed with same species. Jetragon + Jetragon = Jetragon. No other combination works.
+- Exclusive passives: Legend, Divine Dragon
+- Average breeding time: ~2 hours per egg (Huge Dragon Egg)
+
+Jetragon sits at the top of the breeding chain. You can't crossbreed it with anything else. Drop two Jetragons in the ranch and wait. The egg takes about 2 hours to hatch on normal settings. Worth it if you want to roll for better IVs or pass down combat passives.
+
+## Passive Skills
+
+- **Legend** — Attack +20%, Defense +20%, Movement Speed +15%. Every legendary Pal gets this. It's the best all-around combat passive in the game.
+- **Divine Dragon** — 20% increase to Dragon attack damage. Stacks with Legend for a total 40% Attack boost on Dragon-type moves. Exclusive to Jetragon.
+
+Both passives come guaranteed on every wild-caught Jetragon. You can breed to replace them with other passives like Ferocious or Musclehead, but you'd lose the unique Dragon damage bonus.

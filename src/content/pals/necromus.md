@@ -45,3 +45,19 @@ Necromus's Partner Skill is called "Dark Knight's Steed." It increases your Dark
 - Build a base near the Sunreach spawn point. Having a fast travel point right there makes farming much faster.
 - If you're struggling to catch it, try using a Ring of Mercy to guarantee you don't accidentally kill it.
 - Necromus is worth breeding if you want a Dark-type mount. Cross it with a Frostallion to get a Necromus with Ice moves — nasty combo.
+
+## Breeding
+
+- Breed Power: 70
+- Legendary rule: can ONLY breed with same species. Necromus + Necromus = Necromus. No other combo produces it.
+- Exclusive passives: Legend, Lord of the Underworld
+- Average breeding time: ~2 hours per egg (Huge Dark Egg)
+
+Necromus follows the standard legendary breeding restriction: same species pairs only. It produces a Huge Dark Egg. Necromus has the lowest breed power among the legendaries. That only matters for breeding calculations though, not combat performance.
+
+## Passive Skills
+
+- **Legend** — Attack +20%, Defense +20%, Movement Speed +15%. Standard legendary combat passive.
+- **Lord of the Underworld** — 20% increase to Dark attack damage. Stacks with Legend for 40% Attack on Dark moves. Shared with Frostallion Noct.
+
+Both passives are guaranteed on wild-caught Alpha Necromus. Its 145 base Attack combined with Legend and Lord of the Underworld makes it one of the hardest-hitting Dark-types in the game. Breed for Ferocious or Musclehead if you want to push the damage even higher.
