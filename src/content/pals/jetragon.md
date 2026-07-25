@@ -34,7 +34,7 @@ Jetragon drops 10 {{i|Soralite}} when defeated or captured. Soralite is used for
 
 ## Partner Skill
 
-Jetragon's Partner Skill is not fully detailed in the game data, but it's known to boost Dragon-type moves and possibly increase ride speed. Check your Paldeck in-game for the exact effect once you catch it.
+Jetragon's Partner Skill is **Aerial Missile**. While riding Jetragon, you can launch homing missiles at enemies. Makes short work of flying Pals and is one of the best aerial combat skills in the game.
 
 ## Tips & Strategy
 
