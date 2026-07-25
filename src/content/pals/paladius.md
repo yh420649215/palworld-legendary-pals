@@ -30,8 +30,7 @@ Paladius drops **10 Hexolite** when defeated. This is a key material for craftin
 
 ## Partner Skill
 
-The data doesn't specify a partner skill for Paladius. It likely has a unique riding or combat ability, but you'll need to catch it to find out. Check its skill description in the Paldeck after capture.
-
+Paladius's Partner Skill is **Holy Knight of the Firmament**. While riding, your jumping power increases. Attacks deal Neutral damage.
 ## Tips & Strategy
 
 - Bring a **fire or electric** weapon to chip away at its health from range.

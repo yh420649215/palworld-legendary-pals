@@ -36,8 +36,7 @@ Necromus drops 10 Hexolite when defeated or captured. That's it — no special s
 
 ## Partner Skill
 
-Necromus's Partner Skill is called "Dark Knight's Steed." It increases your Dark-type damage while mounted and gives you a speed boost when riding. The exact numbers aren't listed, but it's a solid mount for both combat and travel. You can ride it without a saddle, but you'll need a Legendary Saddle to unlock its full potential.
-
+Necromus's Partner Skill is **Dark Knight of the Abyss**. While riding, you can double-jump. Attacks deal Dark damage.
 ## Tips & Strategy
 
 - Bring a team of Ice-type Pals. Frostallion is the best choice, but even a high-level Vanwyrm or Helzephyr with Ice moves works.

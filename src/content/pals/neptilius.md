@@ -34,8 +34,7 @@ Neptilius drops 10 Coralum Ore when defeated. That's it. No rare schematics, no 
 
 ## Partner Skill
 
-No partner skill data available. Neptilius doesn't have a ride skill or any special ability listed. It's a standard combat Pal.
-
+Neptilius's Partner Skill is **Sentinel of the Great Sea**. While riding, your stamina consumption decreases and you can travel on water surfaces.
 ## Tips & Strategy
 
 - Bring a fire weapon or a Pal with Fire attacks to deal extra damage. Water takes double damage from Fire in Palworld.

@@ -34,8 +34,7 @@ Frostallion drops **10 Ice Organs** every time you catch or kill it. That's a gu
 
 ## Partner Skill
 
-Frostallion's Partner Skill is **Ice Wing**. While mounted, your attacks deal Ice damage and you can double-jump in the air. This makes it one of the best flying mounts for combat — you can strafe enemies and rain down Ice attacks from above. The double jump helps with dodging ground attacks and navigating cliffs.
-
+Frostallion's Partner Skill is **Ice Steed**. While riding Frostallion, your attacks deal Ice damage and you move faster in cold biomes.
 ## Tips & Strategy
 
 - Bring a Fire Pal with high Attack and tanky HP. Jormuntide Ignis is ideal because it resists Ice and hits back hard.

@@ -34,8 +34,7 @@ Frostallion Noct drops 1 Diamond when defeated or captured. That's it. No other 
 
 ## Partner Skill
 
-The partner skill is not listed in the data, but from gameplay it's likely a Dark-type variant of Frostallion's skill. It probably boosts Dark damage or gives a ride speed bonus. Check the in-game description for exact numbers.
-
+Frostallion Noct's Partner Skill is **Black Steed**. While riding, your attacks deal Dark damage. Applies Dark element to your weapon.
 ## Tips & Strategy
 
 - Use it as a fast mount for Feybreak traversal. Its stamina is solid for a Dark Pal.
