@@ -3,9 +3,9 @@ name: Jetragon
 type: Dragon
 level: 50
 no: "202"
-hp: 115
+hp: 110
 attack: 140
-defense: 120
+defense: 110
 ---
 
 ## Location & Spawn
@@ -22,11 +22,11 @@ Weaken Jetragon to low HP without killing it. Use status effects like freeze or 
 
 ## Stats
 
-- HP: 115
+- HP: 110
 - Attack: 140
-- Defense: 120
+- Defense: 110
 
-Jetragon hits hard and can take a beating. Its Attack stat is its standout, making it a top-tier damage dealer.
+Jetragon hits hard and can take a beating. Its Attack stat is stand-out, making it a top-tier damage dealer.
 
 ## Drops
 
