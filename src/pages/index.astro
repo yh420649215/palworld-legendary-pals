@@ -15,11 +15,11 @@ const typeColors: Record<string, string> = {
 ---
 
 <BaseLayout
-  title="All 6 Legendary Pal Locations — Palworld 1.0 Guide"
+  title="Legendary Pal Locations & Guide — Palworld 1.0"
   description="Complete guide to finding and capturing every Legendary Pal in Palworld 1.0. Locations, stats, drops, and breeding for Jetragon, Frostallion, Necromus, and more."
 >
   <section class="text-center mb-16">
-    <h1 class="text-5xl font-semibold mb-4 tracking-tight">
+    <h1 class="text-5xl font-normal mb-4 tracking-tight">
       Palworld 1.0 <span class="text-[#3ecf8e]">Legendary Pal</span> Locations
     </h1>
     <p class="text-lg text-[#b4b4b4] max-w-2xl mx-auto mb-8 leading-relaxed">
@@ -59,9 +59,9 @@ const typeColors: Record<string, string> = {
                 <span class={`text-xs px-2.5 py-1 rounded-full border font-medium ${typeColors[pal.data.type] || 'border-[#2e2e2e] bg-[#1a1a1a] text-[#898989]'}`}>
                   {pal.data.type}
                 </span>
-                <span class="text-xs text-[#62666d] font-medium">Lv. {pal.data.level}</span>
+                <span class="text-xs text-[#898989] font-medium">Lv. {pal.data.level}</span>
               </div>
-              <h2 class="text-lg font-semibold text-[#fafafa] group-hover:text-[#3ecf8e] transition-colors">
+              <h2 class="text-lg font-normal text-[#fafafa] group-hover:text-[#3ecf8e] transition-colors">
                 {pal.data.name}
               </h2>
               <p class="text-sm text-[#898989] mt-1.5 leading-relaxed">
@@ -74,8 +74,22 @@ const typeColors: Record<string, string> = {
     </div>
   </section>
 
-  <section class="mt-20 bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl p-10 text-center">
-    <h2 class="text-2xl font-semibold mb-3">Still hunting?</h2>
+  <section class="mt-16 mb-16">
+    <h2 class="text-xl font-normal text-[#fafafa] mb-5 tracking-tight">Breeding Guides</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <a href="/breeding-how-to/" class="block bg-[#1a1a1a] border-l-2 border-[#3ecf8e] rounded-r-lg p-5 hover:border-l-[#00c573] transition-colors group">
+        <p class="text-sm font-medium text-[#fafafa] group-hover:text-[#3ecf8e] transition-colors">Speed Breeding Guide →</p>
+        <p class="text-xs text-[#898989] leading-relaxed mt-1">Step-by-step speed breeding: inherit Swift, Runner &amp; Legend onto your mounts</p>
+      </a>
+      <a href="/breeding-cheat-sheet/" class="block bg-[#1a1a1a] border-l-2 border-[#3ecf8e] rounded-r-lg p-5 hover:border-l-[#00c573] transition-colors group">
+        <p class="text-sm font-medium text-[#fafafa] group-hover:text-[#3ecf8e] transition-colors">Breeding Cheat Sheet →</p>
+        <p class="text-xs text-[#898989] leading-relaxed mt-1">All 6 legendary breeding rules, breed power, and exclusive passives in one table</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl p-10 text-center">
+    <h2 class="text-2xl font-normal mb-3">Still hunting?</h2>
     <p class="text-[#b4b4b4] max-w-lg mx-auto mb-6 leading-relaxed">
       Each Legendary Pal has unique spawn conditions, drop tables, and partner skills.
       Click any Pal above for the full guide.
@@ -83,6 +97,6 @@ const typeColors: Record<string, string> = {
     <div class="flex justify-center mb-4">
       <ShareButtons title="Palworld 1.0 Legendary Pal Locations — Complete Guide" />
     </div>
-    <p class="text-xs text-[#62666d]">Bookmark this page for quick reference during your Palworld 1.0 playthrough.</p>
+    <p class="text-xs text-[#4d4d4d]">Bookmark this page for quick reference during your Palworld 1.0 playthrough.</p>
   </section>
 </BaseLayout>

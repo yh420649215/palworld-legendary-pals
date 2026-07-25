@@ -1,7 +1,7 @@
 ---
 name: Neptilius
 type: Water
-level: 50
+level: 60
 no: "201"
 hp: 105
 attack: 145
@@ -10,9 +10,9 @@ defense: 125
 
 ## Location & Spawn
 
-Neptilius only spawns as a boss on the Isle of the Glacial Core. You won't find wild Neptilius roaming around anywhere else on the map. The boss spawns at coordinates 600, -860, right in the middle of the frozen island.
+Neptilius only spawns as a boss on the Isle of the Glacial Core. You won't find wild Neptilius roaming around anywhere else on the map. The boss spawns at coordinates 139, 651, in the northern waters.
 
-This is a late-game area. You'll need heat-resistant gear and high-level Pals to survive the freezing temperatures. The boss is level 45 and hits hard.
+This is a late-game area. You'll need cold-resistant gear and high-level Pals to survive the freezing temperatures. The boss is level 60 and hits hard.
 
 ## How to Catch
 
@@ -30,17 +30,17 @@ It's a glass cannon. High attack for a Water type, but defense is average and HP
 
 ## Drops
 
-Neptilius drops 10 Coralum Ore when defeated. That's it. No rare schematics, no Pal souls, just ore. If you're farming Coralum Ore, this is a reliable source since the boss respawns.
+Neptilius drops 10 {{i|Pure Quartz}}, 5 {{i|Polymer}}, 5 {{i|Carbon Fiber}}, a 30% chance of 1 {{i|Diamond}}, and a 1% chance of 1 {{i|Large Pal Soul}} when defeated. If you're farming Pure Quartz or Carbon Fiber, this is a reliable source since the boss respawns.
 
 ## Partner Skill
 
-Neptilius's Partner Skill is **Sentinel of the Great Sea**. While riding, your stamina consumption decreases and you can travel on water surfaces.
+Neptilius's Partner Skill is **Sentinel of the Great Sea**. While fighting together, it follows up your attacks with spear strikes. Can be ridden to travel quickly across water. While mounted, it can leap high into the air over water. Swimming speed increases with condensation level.
 ## Tips & Strategy
 
-- Bring a fire weapon or a Pal with Fire attacks to deal extra damage. Water takes double damage from Fire in Palworld.
+- Bring an Electric or Grass weapon or Pal to deal extra damage. Water takes double damage from Electric and Grass in Palworld.
 - Use a grappling hook to dodge its water jet attack. The boss telegraphs the attack with a charge-up animation.
-- Don't bother breeding Neptilius. The breeding power isn't listed, and the boss spawn is easier to farm.
-- If you're farming Coralum Ore, kill the boss, fast travel away, come back. The respawn timer is about 15 minutes in-game.
+- Don't bother breeding Neptilius if you just want one—the boss spawn is easier to farm.
+- If you're farming Pure Quartz or Carbon Fiber, kill the boss, fast travel away, come back. The respawn timer is about 15 minutes in-game.
 - Neptilius is weak to status effects. Poison or burn it to speed up the fight.
 
 ## Breeding

@@ -16,7 +16,8 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : new URL(ogImage, Astr
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title} | Palworld Legendary Pals</title>
+    <link rel="canonical" href={Astro.url} />
+    <title>{title}</title>
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -32,6 +33,30 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : new URL(ogImage, Astr
     <meta name="google-site-verification" content="Tb5SLAPLH2Ii99ZQWYT8FX6ZB-whF9YpmhgN7EEGB50" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      'headline': title,
+      'description': description,
+      'image': fullOgImage,
+      'url': Astro.url.href,
+      'datePublished': '2026-06-30',
+      'dateModified': '2026-07-24',
+      'author': {
+        '@type': 'Organization',
+        'name': 'Palworld Legendary Pals'
+      },
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'Palworld Legendary Pals',
+        'url': Astro.site ? Astro.site.href : 'https://palworldlegends.com'
+      },
+      'mainEntityOfPage': {
+        '@type': 'WebPage',
+        '@id': Astro.url.href
+      }
+    })} />
     <!-- Umami Analytics -->
     <script defer src="https://cloud.umami.is/script.js" data-website-id="60032402-8387-411b-a7f8-671c6b49b8d2"></script>
     <!-- Google Analytics 4 -->
@@ -46,16 +71,31 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : new URL(ogImage, Astr
   <body class="bg-[#171717] text-[#fafafa] antialiased min-h-screen font-sans">
     <header class="border-b border-[#2e2e2e] sticky top-0 bg-[#171717]/95 backdrop-blur-sm z-50">
       <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="/" class="text-base font-medium tracking-tight text-[#3ecf8e] hover:text-[#00c573] transition-colors">
+        <a href="/" class="text-base font-medium tracking-tight text-[#3ecf8e] hover:text-[#00c573] transition-colors shrink-0">
           Legendary Pals
         </a>
-        <div class="flex gap-8 text-sm font-medium text-[#b4b4b4]">
+        <!-- Desktop links: hidden below 600px -->
+        <div class="hidden min-[601px]:flex gap-8 text-sm font-medium text-[#b4b4b4]">
           <a href="/" class="hover:text-[#fafafa] transition-colors">Home</a>
           <a href="/pals/" class="hover:text-[#fafafa] transition-colors">All Pals</a>
           <a href="/breeding-cheat-sheet/" class="hover:text-[#fafafa] transition-colors">Cheat Sheet</a>
           <a href="/breeding-how-to/" class="hover:text-[#3ecf8e] transition-colors">Breeding Guide</a>
         </div>
+        <!-- Hamburger: visible only below 600px -->
+        <button id="mobile-menu-toggle" class="min-[601px]:hidden text-[#b4b4b4] hover:text-[#fafafa] transition-colors p-1 -mr-1" aria-label="Toggle menu" type="button">
+          <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+        </button>
       </nav>
+      <!-- Mobile dropdown menu -->
+      <div id="mobile-menu" class="hidden min-[601px]:hidden border-t border-[#2e2e2e] bg-[#171717]/95 backdrop-blur-sm">
+        <div class="max-w-6xl mx-auto px-6 py-3 flex flex-col gap-2 text-sm font-medium text-[#b4b4b4]">
+          <a href="/" class="py-2 hover:text-[#fafafa] transition-colors">Home</a>
+          <a href="/pals/" class="py-2 hover:text-[#fafafa] transition-colors">All Pals</a>
+          <a href="/breeding-cheat-sheet/" class="py-2 hover:text-[#fafafa] transition-colors">Cheat Sheet</a>
+          <a href="/breeding-how-to/" class="py-2 hover:text-[#3ecf8e] transition-colors">Breeding Guide</a>
+        </div>
+      </div>
     </header>
 
     <main class="max-w-6xl mx-auto px-6 py-12">
@@ -64,7 +104,7 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : new URL(ogImage, Astr
 
     <footer class="border-t border-[#2e2e2e] mt-24">
       <div class="max-w-6xl mx-auto px-6 py-10 text-center">
-        <p class="text-xs text-[#62666d]">
+        <p class="text-xs text-[#4d4d4d]">
           &copy; 2026 Palworld Legendary Pals Guide
         </p>
         <p class="text-xs text-[#4d4d4d] mt-1">
@@ -72,5 +112,28 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : new URL(ogImage, Astr
         </p>
       </div>
     </footer>
+    <!-- Mobile menu toggle script -->
+    <script>
+      (function() {
+        var btn = document.getElementById('mobile-menu-toggle');
+        var menu = document.getElementById('mobile-menu');
+        var iconOpen = document.getElementById('menu-icon-open');
+        var iconClose = document.getElementById('menu-icon-close');
+        if (!btn || !menu || !iconOpen || !iconClose) return;
+        var open = false;
+        btn.addEventListener('click', function() {
+          open = !open;
+          if (open) {
+            menu.classList.remove('hidden');
+            iconOpen.classList.add('hidden');
+            iconClose.classList.remove('hidden');
+          } else {
+            menu.classList.add('hidden');
+            iconOpen.classList.remove('hidden');
+            iconClose.classList.add('hidden');
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

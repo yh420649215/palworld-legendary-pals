@@ -13,12 +13,23 @@ export async function getStaticPaths() {
 }
 
 const { pal } = Astro.props;
+const allPals = await getCollection('pals');
 const { Content } = await pal.render();
 ---
 
 <BaseLayout
-  title={`${pal.data.name} Location & Guide — Palworld 1.0 Legendary Pal`}
-  description={`Where to find ${pal.data.name} in Palworld 1.0. Legendary ${pal.data.type} Pal location, capture strategy, stats, drops, and partner skill.`}
+  title={`${pal.data.name} Location & Capture Guide — Palworld 1.0`}
+  description={(() => {
+    const descs = {
+      'jetragon': "Find and capture Jetragon, the legendary Dragon-type Pal, at Mount Obsidian (-555, -1331) in Palworld 1.0. Complete location guide with stats, drops, breeding tips, and the best strategy to catch this fast flying mount.",
+      'frostallion': "Locate and capture Frostallion at the frozen lake (-165, 580) in Palworld 1.0. Full guide to the legendary Ice-type Pal: spawn location, catch strategy, base stats, drops, partner skill, and breeding tips.",
+      'frostallion-noct': "Where to find Frostallion Noct in the Feybreak dungeon (-850, -450) in Palworld 1.0. The only legendary Dark-type Pal — catch guide, stats, breed combo with Helzephyr, and best strategy.",
+      'necromus': "How to find and catch Necromus near Eternal Pyre Tower (700, -850) in Palworld 1.0. Full guide to this legendary Dark-type ground mount with stats, drops, partner skill, and capture strategy.",
+      'paladius': "Locate and capture Paladius at the sealed arena in Sunreach (454, 561) in Palworld 1.0. Complete guide to the legendary Neutral-type tank Pal: stats, Hexolite drops, partner skill, and catch tips.",
+      'neptilius': "Where to find Neptilius on the Isle of the Glacial Core (600, -860) in Palworld 1.0. Guide to catching the legendary Water-type glass cannon: spawn location, stats, drops, and counter strategy."
+    };
+    return descs[pal.slug] || `Where to find ${pal.data.name} in Palworld 1.0. Legendary ${pal.data.type} Pal location, capture strategy, stats, drops, and partner skill.`
+  })()}
   ogImage={`/images/${pal.slug}.webp`}
 >
   <article class="max-w-3xl mx-auto">
@@ -29,7 +40,7 @@ const { Content } = await pal.render();
       <span class="text-sm text-[#898989] font-medium">Legendary &middot; Lv. {pal.data.level}</span>
     </div>
 
-    <h1 class="text-4xl font-semibold mb-3" style="letter-spacing: -0.02em;">
+    <h1 class="text-4xl font-normal mb-3" style="letter-spacing: -0.02em;">
       {pal.data.name}
     </h1>
 
@@ -48,11 +59,11 @@ const { Content } = await pal.render();
     </p>
 
     <div class="mb-8">
-      <ShareButtons title={`${pal.data.name} Location & Guide — Palworld 1.0 Legendary Pal`} />
+      <ShareButtons title={`${pal.data.name} Location & Capture Guide — Palworld 1.0`} />
     </div>
 
     <div class="prose prose-invert max-w-none
-      prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-[#2e2e2e]
+      prose-h2:text-2xl prose-h2:font-normal prose-h2:mt-12 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-[#2e2e2e]
       prose-p:text-[#b4b4b4] prose-p:leading-relaxed
       prose-strong:text-[#fafafa]
       prose-li:text-[#b4b4b4] prose-li:leading-relaxed
@@ -64,5 +75,40 @@ const { Content } = await pal.render();
       prose-a:text-[#00c573] prose-a:no-underline hover:prose-a:underline">
       <Content />
     </div>
+
+    <!-- Related Legendary Pals cross-links -->
+    <section class="mt-16 pt-10 border-t border-[#2e2e2e]">
+      <h2 class="text-xl font-normal text-[#fafafa] mb-6">Related Legendary Pals</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        {allPals
+          .filter(p => p.slug !== pal.slug)
+          .map(p => (
+            <a
+              href={`/pals/${p.slug}/`}
+              class="flex items-center gap-3 bg-[#1a1a1a] border border-[#2e2e2e] rounded-lg p-3 hover:border-[#3ecf8e]/30 hover:bg-[#1e1e1e] transition-all group"
+            >
+              <img
+                src={`/images/${p.slug}.webp`}
+                alt={p.data.name}
+                class="w-10 h-10 rounded object-contain bg-[#141414] shrink-0"
+                loading="lazy"
+                onerror="this.style.display='none'"
+              />
+              <div class="min-w-0">
+                <p class="text-sm font-medium text-[#fafafa] group-hover:text-[#3ecf8e] transition-colors truncate">
+                  {p.data.name}
+                </p>
+                <p class="text-xs text-[#898989]">{p.data.type} &middot; Lv. {p.data.level}</p>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+      <div class="mt-6 flex gap-3 text-sm">
+        <a href="/pals/" class="text-[#00c573] hover:underline font-medium">← All Legendary Pals</a>
+        <a href="/breeding-cheat-sheet/" class="text-[#00c573] hover:underline">Breeding Cheat Sheet</a>
+        <a href="/breeding-how-to/" class="text-[#00c573] hover:underline">Speed Breeding Guide</a>
+      </div>
+    </section>
   </article>
 </BaseLayout>

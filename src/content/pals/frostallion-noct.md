@@ -1,7 +1,7 @@
 ---
 name: Frostallion Noct
 type: Dark
-level: 50
+level: 65
 no: "200B"
 hp: 140
 attack: 140
@@ -10,15 +10,15 @@ defense: 135
 
 ## Location & Spawn
 
-Frostallion Noct is a Dark-type Pal that only spawns in a specific dungeon on the Feybreak realm. You won't find it roaming the open world. To get there, head to the Feybreak Island area on the southwest side of the map. The dungeon entrance is roughly at coordinates (-850, -450), near the cliffs along the coast.
+Frostallion Noct is a Dark-type Pal that spawns as an Alpha Pal at the No. 3 Wildlife Sanctuary. You'll find it at coordinates (689, 648), in the northeastern ocean. It's an overworld Alpha spawn, not a dungeon boss.
 
-This is a 1.0 addition, so don't bother looking in the old Frostallion spots on the northern continent. It's exclusive to Feybreak.
+Since version 0.4.11.0, Frostallion Noct has its own Alpha spawn. Prior to that, it could only be obtained through breeding.
 
 ## How to Catch
 
-You need to clear the dungeon first. It's a high-level zone, so bring a team around level 50-55. Frostallion Noct is the boss at the end. Stock up on Hyper Spheres or Legendary Spheres—it has a low catch rate.
+You need to fly out to the No. 3 Wildlife Sanctuary. It's a high-level zone, so bring a team around level 60-65. Frostallion Noct is aggressive and will attack on sight. Stock up on Hyper Spheres or Legendary Spheres—it has a low catch rate.
 
-Use Dark-type Pal spheres. Weaken it to low HP, then hit it with a status effect like Freeze or Sleep. It's fast and hits hard, so stay mobile. Bring a mount with decent speed to dodge its attacks.
+Weaken it to low HP, then hit it with a status effect like Freeze or Sleep. It's fast and hits hard, so stay mobile. Bring a mount with decent speed to dodge its attacks. Since it doesn't sleep at night (Dark-type), you can engage it at any time.
 
 ## Stats
 
@@ -26,20 +26,20 @@ Use Dark-type Pal spheres. Weaken it to low HP, then hit it with a status effect
 - Attack: 140
 - Defense: 135
 
-It's a glass cannon. High attack and HP, but defense is average. You'll want to invest in attack-focused passives if you're using it for combat.
+It has high Attack and HP with solid Defense. You'll want to invest in attack-focused passives if you're using it for combat.
 
 ## Drops
 
-Frostallion Noct drops 1 Diamond when defeated or captured. That's it. No other materials.
+Frostallion Noct drops 10 {{i|Pure Quartz}} and 1 {{i|Large Pal Soul}} when defeated or captured.
 
 ## Partner Skill
 
-Frostallion Noct's Partner Skill is **Black Steed**. While riding, your attacks deal Dark damage. Applies Dark element to your weapon.
+Frostallion Noct's Partner Skill is **Black Steed**. While riding, your attacks deal Dark damage and Dark attacks are enhanced. Converts your attacks to Dark element and boosts Dark damage output.
 ## Tips & Strategy
 
-- Use it as a fast mount for Feybreak traversal. Its stamina is solid for a Dark Pal.
+- Use it as a fast mount for overworld traversal. Its stamina is solid for a Dark Pal.
 - Pair it with Dark-type damage boost passives like "Lord of Darkness" or "Ferocious."
-- The Diamond drop is useful for crafting high-tier spheres, so farm this dungeon if you need them.
+- The Pure Quartz and Large Pal Soul drops are useful for crafting, so farm this spawn if you need them.
 - Don't rely on it for tanking—swap it out if you're taking heavy hits.
 - Bring a Fire-type Pal to counter its Dark attacks if you're fighting it.
 

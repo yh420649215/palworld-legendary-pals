@@ -1,7 +1,7 @@
 ---
 name: Frostallion
 type: Ice
-level: 50
+level: 60
 no: "200"
 hp: 140
 attack: 140
@@ -10,7 +10,7 @@ defense: 120
 
 ## Location & Spawn
 
-Frostallion is a Level 60 Alpha Pal found in the wild at a single, fixed location. Head to the absolute top of the map, northeast of the Land of Absolute Zero. You'll find it roaming around the massive frozen lake area at coordinates **-165, 580**. This is a 1.0 spawn point, not a dungeon or tower fight.
+Frostallion is a Level 60 Alpha Pal found in the wild at a single, fixed location. Head to the Astral Mountains region in the northwest of the map. You'll find it roaming around the frozen area at coordinates **-357, 509**. This is a 1.0 spawn point, not a dungeon or tower fight.
 
 It only spawns as an Alpha Pal. There are no wild non-Alpha Frostallions running around. The Alpha respawns after a few in-game days if you kill or capture it.
 
@@ -26,11 +26,11 @@ Use Legendary Spheres or better. Ultra Spheres work but expect a low catch rate.
 - Attack: 140
 - Defense: 120
 
-These are base stats for the wild Alpha. Frostallion's Attack and HP are both high, making it a glass cannon with decent bulk. Defense is a bit lower, so Fire Pals can chew through it fast.
+These are base stats for the wild Alpha. Frostallion's Attack and HP are both high, giving it strong bulk and damage output. Defense is solid too, so Fire Pals are your best bet for exploiting its Ice weakness.
 
 ## Drops
 
-Frostallion drops **10 Ice Organs** every time you catch or kill it. That's a guaranteed drop, no RNG. Ice Organs are used for crafting Ice-type gear and ammo, so stock up.
+Frostallion drops **10 Ice Organs** and **1 Diamond** every time you catch or kill it. That's a guaranteed drop for both items, no RNG. Ice Organs are used for crafting Ice-type gear and ammo, so stock up.
 
 ## Partner Skill
 

@@ -1,7 +1,7 @@
 ---
 name: Paladius
 type: Neutral
-level: 50
+level: 60
 no: "198"
 hp: 130
 attack: 120
@@ -10,11 +10,11 @@ defense: 145
 
 ## Location & Spawn
 
-Paladius is a Neutral-type Pal, Paldeck No. 198. You won't find this one wandering around in the open world. It's a boss encounter, specifically the level 45 Alpha Paladius. Head to the **Sunreach** area, on the eastern side of the map. The exact coordinates are **454, 561**. You'll find a sealed arena there. Interact with the statue to start the fight.
+Paladius is a Neutral-type Pal, Paldeck No. 198. You won't find this one wandering around in the open world. It's a boss encounter, specifically a Level 60 Alpha Paladius. Head to the **Desiccated Desert** area, in the northeastern part of the map. The exact coordinates are **447, 679**. You'll find it roaming the desert alongside Necromus.
 
 ## How to Catch
 
-This is a tough fight. Paladius is level 45 and hits hard. Bring a team of high-level Pals, ideally level 40 or higher. Dark-types are strong against Neutral, so Pals like **Menasting** or **Shadowbeak** are good picks. Use a mount with good mobility to dodge its charge attacks. When its health gets low, swap to your best spheres. Legendary Spheres or better are recommended. Time your throws for when it's stunned or after a big attack animation.
+This is a tough fight. Paladius is level 60 and hits hard. Bring a team of high-level Pals, ideally level 55 or higher. Dark-types are strong against Neutral, so Pals like **Menasting** or **Shadowbeak** are good picks. Use a mount with good mobility to dodge its charge attacks. When its health gets low, swap to your best spheres. Legendary Spheres or better are recommended. Time your throws for when it's stunned or after a big attack animation.
 
 ## Stats
 
@@ -26,11 +26,11 @@ These are base stats. Paladius is tanky with high defense, so expect a longer fi
 
 ## Drops
 
-Paladius drops **10 Hexolite** when defeated. This is a key material for crafting high-end gear and weapons in the endgame.
+Paladius drops **10 Pal Metal Ingots** and **1 Diamond** when defeated. These are key materials for crafting high-end gear and weapons in the endgame.
 
 ## Partner Skill
 
-Paladius's Partner Skill is **Holy Knight of the Firmament**. While riding, your jumping power increases. Attacks deal Neutral damage.
+Paladius's Partner Skill is **Holy Knight of the Firmament**. While riding, you can triple jump and movement speed increases with condensation level.
 ## Tips & Strategy
 
 - Bring a **fire or electric** weapon to chip away at its health from range.

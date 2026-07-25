@@ -1,7 +1,7 @@
 ---
 name: Jetragon
 type: Dragon
-level: 50
+level: 70
 no: "202"
 hp: 110
 attack: 140
@@ -10,7 +10,7 @@ defense: 110
 
 ## Location & Spawn
 
-Jetragon spawns on the far end of Mount Obsidian, closest to the Wildlife Sanctuary. In Palworld 1.0, you can find it at the southeastern part of Sunreach, directly under the portal. The exact coordinates are -555, -1331.
+Jetragon spawns in the Sunreach area as a Level 70 Alpha Pal. The exact coordinates are -553, -1332.
 
 This is a late-game area, so don't go looking for Jetragon with low-level gear. You'll need to be prepared for a fight.
 
@@ -30,7 +30,7 @@ Jetragon hits hard and can take a beating. Its Attack stat is stand-out, making 
 
 ## Drops
 
-Jetragon drops 10 {{i|Soralite}} when defeated or captured. Soralite is used for high-end crafting, so farming Jetragon is worth it even after you catch one.
+Jetragon drops 10 {{i|Soralite}}, 1-2 {{i|Thermal Core}}s, and a 30% chance of 1 {{i|Diamond}} when defeated or captured. Soralite and Thermal Cores are used for high-end crafting, so farming Jetragon is worth it even after you catch one.
 
 ## Partner Skill
 
@@ -38,7 +38,7 @@ Jetragon's Partner Skill is **Aerial Missile**. While riding Jetragon, you can l
 
 ## Tips & Strategy
 
-- Bring a flying mount to reach the spawn point fast. The terrain around Mount Obsidian is rough.
+- Bring a flying mount to reach the spawn point fast. The terrain around Sunreach is rough.
 - Use Ice-type Pals like Frostallion for a type advantage—Dragon is weak to Ice.
 - Save before engaging. If you fail to catch it, reload and try again.
 - Jetragon's high Attack means you'll want to dodge its charged moves. Keep moving during the fight.

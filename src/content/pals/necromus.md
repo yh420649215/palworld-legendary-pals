@@ -1,7 +1,7 @@
 ---
 name: Necromus
 type: Dark
-level: 50
+level: 60
 no: "199"
 hp: 130
 attack: 145
@@ -10,7 +10,7 @@ defense: 120
 
 ## Location & Spawn
 
-Necromus spawns in the far northeast corner of the map, in the Sunreach area. You'll find it roaming the snowy plateau near the Eternal Pyre Tower, roughly at coordinates (700, -850). It's a field boss, not a dungeon spawn, so it's always out in the open. Necromus is a level 50 boss, so don't wander up there unless you're ready.
+Necromus spawns in the Desiccated Desert area, in the northeastern part of the map. You'll find it roaming the desert alongside Paladius, roughly at coordinates (447, 679). It's a field boss, not a dungeon spawn, so it's always out in the open. Necromus is a level 60 boss, so don't wander up there unless you're ready.
 
 It spawns during both day and night, no special weather conditions needed. If you kill or capture it, it respawns after about an hour of real time.
 
@@ -32,16 +32,16 @@ Necromus has high attack and decent defense, but its HP is a bit low for a legen
 
 ## Drops
 
-Necromus drops 10 Hexolite when defeated or captured. That's it — no special schematics or unique materials. Hexolite is used for high-end crafting, so farming Necromus is one of the best ways to stock up.
+Necromus drops 10 {{i|Pal Metal Ingot}}s and 1 {{i|Large Pal Soul}} when defeated or captured. Pal Metal Ingots are used for high-end crafting, so farming Necromus is one of the best ways to stock up.
 
 ## Partner Skill
 
-Necromus's Partner Skill is **Dark Knight of the Abyss**. While riding, you can double-jump. Attacks deal Dark damage.
+Necromus's Partner Skill is **Dark Knight of the Abyss**. While riding, you can double jump and movement speed increases with condensation level.
 ## Tips & Strategy
 
 - Bring a team of Ice-type Pals. Frostallion is the best choice, but even a high-level Vanwyrm or Helzephyr with Ice moves works.
 - Use a shield. Necromus's charge attack can one-shot you if you're not wearing at least a Legendary Shield.
-- Build a base near the Sunreach spawn point. Having a fast travel point right there makes farming much faster.
+- Build a base near the Desiccated Desert spawn point. Having a fast travel point right there makes farming much faster.
 - If you're struggling to catch it, try using a Ring of Mercy to guarantee you don't accidentally kill it.
 - Necromus is worth breeding if you want a Dark-type mount. Cross it with a Frostallion to get a Necromus with Ice moves — nasty combo.
 
