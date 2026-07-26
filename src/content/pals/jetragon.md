@@ -30,7 +30,24 @@ Jetragon hits hard and can take a beating. Its Attack stat is stand-out, making 
 
 ## Jetragon Weakness
 
-Jetragon is a Dragon-type Pal, making it weak to Ice-type attacks. Bring a strong Ice Pal — its Dragon attacks deal reduced damage against Ice-types, giving you the edge in battle.
+Jetragon is a Dragon-type Pal, making it weak to Ice-type attacks. Ice attacks deal **2× damage** to Dragon Pals, and Ice Pals naturally resist Dragon attacks — meaning they take only **0.5× damage** in return. This double advantage makes Ice-types the safest and fastest way to bring Jetragon down.
+
+### Best Counters
+
+| Pal | Type | Why |
+|-----|------|-----|
+| **Frostallion** | Ice | The best Ice Pal in the game. Legend + Ice Emperor passives stack for +40% Ice damage. Its high bulk lets it tank Jetragon's hard-hitting Dragon moves while dealing massive Ice damage back. |
+| **Reindrix** | Ice | Pure Ice-type with solid stats and easy to catch early. Its Ice active skills (Icicle Cutter, Crystal Wing) hit Jetragon for 2× damage, and it resists Dragon attacks at 0.5×. |
+| **Chillet** | Ice/Dragon | A dual Ice-Dragon type that's accessible even in mid-game. While it takes neutral damage from Dragon moves (since Dragon hits Dragon for 1×), its Ice attacks still deal the full 2× multiplier against Jetragon. Great budget option. |
+
+### What to Avoid
+
+| Type | Why |
+|------|-----|
+| **Fire** | Dragon resists Fire at **0.5× damage**. Your Fire Pals will tickle Jetragon. |
+| **Water** | Dragon resists Water at **0.5× damage**. Same problem — low damage output drags out the fight. |
+| **Electric** | Dragon resists Electric at **0.5× damage**. Leave your Grizzbolts at home. |
+| **Grass** | Dragon resists Grass at **0.5× damage**. Verdash and other Grass types are dead weight here. |
 
 ## Jetragon Drops
 

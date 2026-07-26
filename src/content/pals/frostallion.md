@@ -16,7 +16,7 @@ It only spawns as an Alpha Pal. There are no wild non-Alpha Frostallions running
 
 ## How to Catch
 
-You're going to need serious firepower. Frostallion hits hard with Ice attacks and moves fast. Bring a team of high-level Fire Pals (like Jormuntide Ignis, Blazamut, or Suzaku) to exploit its Ice weakness. Heat-resistant armor is a must — the cold in this zone is brutal even without the fight.
+You're going to need serious firepower. Frostallion hits hard with Ice attacks and moves fast. Bring a team of high-level Fire Pals (like Faleris, Blazamut, or Suzaku) to exploit its Ice weakness. Heat-resistant armor is a must — the cold in this zone is brutal even without the fight.
 
 Use Legendary Spheres or better. Ultra Spheres work but expect a low catch rate. Get its health into the red, then hit it with a Freeze or Stun status effect before throwing spheres. This is a tough fight solo, so bring backup Pals and plenty of ammo.
 
@@ -30,7 +30,22 @@ These are base stats for the wild Alpha. Frostallion's Attack and HP are both hi
 
 ## Frostallion Weakness
 
-Frostallion is an Ice-type Pal, making it weak to Fire-type attacks. Bring a strong Fire Pal — its Ice attacks deal reduced damage against Fire-types, giving you the edge in battle.
+Frostallion is an Ice-type Pal, making it weak to Fire-type attacks. Fire attacks deal **2× damage** to Ice Pals, and Fire Pals naturally resist Ice attacks — meaning they take only **0.5× damage** in return. This double advantage makes Fire-types the undisputed best choice for this fight.
+
+### Best Counters
+
+| Pal | Type | Why |
+|-----|------|-----|
+| **Faleris** | Fire/Dragon | The strongest Fire Pal available. Its Fire/Dragon typing resists Ice at 0.5×, and with high Attack + Fire active skills like Fire Ball and Flare Storm, it melts Frostallion's HP bar. Accessible through breeding even before the fight. |
+| **Blazamut** | Fire | Pure Fire-type with sky-high Attack. Its signature move Rock Lance adds coverage, and its Fire attacks deal the full 2× multiplier. Blazamut's bulk also helps it survive Frostallion's Blizzard Spike. |
+| **Suzaku** | Fire | A reliable Fire-type flying mount. It resists Ice attacks, hits for 2× with Fire moves, and its mobility lets you dodge Frostallion's charge attacks while dealing damage. Easier to obtain than Faleris. |
+
+### What to Avoid
+
+| Type | Why |
+|------|-----|
+| **Ice** | Ice attacks deal only **0.5× damage** to Ice Pals. Bringing your own Frostallion or other Ice types turns the fight into a slow, painful war of attrition. |
+| **Water** | While Water deals neutral damage to Ice, Frostallion's Ice attacks hit Water for neutral too — meaning Water Pals take full damage without any advantage. Stick to Fire. |
 
 ## Frostallion Drops
 
@@ -45,7 +60,7 @@ Frostallion is an Ice-type Pal, making it weak to Fire-type attacks. Bring a str
 Frostallion's Partner Skill is **Ice Steed**. While riding Frostallion, your attacks deal Ice damage and you move faster in cold biomes.
 ## Tips & Strategy
 
-- Bring a Fire Pal with high Attack and tanky HP. Jormuntide Ignis is ideal because it resists Ice and hits back hard.
+- Bring a Fire Pal with high Attack and tanky HP. Faleris is ideal because it resists Ice and hits back hard.
 - Use a shield. Frostallion's charge attack can one-shot you if you're not wearing good gear. A Legendary Shield or at least a Hyper Shield will save your life.
 - The double jump from its Partner Skill is great for getting out of tight spots. Use it to dodge the ice beam attack.
 - If you're farming Ice Organs, just kill Frostallion and wait for the respawn. Catching it is harder and not worth the sphere cost if you only want organs.

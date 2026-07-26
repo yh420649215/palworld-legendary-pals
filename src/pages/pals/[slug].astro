@@ -15,6 +15,72 @@ export async function getStaticPaths() {
 const { pal } = Astro.props;
 const allPals = await getCollection('pals');
 const { Content } = await pal.render();
+
+// FAQ items for structured data
+const faqData: Record<string, Array<{ question: string; answer: string }>> = {
+  'jetragon': [
+    {
+      question: 'What is Jetragon weak to?',
+      answer: 'Jetragon is a Dragon-type Pal, making it weak to Ice-type attacks. Ice attacks deal 2× damage to Jetragon, while Ice Pals take only 0.5× damage from Dragon attacks in return. The best counter Pals are Frostallion, Reindrix, and Chillet. Avoid bringing Fire, Water, Electric, or Grass Pals — Dragon resists all four at 0.5× damage.'
+    },
+    {
+      question: 'Where does Jetragon spawn?',
+      answer: 'Jetragon spawns as a Level 70 Alpha Pal in the Sunreach area at coordinates (-553, -1332). This is a late-game area in Palworld 1.0. It is only found as an Alpha Pal and is aggressive — it will attack on sight.'
+    }
+  ],
+  'frostallion': [
+    {
+      question: 'What is Frostallion weak to?',
+      answer: 'Frostallion is an Ice-type Pal, making it weak to Fire-type attacks. Fire attacks deal 2× damage to Frostallion, and Fire Pals take only 0.5× damage from Ice attacks. The best counter Pals are Jormuntide Ignis, Blazamut, and Suzaku. Avoid bringing Ice Pals — Ice resists Ice at 0.5× damage.'
+    },
+    {
+      question: 'Where does Frostallion spawn?',
+      answer: 'Frostallion spawns as a Level 60 Alpha Pal in the Astral Mountains region at coordinates (-357, 509) in the northwest of the map. It is only found as an Alpha Pal and is aggressive — it will attack on sight. The Alpha respawns after a few in-game days.'
+    }
+  ],
+  'frostallion-noct': [
+    {
+      question: 'What is Frostallion Noct weak to?',
+      answer: 'Frostallion Noct is a Dark-type Pal, making it weak to Dragon-type attacks. Dragon attacks deal 2× damage to Frostallion Noct, and Dragon Pals take only 0.5× damage from Dark attacks. The best counter Pals are Jetragon, Quivern, and Relaxaurus. Avoid bringing Normal or Dark Pals — Dark resists both at 0.5× damage.'
+    },
+    {
+      question: 'Where does Frostallion Noct spawn?',
+      answer: 'Frostallion Noct spawns as a Level 65 Alpha Pal at the No. 3 Wildlife Sanctuary at coordinates (689, 648) in the northeastern ocean of Palworld 1.0. Since version 0.4.11.0, it has its own Alpha spawn. Prior to that, it could only be obtained through breeding Frostallion + Helzephyr.'
+    }
+  ],
+  'necromus': [
+    {
+      question: 'What is Necromus weak to?',
+      answer: 'Necromus is a Dark-type Pal, making it weak to Dragon-type attacks. Dragon attacks deal 2× damage to Necromus, and Dragon Pals take only 0.5× damage from Dark attacks. The best counter Pals are Jetragon, Quivern, and Relaxaurus. Avoid bringing Normal or Dark Pals — Dark resists both at 0.5×. Be careful: Necromus spawns alongside Paladius, so you may fight both at once.'
+    },
+    {
+      question: 'Where does Necromus spawn?',
+      answer: 'Necromus spawns as a Level 60 Alpha Pal in the Desiccated Desert at coordinates (447, 679) in the northeastern part of the map. It roams the desert alongside Paladius and spawns during both day and night. It is aggressive, does not sleep (Dark-type), and respawns after about an hour of real time.'
+    }
+  ],
+  'paladius': [
+    {
+      question: 'What is Paladius weak to?',
+      answer: 'Paladius is a Neutral-type Pal and has no elemental weaknesses — no type deals extra damage against it. All attacks hit for the standard 1× damage. The best strategy is to bring your highest Attack Pals like Jetragon, Jormuntide Ignis, or Blazamut and focus on raw damage output. Avoid bringing low-level or under-geared Pals — this is a stat-check fight against Paladius\'s 145 base Defense.'
+    },
+    {
+      question: 'Where does Paladius spawn?',
+      answer: 'Paladius spawns as a Level 60 Alpha Pal in the Desiccated Desert at coordinates (447, 679) in the northeastern part of the map. It roams the desert alongside Necromus and is aggressive — it will attack on sight. It respawns after about an hour of real time if killed or captured.'
+    }
+  ],
+  'neptilius': [
+    {
+      question: 'What is Neptilius weak to?',
+      answer: 'Neptilius is a Water-type Pal, making it weak to Electric and Grass-type attacks. Both types deal 2× damage to Neptilius, and Electric/Grass Pals take only 0.5× damage from Water attacks. The best counter Pals are Grizzbolt (Electric), Verdash (Grass), and Jolthog (Electric). Avoid bringing Fire or Water Pals — Water resists both at 0.5× damage.'
+    },
+    {
+      question: 'Where does Neptilius spawn?',
+      answer: 'Neptilius spawns as a Level 60 Alpha Pal on the Isle of the Glacial Core at coordinates (139, 651) in the northern waters of Palworld 1.0. It was added in version 0.6.0. You\'ll need cold-resistant gear and high-level Pals — this is a late-game area with freezing temperatures.'
+    }
+  ]
+};
+
+const faqItems = faqData[pal.slug] || [];
 ---
 
 <BaseLayout
@@ -31,6 +97,7 @@ const { Content } = await pal.render();
     return descs[pal.slug] || `Where to find ${pal.data.name} in Palworld 1.0. Legendary ${pal.data.type} Pal location, capture strategy, stats, drops, and partner skill.`
   })()}
   ogImage={`/images/${pal.slug}.webp`}
+  faqItems={faqItems}
 >
   <article class="max-w-3xl mx-auto">
     <div class="flex items-center gap-3 mb-8">

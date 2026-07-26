@@ -32,7 +32,23 @@ Necromus has high attack and decent defense, but its HP is a bit low for a legen
 
 ## Necromus Weakness
 
-Necromus is a Dark-type Pal, making it weak to Dragon-type attacks. Bring a strong Dragon Pal — its Dark attacks deal reduced damage against Dragon-types, giving you the edge in battle.
+Necromus is a Dark-type Pal, making it weak to Dragon-type attacks. Dragon attacks deal **2× damage** to Dark Pals. Dark attacks deal only **0.5× damage** to Dragon Pals, so your Dragon counters absorb far less punishment while dealing double damage back.
+
+### Best Counters
+
+| Pal | Type | Why |
+|-----|------|-----|
+| **Jetragon** | Dragon | The apex Dragon Pal. 140 base Attack + Divine Dragon passive (+20% Dragon damage) + Dragon Burst and Dragon Meteor = Necromus melts. Jetragon also takes 0.5× from Dark moves and has the speed to dodge Necromus's charge attacks. |
+| **Quivern** | Dragon | Pure Dragon-type with good bulk and reliable Dragon-element skills. Resists Dark attacks and deals consistent 2× damage. A solid pick if you haven't caught Jetragon yet. |
+| **Relaxaurus** | Dragon/Water | Easy to obtain and surprisingly tanky. While its Water sub-type means it takes neutral from Dark moves (Water doesn't resist Dark), its Dragon attacks still hit Necromus for the full 2× multiplier. Brings good sustain to longer fights. |
+
+### What to Avoid
+
+| Type | Why |
+|------|-----|
+| **Normal** | Dark Pals resist Normal attacks at **0.5× damage**. Your Normal Pals' damage is cut in half — this fight will drag on forever. |
+| **Dark** | Dark resists Dark at **0.5× damage**. Don't mirror-match — it's slow and you take full damage in return. |
+| **Dragon types with caution** | Necromus spawns alongside Paladius in the Desiccated Desert. If you pull both at once, Paladius's Neutral attacks deal neutral damage to your Dragon Pals. Separate them or engage Necromus first. |
 
 ## Necromus Drops
 

@@ -5,9 +5,10 @@ export interface Props {
   title: string;
   description: string;
   ogImage?: string;
+  faqItems?: Array<{ question: string; answer: string }>;
 }
 
-const { title, description, ogImage = '/images/jetragon.webp' } = Astro.props;
+const { title, description, ogImage = '/images/jetragon.webp', faqItems } = Astro.props;
 const fullOgImage = ogImage.startsWith('http') ? ogImage : new URL(ogImage, Astro.site || Astro.url).href;
 ---
 
@@ -58,6 +59,21 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : new URL(ogImage, Astr
         '@id': Astro.url.href
       }
     })} />
+    <!-- FAQPage JSON-LD Structured Data -->
+    {faqItems && faqItems.length > 0 && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': faqItems.map(item => ({
+          '@type': 'Question',
+          'name': item.question,
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': item.answer
+          }
+        }))
+      })} />
+    )}
     <!-- Umami Analytics -->
     <script defer src="https://cloud.umami.is/script.js" data-website-id="60032402-8387-411b-a7f8-671c6b49b8d2"></script>
     <!-- Google Analytics 4 -->

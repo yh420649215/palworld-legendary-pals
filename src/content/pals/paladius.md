@@ -26,7 +26,22 @@ These are base stats. Paladius is tanky with high defense, so expect a longer fi
 
 ## Paladius Weakness
 
-Paladius is a Neutral-type Pal. Neutral Pals have no elemental weaknesses — no type deals extra damage against them. Bring your highest-damage Pals and focus on raw Attack power to win the battle.
+Paladius is a Neutral-type Pal. Neutral Pals have **no elemental weaknesses** — no type deals extra damage against them, and no type is resisted by them. All attacks hit for the standard **1× damage**. This makes Paladius a pure stat-check fight: bring your strongest Pals and focus on raw damage output to win.
+
+### Best Counters
+
+| Pal | Type | Why |
+|-----|------|-----|
+| **Jetragon** | Dragon | 140 base Attack with Dragon Meteor and Divine Dragon passive. No type advantage here, but Jetragon's raw damage output is among the highest in the game — and that's what matters against Neutral Pals. Its speed helps dodge Paladius's charge attacks. |
+| **Jormuntide Ignis** | Fire/Dragon | Massive Attack stat with Fire and Dragon active skills. Against a Neutral target with no resists, Jormuntide Ignis can unload its full damage kit without penalty — every hit lands at 1×. |
+| **Blazamut** | Fire | Pure Fire-type with top-tier Attack. All of its skills deal full neutral damage to Paladius, and its good bulk helps it survive the long fight. Rock Lance provides solid coverage too. |
+
+### What to Avoid
+
+| Type | Why |
+|------|-----|
+| **No type is truly bad** | Paladius takes 1× from everything. But avoid bringing **low-level or under-geared Pals** — this is a battle of stats, and anything below level 50 will struggle to keep up with Paladius's 145 base Defense and hard-hitting Neutral attacks. |
+| **Watch for Necromus** | Paladius spawns alongside Necromus (Dark-type) in the Desiccated Desert. If you pull both, Dragon Pals are ideal (2× vs Necromus, 1× vs Paladius). Avoid pulling them together unless you're ready for a double boss fight. |
 
 ## Paladius Drops
 

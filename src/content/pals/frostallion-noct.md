@@ -30,7 +30,22 @@ It has high Attack and HP with solid Defense. You'll want to invest in attack-fo
 
 ## Frostallion Noct Weakness
 
-Frostallion Noct is a Dark-type Pal, making it weak to Dragon-type attacks. Bring a strong Dragon Pal — its Dark attacks deal reduced damage against Dragon-types, giving you the edge in battle.
+Frostallion Noct is a Dark-type Pal, making it weak to Dragon-type attacks. Dragon attacks deal **2× damage** to Dark Pals. Crucially, Dark attacks only deal **0.5× damage** to Dragon Pals, so your Dragon counters take heavily reduced damage while dishing out double.
+
+### Best Counters
+
+| Pal | Type | Why |
+|-----|------|-----|
+| **Jetragon** | Dragon | The strongest Dragon Pal with 140 base Attack and Divine Dragon passive (+20% Dragon damage). Its Dragon active skills (Dragon Burst, Dragon Meteor) shred Frostallion Noct for 2× damage, and it takes only 0.5× from Dark moves. |
+| **Quivern** | Dragon | Pure Dragon-type that's much easier to obtain than Jetragon. Solid stats and Dragon-element active skills deal reliable 2× damage. It resists Dark attacks, giving it survivability throughout the fight. |
+| **Relaxaurus** | Dragon/Water | A tanky Dragon/Water hybrid accessible early. While its Water typing means it takes neutral damage from Dark moves (Water doesn't resist Dark), its Dragon attacks still hit for the full 2× multiplier. Good budget option before you catch Jetragon. |
+
+### What to Avoid
+
+| Type | Why |
+|------|-----|
+| **Normal** | Dark Pals resist Normal attacks at **0.5× damage**. Your Normal-type Pals will hit like wet noodles. |
+| **Dark** | Dark resists Dark at **0.5× damage**. Mirror matches are slow and inefficient — use Dragon instead. |
 
 ## Frostallion Noct Drops
 

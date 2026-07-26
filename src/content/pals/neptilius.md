@@ -30,7 +30,22 @@ It's a glass cannon. High attack for a Water type, but defense is average and HP
 
 ## Neptilius Weakness
 
-Neptilius is a Water-type Pal, making it weak to Electric and Grass-type attacks.
+Neptilius is a Water-type Pal, making it weak to **Electric** and **Grass** attacks. Both types deal **2× damage** to Water Pals. Electric and Grass Pals also resist Water attacks, taking only **0.5× damage** in return — giving you a massive defensive and offensive edge.
+
+### Best Counters
+
+| Pal | Type | Why |
+|-----|------|-----|
+| **Grizzbolt** | Electric | The premier Electric-type damage dealer. Its Electric active skills (Spark Blast, Lightning Strike) hit Neptilius for 2× damage, and it resists Water attacks at 0.5×. High Attack stat makes short work of Neptilius's modest 105 HP pool. |
+| **Verdash** | Grass | Pure Grass-type with strong Attack and Grass active skills like Seed Mine and Grass Tornado. Hits for 2× while taking only 0.5× from Water moves. Much easier to obtain than Grizzbolt. |
+| **Jolthog** | Electric | An accessible early-game Electric Pal. While its stats are lower, Jolthog is easy to catch and its Electric attacks still deal the full 2× to Neptilius. A good budget option if you're tackling Neptilius early. |
+
+### What to Avoid
+
+| Type | Why |
+|------|-----|
+| **Fire** | Water Pals resist Fire at **0.5× damage**. Your Fire attacks hit for half — and Fire Pals take full damage from Water moves in return. Blazamut and friends stay home. |
+| **Water** | Water resists Water at **0.5× damage**. Mirror matches are slow and give you no defensive advantage — Neptilius hits your Water Pals for 1× while you hit for 0.5×. |
 
 ## Drops
 
