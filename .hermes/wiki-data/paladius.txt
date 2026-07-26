@@ -1,0 +1,136 @@
+{{Pal Navigation}}
+{{Pal
+|no = 198
+|alpha_title = Holy Knight of Legend
+|ele1 = Neutral
+|ele2 =
+|pal_size = L
+|partner_skill_name = Holy Knight of the Firmament
+|partner_skill_desc = Can be ridden. Can triple jump while mounted.
+|partner_skill_icon = Mount
+|pal_gear = Paladius Saddle
+|work_suitability = Lumbering@6; Mining@6
+<!-- Basics -->
+|hunger = 9
+|nocturnal = False
+|sell_price = 881
+<!-- Skills -->
+|passive_skills = Legend; Celestial Emperor
+|active_skills = Power Shot@1; Ice Missile@7; Iceberg@15; Power Bomb@22; Blizzard Spike@30; Spear Thrust@40; Pal Blast@50; Absolute Frost@55; Holy Burst@60
+<!-- Stats -->
+|hp = 130
+|alpha_hp = 156
+|attack = 120
+|defense = 145
+|work_speed = 100
+|trust_hp = 2.5
+|alpha_trust_hp = 1.2
+|trust_attack = 1.7
+|trust_defense = 1.0
+|trust_work_speed = 0.0
+|stamina = 400
+|slow_walk_speed = 50
+|walk_speed = 100
+|run_speed = 800
+|ride_sprint_speed = 1800
+|alpha_ride_sprint_speed = 1900
+|transport_speed = 450
+|swim_speed = 240
+|swim_dash_speed = 540
+|exp_ratio = 1.0
+|alpha_exp_ratio = 10.0
+|max_hp_rate = 1.0
+|alpha_max_hp_rate = 1.8552631
+|receive_damage_rate = 1.0
+|alpha_receive_damage_rate = 0.18
+|inflict_damage_rate = 1.0
+|capture_rate = 1.0
+|alpha_capture_rate = 0.7
+}}
+{{Palpedia|Once one with [[Necromus]]. Its gleaming form is free of all negative emotions. However, a glimmer of hatred can still be seen deep within its eyes.}}
+'''Paladius''' (Japanese: '''セイントール''' ''Saintaur'') is a {{i|Neutral}}-[[Elements|element]] [[Pals|Pal]]. Paladius a large, centaur-like Pal with a predominantly grey body and a large yellow tail. Its humanoid upper body and four legs are covered in azure-colored armor with golden highlights. It also has two large, wing-shaped adornments on its helmet and two smaller wing-shaped adornments on the knees of its rear legs. In its right hand, Paladius carries a large azure shield rimmed in gold and with a golden emblem on the front. In its left hand is a large lance made of blue crystal and rimmed in gold at the base.
+
+==Obtaining==
+<tabber>
+|-|Habitat=
+Paladius is only found in the wild as an {{Icon|Alpha Pal}}.
+
+Paladius is aggressive and will attack the player on sight.
+
+|-|Alpha (Overworld)=
+{{Entity Location Map
+|name = Paladius
+|location = Desiccated Desert
+|variant = Alpha
+|level = 60
+|coords = (447, 679)
+}}
+
+|-|Breeding=
+[[Breeding]] allows Pals to be paired together to produce offspring, with outcomes determined by various breeding statistics and special parent combinations. 
+{{Breeding
+|breeding_rank = 80
+|male_probability = 50
+|combi_duplicate_priority = 6510000
+|egg = Huge Common Egg
+|uniqueCombos = Paladius + Paladius = Paladius
+}}
+</tabber>
+
+==Drops==
+{{Item Drop
+|target_name = Paladius
+|normal_drops = Pal Metal Ingot*10@100; Diamond*1@100
+|alpha_drops = Ancient Civilization Parts*4-6@100; Pal Metal Ingot*10@100; Diamond*1@100; Precious Entrails*4-6@100; Cold Resistant Pal Metal Armor Schematic 4*1@3
+}}
+
+==Partner Skill==
+As a Legendary Pal, Paladius is a powerful asset in both combat and exploration. Its [[Partner Skills|Partner Skill]], '''Holy Knight of the Firmament''', lets it perform a triple jump while mounted, letting it scale most forms of rough terrain with ease. It also increases Paladius' movement speed depending on its [[Pal Condensation|Condensation]] level.
+
+{{Partner Skill Scale
+|Holy Knight of the Firmament
+|1_effect_type = Movement speed
+|1_target=
+|1_0_value = +0%
+|1_1_value = +10%
+|1_2_value = +12%
+|1_3_value = +15%
+|1_4_value = +20%
+}}
+
+==Other Characteristics==
+Paladius has Lv 2 {{Icon|Lumbering}} and {{Icon|Mining}}, though by the time most players obtain one, much better options for these tasks are available.
+
+Paladius also comes with the [[Legend]] and [[Celestial Emperor]] [[Passive Skills]], boosting its {{Icon|Attack}}, {{Icon|Defense}}, movement speed, and Neutral-element damage.
+
+==Trivia==
+* Paladius currently has the highest base {{Icon|Defense}} stat among all Pals in the game.
+* Paladius' English name derives from the word "paladin."
+** Its Japanese name is a combination of '''セイント''' ''seinto'' (meaining "saint") and "centaur".
+
+==Media==
+<gallery widths="150">
+File:Screenshot 2024-01-16 222730.png|Paladius' shield seen from the front.
+</gallery>
+
+==History==
+* [[1.0]]
+** Palpedia number changed from 108 to 198.
+** Work suitability changes:
+*** Lumbering increased from 2 to 6.
+*** Mining increased from 2 to 6.
+* [[0.4.11.0]]
+** Wild boss spawn is now level 60 (up from 55).
+* [[0.3.1.0]]
+** Wild boss spawn is now level 55 (up from 50).
+* [[0.2.4.0]]
+** Increased the Alpha Received Damage Rate from 0.1 to 0.12.
+* [[0.1.2.0]]
+** Introduced.
+
+{{Navbox Pals}}
+[[Category:Pals]]
+[[Category:Rideable Pals]]
+[[Category:Legendary Pals]]
+[[Category:Pals with exclusive Skills]]
+[[Category:Pals that appear as world bosses]]

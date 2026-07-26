@@ -28,9 +28,15 @@ Weaken Jetragon to low HP without killing it. Use status effects like freeze or 
 
 Jetragon hits hard and can take a beating. Its Attack stat is stand-out, making it a top-tier damage dealer.
 
-## Drops
+## Jetragon Weakness
 
-Jetragon drops 10 {{i|Soralite}}, 1-2 {{i|Thermal Core}}s, and a 30% chance of 1 {{i|Diamond}} when defeated or captured. Soralite and Thermal Cores are used for high-end crafting, so farming Jetragon is worth it even after you catch one.
+Jetragon is a Dragon-type Pal, making it weak to Ice-type attacks. Bring a strong Ice Pal — its Dragon attacks deal reduced damage against Ice-types, giving you the edge in battle.
+
+## Jetragon Drops
+
+- **Soralite** — 100% drop rate (10 per kill or capture)
+- **Thermal Core** — 100% drop rate (1-2 per kill or capture)
+- **Diamond** — 30% drop rate (1 per kill or capture)
 
 ## Partner Skill
 

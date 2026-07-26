@@ -1,0 +1,151 @@
+{{Pal Navigation}}
+{{Pal
+|no = 200B
+|alpha_title = Legendary Steed of Darkness
+|ele1 = Dark
+|ele2 =
+|pal_size = L
+|partner_skill_name = Black Steed
+|partner_skill_desc = Can be ridden as a flying mount. Changes the player's attack type to Dark and enhances Dark attacks while mounted.
+|partner_skill_icon = Flying Mount
+|pal_gear = Frostallion Noct Saddle
+|work_suitability = Gathering@7
+<!-- Basics -->
+|hunger = 7
+|nocturnal = True
+|sell_price = 856
+<!-- Skills -->
+|passive_skills = Legend; Lord of the Underworld
+|active_skills = Air Cannon@1; Dark Ball@7; Shadow Burst@15; Spirit Flame@22; Crystal Wing@30; Nightmare Ball@40; Dark Laser@50; Double Blizzard Spike@55; Dark Whisp@60
+<!-- Stats -->
+|hp = 140
+|alpha_hp = 168
+|attack = 140
+|defense = 135
+|work_speed = 100
+|trust_hp = 2.0
+|alpha_trust_hp = 0.6
+|trust_attack = 1.0
+|trust_defense = 1.1
+|trust_work_speed = 0.0
+|stamina = 300
+|slow_walk_speed = 120
+|walk_speed = 120
+|run_speed = 1200
+|ride_sprint_speed = 1800
+|alpha_ride_sprint_speed = 1900
+|transport_speed = 440
+|swim_speed = 360
+|swim_dash_speed = 540
+|exp_ratio = 1.0
+|alpha_exp_ratio = 10.0
+|max_hp_rate = 1.0
+|alpha_max_hp_rate = 2.728395
+|receive_damage_rate = 1.0
+|alpha_receive_damage_rate = 0.18
+|inflict_damage_rate = 1.0
+|capture_rate = 1.0
+|alpha_capture_rate = 0.7
+}}
+{{Palpedia|Guardian deity of Palpagos Island known as the Night Caller. In the past, when a calamity struck the land, it soared into the sky and sealed away the threat by casting the island into eternal darkness.}}
+'''Frostallion Noct''' (Japanese: '''グレイシャドウ''' ''Glashadow'') is the {{i|Dark}}-[[Elements|element]] subspecies of {{Icon|Frostallion}}. Frostallion Noct is largely identical to the regular Frostallion, except for the fact that it has a black body, a purple mane, tail and hooves, and gold-colored accents.
+
+==Obtaining==
+<tabber>
+|-|Habitat=
+Frostallion Noct is only found in the wild as an {{Icon|Alpha Pal}}.
+
+Frostallion Noct is aggressive and will attack the player on sight. Additionally, as it is a Dark-element [[Pal]], it does not sleep at night.
+
+|-|Alpha (Overworld)=
+{{Entity Location Map
+|name = Frostallion Noct
+|location = No. 3 Wildlife Sanctuary
+|variant = Alpha
+|level = 65
+|coords = (689, 648)
+}}
+
+|-|Breeding=
+[[Breeding]] allows Pals to be paired together to produce offspring, with outcomes determined by various breeding statistics and special parent combinations. 
+{{Breeding
+|breeding_rank = 100
+|male_probability = 50
+|combi_duplicate_priority = 7090000
+|egg = Huge Dark Egg
+|uniqueCombos = Frostallion + Helzephyr = Frostallion Noct
+}}
+</tabber>
+
+==Drops==
+{{Item Drop
+|target_name = Frostallion Noct
+|normal_drops = Pure Quartz*10@100; Large Pal Soul*1@100
+|alpha_drops = Ancient Civilization Parts*6-8@100; Pure Quartz*10@100; Large Pal Soul*1@100; Precious Entrails*6-8@100; Laser Rifle Schematic 4*1@3
+}}
+
+==Partner Skill==
+Like its {{Icon|Ice}}-element cousin, Frostallion Noct is a powerful asset in both combat and exploration. Its [[Partner Skills|Partner Skill]], '''Black Steed''', enhances its Dark-element attacks, applies Dark-element damage to the player's attacks, and boosts the player's {{Icon|Attack}} while mounted.
+
+{{Partner Skill Scale
+|Ice Steed
+|1_effect_type = Dark attack boost
+|1_target= Self
+|1_0_value = +50%
+|1_1_value = +55%
+|1_2_value = +65%
+|1_3_value = +80%
+|1_4_value = +100%
+|2_effect_type = Convert attack to Dark element
+|2_target= Player
+|2_0_value = 1
+|2_1_value = 1
+|2_2_value = 1
+|2_3_value = 1
+|2_4_value = 1
+|3_effect_type = Attack
+|3_target= Player
+|3_0_value = +10%
+|3_1_value = +10%
+|3_2_value = +12%
+|3_3_value = +15%
+|3_4_value = +40%
+}}
+
+==Other Characteristics==
+Frostallion Noct's only [[Work Suitability]] is {{I|Gathering}}, being the only Pal besides {{I|Braloha}} to naturally have that skill at Lv 4. Though Braloha is much easier to obtain, Frostallion Noct's much higher movement speed allows it to move between different plantations much faster. Additionally, its lack of any other Work Suitabilties means that it won't get distracted by other tasks, making it the perfect dedicated Gathering Pal.
+
+Frostallion Noct also comes with the [[Legend]] and [[Lord of the Underworld]] [[Passive Skill|Passive Skills]], which gives it a boost to its {{I|Attack}}, {{I|Defense}}, movement speed, and Dark-element damage.
+
+==Trivia==
+* Prior to version [[0.4.11.0]], Frostallion Noct could only be obtained via breeding.
+* Frostallion Noct's Japanese name is a combination of "glacial" (Frostallion's Japanese name) and "shadow."
+* Frostallion Noct is #088 in Paldeck on PocketPair [https://x.com/Palworld_EN/status/1799048669314072583 X].
+* Unlike the regular Frostallion, Frostallion Noct can gain the [[Passive Skills|Lucky]] Passive Skill. This is because one of its parents, {{Icon|Helzephyr}}, can pass on the Lucky skill, allowing Frostallion Noct to receive boss-specific Passive Skills that Frostallion cannot.
+
+==Media==
+<!--<gallery widths="150">
+...
+</gallery>-->
+{{#ev:youtube|slcEhDMFR74|410|inline|Paldeck - No.088 FROSTALLION NOCT - Palworld - Gameplay - Pocketpair-2||autoplay=false}}
+
+==History==
+* [[1.0]]
+** Palpedia number changed from 110b to 200b.
+** Gathering work suitability increased from 4 to 7.
+* [[0.4.11.0]]
+** Now spawns in its own [[Sealed Realm]] as an Alpha Pal.
+* [[0.2.4.0]]
+** Increased the Alpha Received Damage Rate from 0.1 to 0.12.
+* [[0.2.0.6]]
+** It no longer has ice particles when flying. It has been changed to be more shadowy.
+* [[0.1.2.0]]
+** Introduced.
+
+{{Navbox Pals}}
+[[Category:Pals]]
+[[Category:Rideable Pals]]
+[[Category:Legendary Pals]]
+[[Category:Subspecies]]
+[[Category:Noct Subspecies]]
+[[Category:Pals with exclusive Skills]]

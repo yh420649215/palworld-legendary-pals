@@ -1,0 +1,140 @@
+{{Pal Navigation}}
+{{Pal
+|no = 202
+|alpha_title = Legendary Celestial Dragon
+|ele1 = Dragon
+|ele2 =
+|pal_size = XL
+|partner_skill_name = Aerial Missile
+|partner_skill_desc = Can be [[ridden]] as a flying mount. Can rapidly fire a missile launcher while mounted.
+|partner_skill_icon = Flying Mount
+|pal_gear = Jetragon's Missile Launcher
+|work_suitability = Gathering@8
+<!-- Basics -->
+|hunger = 9
+|nocturnal = False
+|sell_price = 868
+<!-- Skills -->
+|passive_skills = Legend; Divine Dragon
+|active_skills = Spirit Fire@1; Dragon Burst@7; Flare Storm@15; Draconic Breath@22; Beam Comet@30; Fire Ball@40; Dragon Meteor@50; Beam Slicer@55; Meteorain@60
+<!-- Stats -->
+|hp = 110
+|alpha_hp = 132
+|attack = 140
+|defense = 110
+|work_speed = 100
+|trust_hp = 3.5
+|alpha_trust_hp = 2.4
+|trust_attack = 1.0
+|trust_defense = 2.1
+|trust_work_speed = 0.0
+|stamina = 100
+|slow_walk_speed = 200
+|walk_speed = 800
+|run_speed = 1700
+|ride_sprint_speed = 3300
+|transport_speed = 1250
+|swim_speed = 510
+|swim_dash_speed = 990
+|exp_ratio = 1.0
+|alpha_exp_ratio = 10.0
+|max_hp_rate = 1.0
+|alpha_max_hp_rate = 2.6666667
+|receive_damage_rate = 1.0
+|alpha_receive_damage_rate = 0.18
+|inflict_damage_rate = 1.0
+|capture_rate = 1.0
+|alpha_capture_rate = 0.7
+}}
+{{Palpedia|Watches over Palpagos Island from high above. When calamity returns to the land, the earth will split open, and the skies will burn. It is destined to strike down the calamity in a flash of total destruction.}}
+'''Jetragon''' (Japanese: '''ジェッドラゴン''' ''Jedragon'') is a {{i|Dragon}}-[[Elements|element]] [[Pals|Pal]]. Jetragon is a draconic Pal with a predominantly light blue body, a white underbelly, red markings on its forearms and thighs, and white markings on its shark-like tail. Jetragon also has two angular black horns with red highlights as well as a large black protrusion on its back with four orange spikes on it. Attached to each of these spikes are large pinkish diamonds made of energy that resemble wings.
+
+==Obtaining==
+<tabber>
+|-|Habitat=
+Jetragon is only found in the wild as an {{Icon|Alpha Pal}}.
+
+Jetragon is aggressive and will attack the player on sight.
+
+|-|Alpha (Overworld)=
+{{Entity Location Map
+|name = Jetragon
+|location = Sunreach
+|variant = Alpha
+|level = 70
+|coords = (-553, -1332)
+}}
+
+|-|Breeding=
+[[Breeding]] allows Pals to be paired together to produce offspring, with outcomes determined by various breeding statistics and special parent combinations. 
+{{Breeding
+|breeding_rank = 90
+|male_probability = 50
+|combi_duplicate_priority = 6690000
+|egg = Huge Dragon Egg
+|uniqueCombos = Jetragon + Jetragon = Jetragon
+}}
+</tabber>
+
+==Drops==
+{{Item Drop
+|target_name = Jetragon
+|normal_drops = Soralite*10@100;Thermal Core*1-2@100;Diamond*1@30
+|alpha_drops = Ancient Civilization Parts*7-9@100;Precious Dragon Stone*7-9@100; Rocket Launcher Schematic 4*1@3
+}}
+
+==Partner Skill==
+As a Legendary Pal, Jetragon is a powerful asset in both combat and exploration. Its [[Partner Skills|Partner Skill]], '''Aerial Missile''', lets it attack with a rapid-fire missile launcher when mounted. While this attack deals relatively low damage per shot, the sheer amount of missiles fired means that it's bound to deal heavy damage to anything it hits. However, it should be noted that Jetragon's Partner Skill prevents the player from using [[weapons]] while riding it.
+
+{{Partner Skill Scale
+|Aerial Missile
+|1_effect_type = Attack power
+|1_target=
+|1_0_value = 13
+|1_1_value = 14.3
+|1_2_value = 16.9
+|1_3_value = 20.9
+|1_4_value = 26
+}}
+
+==Other Characteristics==
+Jetragon's only [[Work Suitability]] is {{Icon|Gathering}} at Lv 8, though by the time most players obtain one, much better options are available.
+
+Jetragon also comes with the [[Legend]] and [[Divine Dragon]] [[Passive Skills]], boosting its {{Icon|Attack}}, {{Icon|Defense}}, movement speed, and Dragon-element damage.
+
+Jetragon is also the fastest Pal in the entire game, boasting a sprint speed of 3300. While this makes Jetragon the best Pal for getting around the [[Palpagos Islands]] quickly, {{Icon|Xenolord}} is generally considered to be the superior mount due to it allowing players to use weapons while mounted and having three times the stamina while only being ever so slightly slower than Jetragon (having a sprint speed of 3240).
+
+==Trivia==
+* Jetragon's English name is a combination of "jet" and "dragon."
+* Jetragon is #050 in Paldeck on PocketPair [https://x.com/Palworld_EN/status/1741066607378530339 X].
+
+==Media==
+<gallery widths="150">
+File:Jetragon riding.png|alt=
+File:Jetragon bis.png
+File:Screenshot 6.webp
+</gallery>
+{{#ev:youtube|0e2woibUML0|410|inline|Paldeck_SP No.050 JETRAGON - Palworld Gameplay Pocketpair||autoplay=false}}
+
+==History==
+* [[1.0]]
+** Wild boss spawn is now level 70 (up from 60).
+** Changed the alpha encounter location from [[Mount Obsidian]] to [[Sunreach]].
+** Gathering is now level 8 (up from 3).
+** Palpedia number changed from 111 to 202.
+* [[0.4.11.0]]
+** Wild boss spawn is now level 60 (up from 55).
+* [[0.3.1.0]]
+** Wild boss spawn is now level 55 (up from 50).
+* [[0.2.4.0]]
+** Alpha Received Damage Rate is now 0.12 (up from 0.1).
+* [[0.2.0.6]]
+** Jetragon's mount missiles will correctly attack the target you are aiming at.
+* [[0.1.2.0]]
+** Introduced.
+
+{{Navbox Pals}}
+[[Category:Pals]]
+[[Category:Rideable Pals]]
+[[Category:Legendary Pals]]
+[[Category:Pals with exclusive Skills]]

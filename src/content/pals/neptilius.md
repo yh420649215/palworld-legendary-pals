@@ -1,5 +1,5 @@
 ---
-name: Neptilius
+name: Neptilius Location Guide — Palworld 1.0 (Map & Coordinates)
 type: Water
 level: 60
 no: "201"
@@ -10,7 +10,7 @@ defense: 125
 
 ## Location & Spawn
 
-Neptilius only spawns as a boss on the Isle of the Glacial Core. You won't find wild Neptilius roaming around anywhere else on the map. The boss spawns at coordinates 139, 651, in the northern waters.
+Neptilius is located on the Isle of the Glacial Core at coordinates (139, 651) in the northern waters of Palworld 1.0.
 
 This is a late-game area. You'll need cold-resistant gear and high-level Pals to survive the freezing temperatures. The boss is level 60 and hits hard.
 
@@ -28,9 +28,16 @@ Don't try to capture it at full health. Weaken it to below 20% HP first. Use a L
 
 It's a glass cannon. High attack for a Water type, but defense is average and HP is low. You'll want to kill things before they hit back.
 
+## Neptilius Weakness
+
+Neptilius is a Water-type Pal, making it weak to Electric and Grass-type attacks.
+
 ## Drops
 
-Neptilius drops 10 {{i|Pure Quartz}}, 5 {{i|Polymer}}, 5 {{i|Carbon Fiber}}, a 30% chance of 1 {{i|Diamond}}, and a 1% chance of 1 {{i|Large Pal Soul}} when defeated. If you're farming Pure Quartz or Carbon Fiber, this is a reliable source since the boss respawns.
+- **Pure Quartz** — 100% drop rate (10 per kill or capture)
+- **Polymer** — 100% drop rate (5 per kill)
+- **Carbon Fiber** — 100% drop rate (5 per kill)
+- **Diamond** — 30% drop chance
 
 ## Partner Skill
 

@@ -30,9 +30,14 @@ Status effects help a lot. Freeze or stun it with a Pal like Blizzard Spike or a
 
 Necromus has high attack and decent defense, but its HP is a bit low for a legendary. That's good news for you — it goes down faster than some other field bosses. Just don't let it hit you more than a couple times.
 
-## Drops
+## Necromus Weakness
 
-Necromus drops 10 {{i|Pal Metal Ingot}}s and 1 {{i|Large Pal Soul}} when defeated or captured. Pal Metal Ingots are used for high-end crafting, so farming Necromus is one of the best ways to stock up.
+Necromus is a Dark-type Pal, making it weak to Dragon-type attacks. Bring a strong Dragon Pal — its Dark attacks deal reduced damage against Dragon-types, giving you the edge in battle.
+
+## Necromus Drops
+
+- **Pal Metal Ingot** — 100% drop rate (10 per kill or capture)
+- **Large Pal Soul** — 100% drop rate (1 per kill or capture)
 
 ## Partner Skill
 

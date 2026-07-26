@@ -24,9 +24,14 @@ This is a tough fight. Paladius is level 60 and hits hard. Bring a team of high-
 
 These are base stats. Paladius is tanky with high defense, so expect a longer fight.
 
-## Drops
+## Paladius Weakness
 
-Paladius drops **10 Pal Metal Ingots** and **1 Diamond** when defeated. These are key materials for crafting high-end gear and weapons in the endgame.
+Paladius is a Neutral-type Pal. Neutral Pals have no elemental weaknesses — no type deals extra damage against them. Bring your highest-damage Pals and focus on raw Attack power to win the battle.
+
+## Paladius Drops
+
+- **Pal Metal Ingot** — 100% drop rate (10 per kill or capture)
+- **Diamond** — 100% drop rate (1 per kill or capture)
 
 ## Partner Skill
 

@@ -1,0 +1,155 @@
+{{Pal Navigation}}
+{{Pal
+|no = 200
+|alpha_title = Legendary Steed of Ice
+|ele1 = Ice
+|ele2 =
+|pal_size = L
+|partner_skill_name = Ice Steed
+|partner_skill_desc = Can be ridden as a flying mount. Changes the player's attack type to Ice and enhances Ice attacks while mounted.
+|partner_skill_icon = Flying Mount
+|pal_gear = Frostallion Saddle
+|work_suitability = Cooling@7
+<!-- Basics -->
+|hunger = 7
+|nocturnal = False
+|sell_price = 844
+<!-- Skills -->
+|passive_skills = Legend; Ice Emperor
+|active_skills = Air Cannon@1; Ice Missile@7; Icicle Cutter@15; Iceberg@22; Crystal Wing@30; Crystal Breath@40; Blizzard Spike@50; Holy Burst@55; Double Blizzard Spike@60
+<!-- Stats -->
+|hp = 140
+|alpha_hp = 168
+|attack = 140
+|defense = 120
+|work_speed = 100
+|trust_hp = 2.0
+|alpha_trust_hp = 0.6
+|trust_attack = 1.0
+|trust_defense = 1.7
+|trust_work_speed = 0.0
+|stamina = 300
+|slow_walk_speed = 120
+|walk_speed = 120
+|run_speed = 1200
+|ride_sprint_speed = 1800
+|alpha_ride_sprint_speed = 1900
+|transport_speed = 440
+|swim_speed = 360
+|swim_dash_speed = 540
+|exp_ratio = 1.0
+|alpha_exp_ratio = 10.0
+|max_hp_rate = 1.0
+|alpha_max_hp_rate = 2.728395
+|receive_damage_rate = 1.0
+|alpha_receive_damage_rate = 0.18
+|inflict_damage_rate = 1.0
+|capture_rate = 1.0
+|alpha_capture_rate = 0.7
+}}
+{{Palpedia|Guardian deity of Palpagos Island, known as the Winter Caller. In the past, when a calamity struck the land, it soared into the sky and sealed away the threat by casting the island into an eternal winter.}}
+'''Frostallion''' (Japanese: '''グレイシャル''' ''Glacial'') is an {{i|Ice}}-[[Elements|element]] [[Pals|Pal]]. Frostallion is a large, horse-like Pal with a white body, a grey mane and tail, and icy shards on its hooves, legs, and forehead. It also possesses a pair of large white wings.
+
+Frostallion also has a {{i|Dark}}-element subspecies, {{I|Frostallion Noct}}.
+
+==Obtaining==
+<tabber>
+|-|Habitat=
+Frostallion is only found in the wild as an {{Icon|Alpha Pal}}.
+
+Frostallion is aggressive and will attack the player on sight.
+
+|-|Alpha (Overworld)=
+{{Entity Location Map
+|name = Frostallion
+|location = Astral Mountains
+|variant = Alpha
+|level = 60
+|coords = (-357, 509)
+}}
+
+|-|Breeding=
+[[Breeding]] allows Pals to be paired together to produce offspring, with outcomes determined by various breeding statistics and special parent combinations. 
+{{Breeding
+|breeding_rank = 120
+|male_probability = 50
+|combi_duplicate_priority = 7100000
+|egg = Huge Frozen Egg
+|uniqueCombos = Frostallion + Frostallion = Frostallion
+}}
+</tabber>
+
+==Drops==
+{{Item Drop
+|target_name = Frostallion
+|normal_drops = Ice Organ*10@100; Diamond*1@100
+|alpha_drops = Ancient Civilization Parts*6-8@100; Ice Organ*10@100; Diamond*1@100; Precious Entrails*6-8@100; Pal Metal Helm Schematic 4*1@3
+}}
+
+==Partner Skill==
+As a Legendary Pal, Frostallion is a powerful asset in both combat and exploration. Its [[Partner Skills|Partner Skill]], '''Ice Steed''', enhances its Ice-element attacks, applies Ice-element damage to the player's attacks, and boosts the player's {{Icon|Attack}} while mounted.
+
+{{Partner Skill Scale
+|Ice Steed
+|1_effect_type = Ice attack boost
+|1_target= Self
+|1_0_value = +50%
+|1_1_value = +55%
+|1_2_value = +65%
+|1_3_value = +80%
+|1_4_value = +100%
+|2_effect_type = Convert attack to Ice element
+|2_target= Player
+|2_0_value = 1
+|2_1_value = 1
+|2_2_value = 1
+|2_3_value = 1
+|2_4_value = 1
+|3_effect_type = Attack
+|3_target= Player
+|3_0_value = +10%
+|3_1_value = +10%
+|3_2_value = +12%
+|3_3_value = +15%
+|3_4_value = +40%
+}}
+
+==Other Characteristics==
+Frostallion's only [[Work Suitability]] is {{I|Cooling}}, being one of the few Pals to naturally have that skill at Lv 4. Though {{I|Whalaska}} is easier to obtain, Frostallion's lack of other work suitabilities means that it won't get distracted with other tasks, making it the perfect dedicated cooling Pal.
+
+Frostallion also comes with the [[Legend]] and [[Ice Emperor]] [[Passive Skill]]s, giving it a bonus to its {{I|Attack}}, {{I|Defense}}, movement speed, and Ice-element damage.
+
+As an Ice-element Pal, Frostallion cools down any players near it, making it useful in hot areas like [[Mount Obsidian]] or the [[Desiccated Dunes]].
+
+==Trivia==
+* Frostallion was named by the community during a [[Name This Pal]] event.
+* Frostallion's English name is a combination of "frost" and "stallion."
+** Its Japanese name is simply "glacial."
+* Frostallion may be inspired by [https://en.wikipedia.org/wiki/Pegasus Pegasus], a winged horse from Greek mythology.
+* Frostallion is the only Legendary Pal to have a subspecies.
+* Frostallion is #060 in Paldeck on PocketPair [https://x.com/Palworld_EN/status/1756649280893284856 X].
+
+==Media==
+<gallery widths="150">
+File:Frostallion bis.png
+</gallery>
+{{#ev:youtube|H4RJ0TdC8Go|410|inline|Paldeck_SP No.060 FROSTALLION - Palworld Gameplay Pocketpair||autoplay=false}}
+
+==History==
+* [[1.0]]
+** Palpedia number changed from 110 to 200.
+** Cooling work suitability increased from 4 to 7.
+* [[0.4.11.0]]
+** Wild boss spawn is now level 60 (up from 55).
+* [[0.3.1.0]]
+** Wild boss spawn is now level 55 (up from 50).
+* [[0.2.4.0]]
+** Increased the Alpha Received Damage Rate from 0.1 to 0.12.
+* [[0.1.2.0]]
+** Introduced.
+
+{{Navbox Pals}}
+[[Category:Pals]]
+[[Category:Rideable Pals]]
+[[Category:Legendary Pals]]
+[[Category:Pals with exclusive Skills]]

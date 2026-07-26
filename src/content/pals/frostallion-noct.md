@@ -28,9 +28,14 @@ Weaken it to low HP, then hit it with a status effect like Freeze or Sleep. It's
 
 It has high Attack and HP with solid Defense. You'll want to invest in attack-focused passives if you're using it for combat.
 
-## Drops
+## Frostallion Noct Weakness
 
-Frostallion Noct drops 10 {{i|Pure Quartz}} and 1 {{i|Large Pal Soul}} when defeated or captured.
+Frostallion Noct is a Dark-type Pal, making it weak to Dragon-type attacks. Bring a strong Dragon Pal — its Dark attacks deal reduced damage against Dragon-types, giving you the edge in battle.
+
+## Frostallion Noct Drops
+
+- **Pure Quartz** — 100% drop rate (10 per kill or capture)
+- **Large Pal Soul** — 100% drop rate (1 per kill or capture)
 
 ## Partner Skill
 

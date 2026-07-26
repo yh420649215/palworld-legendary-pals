@@ -1,0 +1,134 @@
+{{Pal Navigation}}
+{{Pal
+|no = 199
+|alpha_title = Dark Knight of Legend
+|ele1 = Dark
+|ele2 =
+|pal_size = L
+|partner_skill_name = Dark Knight of the Abyss
+|partner_skill_desc = Can be [[ridden]]. Can double jump while mounted.
+|partner_skill_icon = Mount
+|pal_gear = Necromus Saddle
+|work_suitability = Lumbering@6; Mining@6
+<!-- Basics -->
+|hunger = 9
+|nocturnal = True
+|sell_price = 893
+<!-- Skills -->
+|passive_skills = Legend; Lord of the Underworld
+|active_skills = Shadow Burst@1; Spirit Fire@7; Spirit Flame@15; Nightmare Ball@22; Rock Lance@30; Twin Spears@40; Dark Laser@50; Apocalypse@55; Stone Beat@60
+<!-- Stats -->
+|hp = 130
+|alpha_hp = 156
+|attack = 145
+|defense = 120
+|work_speed = 100
+|trust_hp = 2.5
+|alpha_trust_hp = 1.2
+|trust_attack = 1.0
+|trust_defense = 1.7
+|trust_work_speed = 0.0
+|stamina = 350
+|slow_walk_speed = 100
+|walk_speed = 350
+|run_speed = 1300
+|ride_sprint_speed = 1900
+|alpha_ride_sprint_speed = 2000
+|transport_speed = 625
+|swim_speed = 390
+|swim_dash_speed = 570
+|exp_ratio = 1.0
+|alpha_exp_ratio = 10.0
+|max_hp_rate = 1.0
+|alpha_max_hp_rate = 1.8552631
+|receive_damage_rate = 1.0
+|alpha_receive_damage_rate = 0.18
+|inflict_damage_rate = 1.0
+|capture_rate = 1.0
+|alpha_capture_rate = 0.7
+}}
+{{Palpedia|Once one with [[Paladius]]. Its darkened form is the embodiment of negative emotions. However, a glimmer of compassion can still be seen deep within its eyes.}}
+'''Necromus''' (Japanese: '''べイントール''' ''Banetaur'') is a {{i|Dark}}-[[Elements|element]] [[Pals|Pal]]. Necromus is a large, centaur-like Pal with a black body and a large dark purple tail. Its humanoid upper body and four legs are covered in black armor with red highlights on the torso and helment and dark purple highlights on the leg armor. It also has a large, wing-shaped red plume atop its helmet. In place of hands, Necromus has two large lances made of red crystal and rimmed in dark purple metal at their bases.
+
+==Obtaining==
+<tabber>
+|-|Habitat=
+Necromus is only found in the wild as an {{Icon|Alpha Pal}}.
+
+Necromus is aggressive and will attack the player on sight. Additionally, as it is a Dark-element Pal, it does not sleep at night.
+
+|-|Alpha (Overworld)=
+{{Entity Location Map
+|name = Necromus
+|location = Desiccated Desert
+|variant = Alpha
+|level = 60
+|coords = (447, 679)
+}}
+
+|-|Breeding=
+[[Breeding]] allows Pals to be paired together to produce offspring, with outcomes determined by various breeding statistics and special parent combinations. 
+{{Breeding
+|breeding_rank = 70
+|male_probability = 50
+|combi_duplicate_priority = 6380000
+|egg = Huge Dark Egg
+|uniqueCombos = Necromus + Necromus = Necromus
+}}
+</tabber>
+
+==Drops==
+{{Item Drop
+|target_name = Necromus
+|normal_drops = Pal Metal Ingot*10@100; Large Pal Soul*1@100
+|alpha_drops = Ancient Civilization Parts*6-8@100; Pal Metal Ingot*10@100; Large Pal Soul*1@100; Precious Entrails*6-8@100; Heat Resistant Pal Metal Armor Schematic 4*1@3
+}}
+
+==Partner Skill==
+As a Legendary Pal, Necromus is a powerful asset in both combat and exploration. Its [[Partner Skills|Partner Skill]], '''Dark Knight of the Abyss''', lets it perform a double jump while mounted, letting it clear most types of terrain with ease.
+
+{{Partner Skill Scale
+|Dark Knight of the Abyss
+|1_effect_type = Movement speed
+|1_target= 
+|1_0_value = +0%
+|1_1_value = +10%
+|1_2_value = +12%
+|1_3_value = +15%
+|1_4_value = +20%
+}}
+
+==Other Characteristcs==
+Necromus has Lv 2 {{Icon|Lumbering}} and {{Icon|Mining}}, though by the time most players obtain one, much better options for both these tasks are available.
+
+Necromus also comes with the [[Legend]] and [[Lord of the Underworld]] [[Passive Skills]], boosting its {{Icon|Attack}}, {{Icon|Defense}}, movement speed and Dark-element damage.
+
+==Trivia==
+* Necromus' English name derives from "necro" (from the Ancient Greek νεκρός (''nekrós'')), meaning "dead" or "corpse."
+** Its Japanese name is a combination of '''ベイン''' ''bein'' (meaning "bane") and "centaur".
+
+==Media==
+<gallery widths="150">
+...
+</gallery>
+
+==History==
+* [[1.0]]
+** Palpedia number changed from 109 to 199.
+** Work suitability changes:
+*** Lumbering increased from 2 to 6.
+*** Mining increased from 2 to 6.
+* [[0.4.11.0]]
+** Wild boss spawn is now level 60 (up from 55).
+* [[0.3.1.0]]
+** Wild boss spawn is now level 55 (up from 50).
+* [[0.2.4.0]]
+** Increased the Alpha Received Damage Rate from 0.1 to 0.12.
+* [[0.1.2.0]]
+** Introduced.
+
+{{Navbox Pals}}
+[[Category:Pals]]
+[[Category:Rideable Pals]]
+[[Category:Legendary Pals]]
+[[Category:Pals with exclusive Skills]]

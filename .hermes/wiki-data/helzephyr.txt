@@ -1,0 +1,115 @@
+{{Pal Navigation}}
+{{Pal
+|no = 080
+|alpha_title = Wings of The Underworld
+|ele1 = Dark
+|ele2 =
+|pal_size = L
+|partner_skill_name = Wings of Death
+|partner_skill_desc = Can be ridden as a flying mount. Changes the player's attack type to Dark while mounted.
+|partner_skill_icon = Flying Mount
+|pal_gear = Helzephyr Saddle
+|work_suitability = Transporting@4
+<!-- Basics -->
+|hunger = 8
+|nocturnal = True
+|sell_price = 784
+<!-- Skills -->
+|passive_skills =
+|active_skills = Spirit Fire@1; Dark Ball@7; Shadow Burst@15; Flare Storm@22; Spirit Flame@30; Nightmare Ball@40; Dark Laser@50
+<!-- Stats -->
+|hp = 100
+|alpha_hp = 120
+|attack = 125
+|defense = 100
+|work_speed = 100
+|trust_hp = 4.0
+|alpha_trust_hp = 3.0
+|trust_attack = 1.5
+|trust_defense = 2.5
+|trust_work_speed = 0.0
+|stamina = 170
+|slow_walk_speed = 100
+|walk_speed = 100
+|run_speed = 700
+|ride_sprint_speed = 1100
+|alpha_ride_sprint_speed = 1200
+|transport_speed = 450
+|swim_speed = 700
+|swim_dash_speed = 700
+|exp_ratio = 1.0
+|alpha_exp_ratio = 10.0
+|max_hp_rate = 1.0
+|receive_damage_rate = 1.0
+|alpha_receive_damage_rate = 0.24
+|inflict_damage_rate = 1.0
+|capture_rate = 1.0
+|alpha_capture_rate = 0.7
+}}
+{{Palpedia|It calls forth lightning from the depths of hell. One who dies from Helzephyr's inferno is sure to be sent to the underworld.}}
+'''Helzephyr''' (Japanese: '''ヘルガルダ''' ''Hellgaruda'') is a {{i|Dark}}-[[Elements|element]] [[Pals|Pal]]. Helzephyr is a large, avian Pal with a predominantly black body, jagged, crescent-shaped wings, and blue thunderbolt patterns on its wings and tail. Helzephyr also has a blue face and a wispy purple flame emanating from its head. The markings and flame also glow faintly in the dark.
+
+Helzephyr also has a {{i|Dark}} / {{i|Electric}}-element subspecies, {{i|Helzephyr Lux}}.
+
+==Obtaining==
+<tabber>
+|-|Habitat=
+Helzephyr can be found in the [[Crescent Moon Shore]], the [[Verdant Brook]], and the [[Scars of War]] at night.
+
+Helzephyr is aggressive and will attack the player on sight. Additionally, as it is a Dark-element Pal, it does not sleep at night.
+
+{{Habitat|Helzephyr}}
+
+|-|Alpha (Overworld)=
+There is no {{i|Alpha}} Helzephyr as an overworld boss.
+
+|-|Breeding=
+[[Breeding]] allows Pals to be paired together to produce offspring, with outcomes determined by various breeding statistics and special parent combinations. 
+{{Breeding
+|breeding_rank = 190
+|male_probability = 50
+|combi_duplicate_priority = 6440000
+|egg = Large Dark Egg
+|uniqueCombos = 
+}}
+
+</tabber>
+
+==Drops==
+{{Item Drop
+|target_name = Helzephyr
+|normal_drops = Venom Gland*1-3@100; Medium Pal Soul*1@3
+|alpha_drops = Ancient Civilization Parts*4-6@100; Venom Gland*1-3@100; Medium Pal Soul*1@3; Precious Plume*4-6@100; Ring of Dark Resistance +1*1@3
+}}
+
+==Partner Skill==
+Helzephyr is a good mid-to-lategame combat and exploration mount. Its [[Partner Skills|Partner Skill]], '''Wings of Death''', boosts the player's {{Icon|Attack}} and applies Dark-element damage to the player's attacks while mounted.{{Partner Skill Scale|Wings of Death|1_effect_type=Convert Attack to Dark Element|1_target=Player|1_0_value=1|1_1_value=1|1_2_value=1|1_3_value=1|1_4_value=1|2_effect_type=Attack|2_target=Player|2_0_value=+5%|2_1_value=+7%|2_2_value=+10%|2_3_value=+14%|2_4_value=+20%}}
+
+==Other Characteristics==
+Helzephyr's only Work Suitability is {{Icon|Transporting}} at Lv 3, making it very useful until the player manages to obtain Pals like {{Icon|Wumpo}} or {{Icon|Knocklem}}. It is also naturally nocturnal, allowing it to work constantly without needing to sleep.
+
+==Trivia==
+* Helzephyr's English name is likely a combination of "Hel" (the Norse goddess of death) and "zephyr" (a Greek term that means "west wind").
+** Its Japanese name is a combination of '''ヘル''' ''heru'' (meaning "hell") and '''ガルーダ''' ''Garūda'' (a large mythical bird from Hindu and Buddhist mythology).
+*Helzephyr is #063 in Paldeck on PocketPair [https://x.com/Palworld_EN/status/1761360325843296659 X].
+
+==Media==
+<gallery widths="150">
+...
+</gallery>
+{{#ev:youtube|E-ElbMWYsaY|410|inline|Paldeck No.063 HELZEPHYR - Palworld Gameplay Pocketpair||autoplay=false}}
+
+==History==
+* [[1.0]]
+** Palpedia number changed from 97 to 80.
+** Transporting work suitability increased from 3 to 4.
+* [[0.2.4.0]]
+** Increased the Alpha Received Damage Rate from 0.2 to 0.24.
+* [[0.2.0.6]]
+** The increased attack power multiplier of partner skills that increase the player's attack power while riding has been uniformly reduced from 2.0 to 1.2.
+* [[0.1.2.0]]
+** Introduced.
+
+{{Navbox Pals}}
+[[Category:Pals]]
+[[Category:Rideable Pals]]

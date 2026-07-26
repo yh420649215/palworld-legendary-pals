@@ -28,9 +28,17 @@ Use Legendary Spheres or better. Ultra Spheres work but expect a low catch rate.
 
 These are base stats for the wild Alpha. Frostallion's Attack and HP are both high, giving it strong bulk and damage output. Defense is solid too, so Fire Pals are your best bet for exploiting its Ice weakness.
 
-## Drops
+## Frostallion Weakness
 
-Frostallion drops **10 Ice Organs** and **1 Diamond** every time you catch or kill it. That's a guaranteed drop for both items, no RNG. Ice Organs are used for crafting Ice-type gear and ammo, so stock up.
+Frostallion is an Ice-type Pal, making it weak to Fire-type attacks. Bring a strong Fire Pal — its Ice attacks deal reduced damage against Fire-types, giving you the edge in battle.
+
+## Frostallion Drops
+
+- **Ice Organ** — 100% drop rate (10 per kill or capture)
+- **Diamond** — 100% drop rate (1 per kill or capture)
+- **Ancient Civilization Parts** — 100% from Alpha (6-8 per kill)
+- **Precious Entrails** — 100% from Alpha (6-8 per kill)
+- **Pal Metal Ingot** — 100% from Alpha (4-6 per kill)
 
 ## Partner Skill
 
