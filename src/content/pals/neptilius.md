@@ -1,5 +1,5 @@
 ---
-name: Neptilius Location Guide — Palworld 1.0 (Map & Coordinates)
+name: Neptilius
 type: Water
 level: 60
 no: "201"
