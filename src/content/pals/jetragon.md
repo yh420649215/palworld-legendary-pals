@@ -58,6 +58,9 @@ Jetragon is a Dragon-type Pal, making it weak to Ice-type attacks. Ice attacks d
 - **Soralite** — 100% drop rate (10 per kill or capture)
 - **Thermal Core** — 100% drop rate (1-2 per kill or capture)
 - **Diamond** — 30% drop rate (1 per kill or capture)
+- **Ancient Civilization Parts** — 100% from Alpha (7-9 per kill)
+- **Precious Dragon Stone** — 100% from Alpha (7-9 per kill)
+- **Rocket Launcher Schematic 4** — 3% from Alpha
 
 ## Partner Skill
 

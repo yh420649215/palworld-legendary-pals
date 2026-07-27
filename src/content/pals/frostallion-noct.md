@@ -51,6 +51,9 @@ Frostallion Noct is a Dark-type Pal, making it weak to Dragon-type attacks. Drag
 
 - **Pure Quartz** — 100% drop rate (10 per kill or capture)
 - **Large Pal Soul** — 100% drop rate (1 per kill or capture)
+- **Ancient Civilization Parts** — 100% from Alpha (6-8 per kill)
+- **Precious Entrails** — 100% from Alpha (6-8 per kill)
+- **Laser Rifle Schematic 4** — 3% from Alpha
 
 ## Partner Skill
 
@@ -58,10 +61,10 @@ Frostallion Noct's Partner Skill is **Black Steed**. While riding, your attacks 
 ## Tips & Strategy
 
 - Use it as a fast mount for overworld traversal. Its stamina is solid for a Dark Pal.
-- Pair it with Dark-type damage boost passives like "Lord of Darkness" or "Ferocious."
+- Pair it with Dark-type damage boost passives like "Lord of the Underworld" or "Ferocious."
 - The Pure Quartz and Large Pal Soul drops are useful for crafting, so farm this spawn if you need them.
 - Don't rely on it for tanking—swap it out if you're taking heavy hits.
-- Bring a Fire-type Pal to counter its Dark attacks if you're fighting it.
+- Bring a Dragon-type Pal to counter its Dark attacks if you're fighting it.
 
 ## Breeding
 

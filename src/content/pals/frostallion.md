@@ -16,7 +16,7 @@ It only spawns as an Alpha Pal. There are no wild non-Alpha Frostallions running
 
 ## How to Catch
 
-You're going to need serious firepower. Frostallion hits hard with Ice attacks and moves fast. Bring a team of high-level Fire Pals (like Faleris, Blazamut, or Suzaku) to exploit its Ice weakness. Heat-resistant armor is a must — the cold in this zone is brutal even without the fight.
+You're going to need serious firepower. Frostallion hits hard with Ice attacks and moves fast. Bring a team of high-level Fire Pals (like Faleris, Blazamut, or Suzaku) to exploit its Ice weakness. Cold-resistant armor is a must — the Astral Mountains are freezing even without the fight.
 
 Use Legendary Spheres or better. Ultra Spheres work but expect a low catch rate. Get its health into the red, then hit it with a Freeze or Stun status effect before throwing spheres. This is a tough fight solo, so bring backup Pals and plenty of ammo.
 
