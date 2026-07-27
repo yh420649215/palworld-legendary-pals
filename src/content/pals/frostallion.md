@@ -57,8 +57,7 @@ Frostallion is an Ice-type Pal, making it weak to Fire-type attacks. Fire attack
 - **Diamond** — 100% drop rate (1 per kill or capture)
 - **Ancient Civilization Parts** — 100% from Alpha (6-8 per kill)
 - **Precious Entrails** — 100% from Alpha (6-8 per kill)
-- **Pal Metal Ingot** — 100% from Alpha (4-6 per kill)
-
+- **Pal Metal Helm Schematic 4** — 3% from Alpha
 ## Partner Skill
 
 Frostallion's Partner Skill is **Ice Steed**. While riding Frostallion, your attacks deal Ice damage and you move faster in cold biomes.

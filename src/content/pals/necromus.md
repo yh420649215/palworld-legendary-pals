@@ -18,7 +18,7 @@ It spawns during both day and night, no special weather conditions needed. If yo
 
 You need a Legendary Sphere or better to have a real shot at catching Necromus. Ultra Spheres might work if you get its health really low, but don't count on it. Bring at least 50 Legendary Spheres and some Hyper Spheres as backup.
 
-Get Necromus down to 5% health or less. Use a Pal with strong Ice attacks, like Frostallion or Vanwyrm, since Dark types are weak to Ice. Avoid using any Fire or Dark Pals against it — they'll get shredded.
+Get Necromus down to 5% health or less. Use a Pal with strong Dragon attacks, like Jetragon or Quivern, since Dark types are weak to Dragon. Avoid using Normal or Dark Pals against it — their damage is cut in half.
 
 Status effects help a lot. Freeze or stun it with a Pal like Blizzard Spike or an Ice-type active skill, then throw spheres while it's locked in place. Necromus moves fast and hits hard, so don't try to catch it while it's charging at you.
 
@@ -59,13 +59,16 @@ Necromus is a Dark-type Pal, making it weak to Dragon-type attacks. Dragon attac
 
 - **Pal Metal Ingot** — 100% drop rate (10 per kill or capture)
 - **Large Pal Soul** — 100% drop rate (1 per kill or capture)
+- **Ancient Civilization Parts** — 100% from Alpha (6-8 per kill)
+- **Precious Entrails** — 100% from Alpha (6-8 per kill)
+- **Heat Resistant Pal Metal Armor Schematic 4** — 3% from Alpha
 
 ## Partner Skill
 
 Necromus's Partner Skill is **Dark Knight of the Abyss**. While riding, you can double jump and movement speed increases with condensation level.
 ## Tips & Strategy
 
-- Bring a team of Ice-type Pals. Frostallion is the best choice, but even a high-level Vanwyrm or Helzephyr with Ice moves works.
+- Bring a team of Dragon-type Pals. Jetragon is the best choice, but a high-level Quivern or Relaxaurus works too.
 - Use a shield. Necromus's charge attack can one-shot you if you're not wearing at least a Legendary Shield.
 - Build a base near the Desiccated Desert spawn point. Having a fast travel point right there makes farming much faster.
 - If you're struggling to catch it, try using a Ring of Mercy to guarantee you don't accidentally kill it.

@@ -14,7 +14,7 @@ Paladius is a Neutral-type Pal, Paldeck No. 198. You won't find this one wanderi
 
 ## How to Catch
 
-This is a tough fight. Paladius is level 60 and hits hard. Bring a team of high-level Pals, ideally level 55 or higher. Dark-types are strong against Neutral, so Pals like **Menasting** or **Shadowbeak** are good picks. Use a mount with good mobility to dodge its charge attacks. When its health gets low, swap to your best spheres. Legendary Spheres or better are recommended. Time your throws for when it's stunned or after a big attack animation.
+This is a tough fight. Paladius is level 60 and hits hard. Bring a team of high-level Pals, ideally level 55 or higher. Neutral type has no elemental weaknesses, so bring your strongest Pals with high raw Attack — Jetragon, Jormuntide Ignis, or Blazamut are excellent choices. Use a mount with good mobility to dodge its charge attacks. When its health gets low, swap to your best spheres. Legendary Spheres or better are recommended. Time your throws for when it's stunned or after a big attack animation.
 
 ## Stats
 
@@ -52,6 +52,9 @@ Paladius is a Neutral-type Pal. Neutral Pals have **no elemental weaknesses** �
 
 - **Pal Metal Ingot** — 100% drop rate (10 per kill or capture)
 - **Diamond** — 100% drop rate (1 per kill or capture)
+- **Ancient Civilization Parts** — 100% from Alpha (4-6 per kill)
+- **Precious Entrails** — 100% from Alpha (4-6 per kill)
+- **Cold Resistant Pal Metal Armor Schematic 4** — 3% from Alpha
 
 ## Partner Skill
 
@@ -61,7 +64,7 @@ Paladius's Partner Skill is **Holy Knight of the Firmament**. While riding, you 
 - Bring a **fire or electric** weapon to chip away at its health from range.
 - Watch out for its charging attack. It has a long wind-up but hits like a truck. Roll to the side.
 - Use Pals with **stun or freeze** abilities to lock it down for a few seconds.
-- If you're struggling, level up a few Dark-type Pals to 45+ first. The damage bonus stacks.
+- If you're struggling, level up your strongest Pals to 50+ first. Focus on raw Attack stats since there are no type advantages against Neutral.
 - Stock up on healing items and ammo before the fight. It's a resource check.
 
 ## Breeding

@@ -53,6 +53,11 @@ Neptilius is a Water-type Pal, making it weak to **Electric** and **Grass** atta
 - **Polymer** — 100% drop rate (5 per kill)
 - **Carbon Fiber** — 100% drop rate (5 per kill)
 - **Diamond** — 30% drop chance
+- **Large Pal Soul** — 1% drop rate
+- **Ancient Civilization Parts** — 100% from Alpha (6-8 per kill)
+- **Precious Dragon Stone** — 100% from Alpha (2-3 per kill)
+- **Water Support Whistle +2** — 3% from Alpha
+- **Charge Rifle Schematic 4** — 3% from Alpha
 
 ## Partner Skill
 
