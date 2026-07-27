@@ -81,3 +81,10 @@ Frostallion Noct breaks the usual legendary rule. You need a regular Frostallion
 - **Lord of the Underworld** — 20% increase to Dark attack damage. Stacks with Legend for 40% total Attack on Dark moves. Shared with Necromus.
 
 Both passives come guaranteed on wild-caught Alpha Frostallion Nocts. Through breeding, you can also inherit Lucky from the Helzephyr parent — a unique trait no other legendary can get naturally.
+
+## 1.0 Update Changes
+
+- **Lord of the Underworld** passive buffed
+- Now spawns as a wild Alpha Pal at No. 3 Wildlife Sanctuary (689, 648), level 65
+
+→ [View full 1.0 Update notes →](/1.0-update/)

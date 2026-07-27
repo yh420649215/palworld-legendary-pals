@@ -84,14 +84,7 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : new URL(ogImage, Astr
     )}
     <!-- Umami Analytics -->
     <script defer src="https://cloud.umami.is/script.js" data-website-id="60032402-8387-411b-a7f8-671c6b49b8d2"></script>
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_GA4_ID"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-YOUR_GA4_ID');
-    </script>
+
   </head>
   <body class="bg-[#171717] text-[#fafafa] antialiased min-h-screen font-sans">
     <header class="border-b border-[#2e2e2e] sticky top-0 bg-[#171717]/95 backdrop-blur-sm z-50">
@@ -106,6 +99,7 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : new URL(ogImage, Astr
           <a href="/best-legendary-pals/" class="hover:text-[#fafafa] transition-colors">Tier List</a>
           <a href="/breeding-cheat-sheet/" class="hover:text-[#fafafa] transition-colors">Cheat Sheet</a>
           <a href="/breeding-how-to/" class="hover:text-[#3ecf8e] transition-colors">Breeding Guide</a>
+          <a href="/1.0-update/" class="hover:text-[#3ecf8e] transition-colors">1.0 Update</a>
         </div>
         <!-- Hamburger: visible only below 600px -->
         <button id="mobile-menu-toggle" class="min-[601px]:hidden text-[#b4b4b4] hover:text-[#fafafa] transition-colors p-1 -mr-1" aria-label="Toggle menu" type="button">
@@ -121,11 +115,12 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : new URL(ogImage, Astr
           <a href="/best-legendary-pals/" class="py-2 hover:text-[#fafafa] transition-colors">Tier List</a>
           <a href="/breeding-cheat-sheet/" class="py-2 hover:text-[#fafafa] transition-colors">Cheat Sheet</a>
           <a href="/breeding-how-to/" class="py-2 hover:text-[#3ecf8e] transition-colors">Breeding Guide</a>
+          <a href="/1.0-update/" class="py-2 hover:text-[#3ecf8e] transition-colors">1.0 Update</a>
         </div>
       </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 py-12">
+    <main class="max-w-6xl mx-auto px-6 py-12 flow-root">
       <slot />
     </main>
 

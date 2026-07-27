@@ -28,6 +28,10 @@ Use Legendary Spheres or better. Ultra Spheres work but expect a low catch rate.
 
 These are base stats for the wild Alpha. Frostallion's Attack and HP are both high, giving it strong bulk and damage output. Defense is solid too, so Fire Pals are your best bet for exploiting its Ice weakness.
 
+## Work Suitability
+
+- **Cooling Lv 7** — Top-tier cooling Pal for your refrigerator and cooler box.
+
 ## Frostallion Weakness
 
 Frostallion is an Ice-type Pal, making it weak to Fire-type attacks. Fire attacks deal **2× damage** to Ice Pals, and Fire Pals naturally resist Ice attacks — meaning they take only **0.5× damage** in return. This double advantage makes Fire-types the undisputed best choice for this fight.
@@ -84,3 +88,10 @@ Frostallion is species-locked for breeding. Pair two Frostallions together and y
 - **Ice Emperor** — 20% increase to Ice attack damage. Stacks with Legend for a total 40% Attack on Ice moves. Exclusive to Frostallion.
 
 Both passives are guaranteed on every wild-caught Frostallion. If you're breeding for combat, keep Ice Emperor — it's the whole reason Frostallion hits as hard as it does with Blizzard Spike and Crystal Wing.
+
+## 1.0 Update Changes
+
+- **Ice Emperor** passive buffed
+- Cooling work suitability increased from 4 → 7
+
+→ [View full 1.0 Update notes →](/1.0-update/)

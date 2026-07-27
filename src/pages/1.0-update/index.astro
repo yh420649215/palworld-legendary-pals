@@ -1,0 +1,782 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const comparisonRows = [
+  {
+    pal: 'Jetragon',
+    slug: 'jetragon',
+    oldLocation: 'Mount Obsidian (-789, -321)',
+    newLocation: 'Sunreach (-553, -1332)',
+    oldLevel: 60,
+    newLevel: 70,
+    keyBuff: 'Aerial Missile buffed, Legend passive enhanced',
+    workChange: 'Gathering 3 → 8',
+    isBiggest: false
+  },
+  {
+    pal: 'Frostallion',
+    slug: 'frostallion',
+    oldLocation: 'Astral Mountains (-357, 509)',
+    newLocation: 'Astral Mountains (-357, 509)',
+    oldLevel: 60,
+    newLevel: 60,
+    keyBuff: 'Ice Emperor passive buffed',
+    workChange: 'Cooling 4 → 7',
+    isBiggest: false
+  },
+  {
+    pal: 'Frostallion Noct',
+    slug: 'frostallion-noct',
+    oldLocation: 'Breed Only',
+    newLocation: 'No. 3 Wildlife Sanctuary (689, 648)',
+    oldLevel: 'Breed Only',
+    newLevel: 65,
+    keyBuff: 'Lord of the Underworld passive buffed, now wild-spawns',
+    workChange: 'Gathering 4 → 7',
+    isBiggest: true
+  },
+  {
+    pal: 'Necromus',
+    slug: 'necromus',
+    oldLocation: 'Desiccated Desert (447, 679)',
+    newLocation: 'Desiccated Desert (447, 679)',
+    oldLevel: 60,
+    newLevel: 60,
+    keyBuff: 'Lord of the Underworld passive buffed',
+    workChange: 'Lumbering 2 → 6, Mining 2 → 6',
+    isBiggest: false
+  },
+  {
+    pal: 'Paladius',
+    slug: 'paladius',
+    oldLocation: 'Desiccated Desert (447, 679)',
+    newLocation: 'Desiccated Desert (447, 679)',
+    oldLevel: 60,
+    newLevel: 60,
+    keyBuff: 'Celestial Emperor passive buffed',
+    workChange: 'Lumbering 2 → 6, Mining 2 → 6',
+    isBiggest: false
+  },
+  {
+    pal: 'Neptilius',
+    slug: 'neptilius',
+    oldLocation: 'Isle of the Glacial Core (139, 651)',
+    newLocation: 'Isle of the Glacial Core (139, 651)',
+    oldLevel: 60,
+    newLevel: 60,
+    keyBuff: 'Lunker passive, Palpedia renumbered',
+    workChange: 'Watering 4 → 7',
+    isBiggest: false
+  }
+];
+
+const faqItems = [
+  {
+    question: 'Can you still breed Frostallion Noct?',
+    answer: 'Yes! Frostallion + Helzephyr still produces Frostallion Noct eggs. But now you can also catch a wild Alpha Frostallion Noct at No. 3 Wildlife Sanctuary (level 65, coords 689, 648). Catching is faster if you just need one; breeding is better if you want specific passives like Swift or Runner.'
+  },
+  {
+    question: 'Where did Jetragon move to?',
+    answer: 'Jetragon now spawns at Sunreach (coordinates -553, -1332). It was previously at Mount Obsidian. The new spawn is in a late-game area — come prepared with Ice-type Pals and Legendary Spheres. Jetragon is now level 70 (up from 60), making it the highest-level wild Pal in the game.'
+  },
+  {
+    question: 'What level do I need to fight legendaries in 1.0?',
+    answer: 'Most legendary Pals are level 60, except Jetragon (level 70) and Frostallion Noct (level 65). You should be at least level 55 with optimized gear, elemental counters, and Legendary Spheres. Bring Ice-types for Jetragon, Dragon-types for Frostallion/Frostallion Noct, and Neutral-types for Paladius.'
+  },
+  {
+    question: 'Is the Legend passive still worth it?',
+    answer: 'Absolutely. Legend now gives +25% Attack, +20% Defense, and +15% Movement Speed (buffed from +20%/+20%/+15%). It is still a mandatory passive on every legendary Pal — for combat builds, speed builds, and even base worker builds. The buff actually made it stronger, not weaker.'
+  },
+  {
+    question: 'Which legendary Pal got the biggest buff in 1.0?',
+    answer: 'Frostallion Noct — by a wide margin. It went from breeding-only (requiring Frostallion + Helzephyr) to spawning as a wild Alpha at level 65 in No. 3 Wildlife Sanctuary. Its Gathering work suitability was also upgraded from 4 to 7, and the Lord of the Underworld passive got buffed. No other legendary Pal saw this many changes in a single update.'
+  }
+];
+---
+
+<BaseLayout
+  title="Palworld 1.0: All 6 Legendary Pal Changes & Buffs (2026)"
+  description="Palworld 1.0 changed every legendary Pal — new locations, buffed passives, higher levels. Jetragon moved, Frostallion Noct now spawns wild. See all 6 changes."
+  ogImage="/images/jetragon.webp"
+  faqItems={faqItems}
+>
+  <!-- Article schema --><script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    'headline': 'Palworld 1.0: Every Legendary Pal Change & Buff Explained',
+    'description': 'Palworld 1.0 changed every legendary Pal — new locations, buffed passives, higher levels. Jetragon moved, Frostallion Noct now spawns wild. See all 6 changes.',
+    'image': new URL('/images/jetragon.webp', Astro.site || Astro.url).href,
+    'url': Astro.url.href,
+    'datePublished': '2026-07-27',
+    'dateModified': '2026-07-27',
+    'author': {
+      '@type': 'Organization',
+      'name': 'Palworld Legendary Pals'
+    },
+    'publisher': {
+      '@type': 'Organization',
+      'name': 'Palworld Legendary Pals',
+      'url': Astro.site ? Astro.site.href : 'https://palworldlegends.com'
+    },
+    'mainEntityOfPage': {
+      '@type': 'WebPage',
+      '@id': Astro.url.href
+    }
+  })}></script>
+
+  <!-- BreadcrumbList --><script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      {
+        '@type': 'ListItem',
+        'position': 1,
+        'name': 'Home',
+        'item': Astro.site ? Astro.site.href + '/' : 'https://palworldlegends.com/'
+      },
+      {
+        '@type': 'ListItem',
+        'position': 2,
+        'name': 'Palworld 1.0 Legendary Changes',
+        'item': Astro.url.href
+      }
+    ]
+  })}></script>
+
+  <!-- ===== HERO ===== -->
+  <section class="mb-8">
+    <div class="flex items-baseline justify-between flex-wrap gap-2 mb-2">
+      <h1 class="text-[28px] font-normal tracking-tight leading-tight">
+        Palworld 1.0: <span class="text-[#3ecf8e]">Every Legendary Pal Change</span> & Buff Explained
+      </h1>
+      <div class="flex items-center gap-2 text-xs font-medium">
+        <span class="border border-[#3ecf8e]/20 bg-[#3ecf8e]/10 text-[#3ecf8e] px-2.5 py-1 rounded-full">Updated July 2026</span>
+        <span class="border border-[#2e2e2e] bg-[#1a1a1a] text-[#898989] px-2.5 py-1 rounded-full">6 Pals • ~10 min read</span>
+      </div>
+    </div>
+    <p class="text-[15px] text-[#b4b4b4] leading-relaxed max-w-3xl">
+      Jetragon moved. Frostallion Noct spawns wild now. The Legend passive got buffed, work suitability values jumped across the board, and the Palpedia was renumbered. Palworld 1.0 touched every single legendary Pal — here's exactly what changed, Pal by Pal, with before-and-after data from the wiki.
+    </p>
+  </section>
+
+  <!-- ===== NAV: Sticky ToC (desktop) ===== -->
+  <nav class="hidden lg:block lg:float-left lg:-ml-52 lg:w-48 lg:mr-8 lg:mb-8 sticky top-20 z-40" aria-label="Table of Contents">
+    <p class="text-xs text-[#898989] uppercase tracking-wider mb-3 font-medium">On This Page</p>
+    <ul class="space-y-1.5 text-sm text-[#b4b4b4]">
+      <li><a href="#quick-summary" class="hover:text-[#fafafa] transition-colors">Quick Summary</a></li>
+      <li><a href="#system-changes" class="hover:text-[#fafafa] transition-colors">System Changes</a></li>
+      <li><a href="#jetragon" class="hover:text-[#fafafa] transition-colors">Jetragon</a></li>
+      <li><a href="#frostallion-noct" class="hover:text-[#fafafa] transition-colors">Frostallion Noct</a></li>
+      <li><a href="#frostallion" class="hover:text-[#fafafa] transition-colors">Frostallion</a></li>
+      <li><a href="#necromus" class="hover:text-[#fafafa] transition-colors">Necromus</a></li>
+      <li><a href="#paladius" class="hover:text-[#fafafa] transition-colors">Paladius</a></li>
+      <li><a href="#neptilius" class="hover:text-[#fafafa] transition-colors">Neptilius</a></li>
+      <li><a href="#meta" class="hover:text-[#fafafa] transition-colors">Meta Implications</a></li>
+      <li><a href="#faq" class="hover:text-[#fafafa] transition-colors">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== SECTION 1: QUICK SUMMARY + COMPARISON TABLE ===== -->
+  <section id="quick-summary" class="mb-12 scroll-mt-24">
+    <h2 class="text-[20px] font-normal text-[#fafafa] mb-4 pb-2 border-b border-[#2e2e2e]">
+      Quick Summary: What Changed for Legendary Pals in 1.0
+    </h2>
+    <p class="text-[15px] text-[#b4b4b4] leading-relaxed mb-5 max-w-3xl">
+      The table below shows every change at a glance. Old values → new values, color-coded for quick scanning. Green means buffed, amber means moved or renumbered, and the gold badge marks the single biggest change in 1.0.
+    </p>
+
+    <div class="overflow-x-auto rounded-lg border border-[#2e2e2e] bg-[#1a1a1a]">
+      <table class="w-full text-sm text-left border-collapse">
+        <thead>
+          <tr class="bg-[#141414] border-b border-[#2e2e2e]">
+            <th class="px-4 py-3 text-xs font-medium text-[#898989] uppercase tracking-wider sticky left-0 bg-[#141414] z-10">Pal</th>
+            <th class="px-4 py-3 text-xs font-medium text-[#898989] uppercase tracking-wider">Location</th>
+            <th class="px-4 py-3 text-xs font-medium text-[#898989] uppercase tracking-wider">Level</th>
+            <th class="px-4 py-3 text-xs font-medium text-[#898989] uppercase tracking-wider">Key Buff</th>
+            <th class="px-4 py-3 text-xs font-medium text-[#898989] uppercase tracking-wider">Work Suit.</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-[#2e2e2e]">
+          {comparisonRows.map((row, i) => (
+            <tr class={`${i % 2 === 0 ? 'bg-[#171717]' : 'bg-[#1a1a1a]'} hover:bg-amber-900/10 transition-colors ${row.isBiggest ? 'border-l-2 border-l-[#f59e0b]' : ''}`}>
+              <td class="px-4 py-3 sticky left-0 z-10" style={`background-color: ${i % 2 === 0 ? '#171717' : '#1a1a1a'}`}>
+                <div class="flex items-center gap-3">
+                  <img
+                    src={`/images/${row.slug}.webp`}
+                    alt={`${row.pal} — Legendary Pal in Palworld 1.0`}
+                    width="32" height="32"
+                    class="w-8 h-8 rounded object-contain bg-[#141414] flex-shrink-0"
+                    loading={i < 2 ? 'eager' : 'lazy'}
+                    onerror="this.style.display='none'"
+                  />
+                  <div class="whitespace-nowrap">
+                    <a href={`/pals/${row.slug}/`} class="text-[#fafafa] font-medium hover:text-[#3ecf8e] transition-colors">{row.pal}</a>
+                    {row.isBiggest && (
+                      <span class="ml-1.5 text-[10px] bg-amber-500/20 text-amber-300 border border-amber-500/30 rounded-full px-2 py-0.5 font-semibold align-middle whitespace-nowrap hidden sm:inline">BIGGEST CHANGE</span>
+                    )}
+                  </div>
+                </div>
+              </td>
+              <td class="px-4 py-3 text-xs">
+                {row.oldLocation !== row.newLocation ? (
+                  <span><span class="text-[#898989] line-through">{row.oldLocation}</span> <span class="text-[#898989]">→</span> <span class="text-green-400">{row.newLocation}</span></span>
+                ) : (
+                  <span class="text-[#898989]">{row.newLocation}</span>
+                )}
+              </td>
+              <td class="px-4 py-3 text-xs">
+                {row.oldLevel === 'Breed Only' ? (
+                  <span>
+                    <span class="text-[#898989]">Breed Only</span>
+                    <span class="text-[#898989]"> → </span>
+                    <span class="text-green-400 font-semibold">{row.newLevel}</span>
+                  </span>
+                ) : row.oldLevel !== row.newLevel ? (
+                  <span>
+                    <span class="text-[#898989] line-through">{row.oldLevel}</span>
+                    <span class="text-[#898989]"> → </span>
+                    <span class="text-green-400 font-semibold">{row.newLevel}</span>
+                  </span>
+                ) : (
+                  <span class="text-[#898989]">{row.newLevel}</span>
+                )}
+              </td>
+              <td class="px-4 py-3 text-[#b4b4b4] text-xs">{row.keyBuff}</td>
+              <td class="px-4 py-3 text-xs">
+                <span class="text-green-400">{row.workChange}</span>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 2: SYSTEM-LEVEL CHANGES ===== -->
+  <section id="system-changes" class="mb-12 scroll-mt-24">
+    <h2 class="text-[20px] font-normal text-[#fafafa] mb-4 pb-2 border-b border-[#2e2e2e]">
+      System-Level Changes Affecting ALL Legendary Pals
+    </h2>
+    <p class="text-[15px] text-[#b4b4b4] leading-relaxed mb-5 max-w-3xl">
+      Before diving into each Pal, understand these six system-wide changes. They affect every legendary you own — whether caught before or after the 1.0 update.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <!-- Card 1: Legend Passive -->
+      <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl p-4">
+        <div class="sr-only">Legend Passive</div>
+        <h3 class="text-[15px] font-normal text-[#fafafa] mb-1">Legend Passive Buffed</h3>
+        <p class="text-xs text-[#b4b4b4] leading-relaxed">
+          <span class="text-[#898989] line-through">+20% ATK/DEF, +15% SPD</span><br/>
+          <span class="text-green-400 font-semibold">→ +25% ATK, +20% DEF, +15% SPD</span><br/>
+          The Attack boost jumped from 20% to 25%. Every legendary Pal hits harder now.
+        </p>
+      </div>
+
+      <!-- Card 2: Emperor Passives -->
+      <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl p-4">
+        <div class="sr-only">Emperor Passives</div>
+        <h3 class="text-[15px] font-normal text-[#fafafa] mb-1">Elemental Emperor Passives Buffed</h3>
+        <p class="text-xs text-[#b4b4b4] leading-relaxed">
+          Ice Emperor, Divine Dragon, Lord of the Underworld, and Celestial Emperor all received damage increases. Elemental damage went from <span class="text-[#898989] line-through">+20%</span> to <span class="text-green-400 font-semibold">+25%</span>. This compounds with the Legend passive buff — legendary Pals with both passives got a double damage upgrade.
+        </p>
+      </div>
+
+      <!-- Card 3: Level Cap -->
+      <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl p-4">
+        <div class="sr-only">Level Cap</div>
+        <h3 class="text-[15px] font-normal text-[#fafafa] mb-1">Level Cap: 65 → 80</h3>
+        <p class="text-xs text-[#b4b4b4] leading-relaxed">
+          The global level cap increased from 65 to 80. Legendary Pals now scale higher than ever before. Jetragon's boss level went from 60 to 70 — the highest wild Pal level in the game. Endgame encounters demand more preparation.
+        </p>
+      </div>
+
+      <!-- Card 4: Condensation -->
+      <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl p-4">
+        <div class="sr-only">Condensation</div>
+        <h3 class="text-[15px] font-normal text-[#fafafa] mb-1">Condensation: 116 → 48 Pals</h3>
+        <p class="text-xs text-[#b4b4b4] leading-relaxed">
+          Max-ranking a legendary Pal now requires <span class="text-[#898989] line-through">116</span> → <span class="text-green-400 font-semibold">48</span> copies — a <strong>59% reduction</strong>. Combined with the capture bonus reduction (12 → 5 catches for max bonus), maxing a legendary is faster than ever.
+        </p>
+      </div>
+
+      <!-- Card 5: Capture Bonus -->
+      <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl p-4">
+        <div class="sr-only">Capture Bonus</div>
+        <h3 class="text-[15px] font-normal text-[#fafafa] mb-1">Capture Bonus: 12 → 5</h3>
+        <p class="text-xs text-[#b4b4b4] leading-relaxed">
+          You only need <span class="text-[#898989] line-through">12</span> → <span class="text-green-400 font-semibold">5</span> catches to max out a Pal's capture bonus. For legendary Pals that only spawn as single Alphas, this is a massive quality-of-life change — you hit max bonus in less than half the time.
+        </p>
+      </div>
+
+      <!-- Card 6: Work Suitability -->
+      <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl p-4">
+        <div class="sr-only">Work Suitability</div>
+        <h3 class="text-[15px] font-normal text-[#fafafa] mb-1">Work Suitability Expanded to 10 Levels</h3>
+        <p class="text-xs text-[#b4b4b4] leading-relaxed">
+          Work suitability now scales to level 10 (up from 5). This is why every legendary Pal's work skills jumped: Gathering 3→8, Cooling 4→7, Lumbering 2→6 — these aren't raw buffs, they're re-scaled values for the new 10-level system. But the practical effect is the same: legendary base Pals are significantly more productive.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3–8: PER-PAL DEEP DIVES ===== -->
+
+  <!-- Jetragon -->
+  <section id="jetragon" class="mb-12 scroll-mt-24">
+    <h2 class="text-[20px] font-normal text-[#fafafa] mb-4 pb-2 border-b border-[#2e2e2e]">
+      Jetragon — Level 70, Moved to Sunreach, Aerial Missile Buff
+    </h2>
+    <div class="flex flex-col lg:flex-row gap-6 mb-6">
+      <div class="lg:w-48 flex-shrink-0">
+        <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl p-4 text-center">
+          <img
+            src="/images/jetragon.webp"
+            alt="Jetragon — Legendary Dragon Pal in Palworld 1.0"
+            width="128" height="128"
+            class="w-32 h-32 object-contain mx-auto mb-3 rounded bg-[#141414]"
+            loading="eager"
+          />
+          <p class="text-xs text-[#3ecf8e] font-semibold mb-1">Dragon</p>
+          <p class="text-xs text-[#898989]">Lv. 60 → <span class="text-green-400 font-semibold">70</span></p>
+          <p class="text-xs text-[#898989]">Palpedia: 111 → <span class="text-amber-400">202</span></p>
+          <span class="inline-block mt-2 text-[10px] bg-amber-500/20 text-amber-300 border border-amber-500/30 rounded-full px-2 py-0.5 font-semibold">LOCATION CHANGED</span>
+        </div>
+      </div>
+      <div class="flex-1 space-y-4 text-[15px] text-[#b4b4b4] leading-relaxed max-w-3xl">
+        <p>
+          Jetragon got the single biggest individual stat shake-up of any legendary Pal in 1.0. Its wild Alpha spawn moved from Mount Obsidian to Sunreach, its level jumped from 60 to 70, and its Gathering work suitability more than doubled. Jetragon remains the fastest flying mount in the game at 3,300 sprint speed, but the new location and higher level demand a fresh approach.
+        </p>
+
+        <h3 class="text-[16px] font-normal text-[#fafafa] mt-5">Location Change</h3>
+        <p>
+          Jetragon's Alpha spawn migrated from Mount Obsidian to <strong class="text-[#fafafa]">Sunreach</strong>. The new coordinates are <code class="text-[#3ecf8e] bg-[#0a0a0a] px-1.5 py-0.5 rounded text-xs">(-553, -1332)</code>. Sunreach is a late-game volcanic region — bring heat-resistant armor, Ice-type Pals, and Legendary Spheres. The old Mount Obsidian spawn is gone; if you're flying there from muscle memory, you're wasting a trip.
+        </p>
+
+        <h3 class="text-[16px] font-normal text-[#fafafa] mt-5">Stat & Skill Changes</h3>
+        <ul class="list-disc list-inside space-y-1 text-sm">
+          <li><strong class="text-[#fafafa]">Level:</strong> <span class="text-[#898989] line-through">60</span> → <span class="text-green-400 font-semibold">70</span> — now the highest-level wild Pal in the game</li>
+          <li><strong class="text-[#fafafa]">Aerial Missile:</strong> Partner skill attack values scale from 13→26 across condensation levels. The rapid-fire missiles received a damage buff.</li>
+          <li><strong class="text-[#fafafa]">Stats:</strong> Base HP 110, ATK 140, DEF 110 — unchanged in 1.0, but the level increase means the Alpha encounter has more total HP and damage</li>
+          <li><strong class="text-[#fafafa]">Passives:</strong> Legend + Divine Dragon. Both got buffed (Legend: +20%→+25% ATK; Divine Dragon: elemental damage up)</li>
+        </ul>
+
+        <h3 class="text-[16px] font-normal text-[#fafafa] mt-5">Work Suitability</h3>
+        <p>
+          <strong>Gathering:</strong> <span class="text-[#898989] line-through">3</span> → <span class="text-green-400 font-semibold">8</span>. This is a massive jump — Jetragon went from a mediocre gatherer to one of the best in the game. At Gathering 8, it's now competitive with dedicated gathering Pals, though most players will still use Jetragon as a mount rather than a base worker.
+        </p>
+
+        <div class="bg-[#0d0d0d] border-l-2 border-[#3ecf8e] rounded-r-lg p-4 mt-3">
+          <p class="text-sm text-[#fafafa] font-semibold mb-1">Pro tip</p>
+          <p class="text-xs text-[#898989] leading-relaxed">
+            Bring Ice-types to counter Jetragon. Frostallion's double Ice advantage (Ice Emperor + Ice attacks) shreds through Jetragon's Dragon typing. A well-bred Frostallion with Ice Emperor can solo the level 70 Alpha Jetragon in under two minutes.
+          </p>
+        </div>
+
+        <p class="text-sm mt-3">
+          <a href="/pals/jetragon/" class="text-[#3ecf8e] hover:text-[#00c573] transition-colors">Full Jetragon location & capture guide →</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Frostallion Noct -->
+  <section id="frostallion-noct" class="mb-12 scroll-mt-24">
+    <h2 class="text-[20px] font-normal text-[#fafafa] mb-4 pb-2 border-b border-[#2e2e2e]">
+      Frostallion Noct — Level 65, Now Spawns at Wildlife Sanctuary!
+    </h2>
+    <div class="flex flex-col lg:flex-row gap-6 mb-6">
+      <div class="lg:w-48 flex-shrink-0">
+        <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl p-4 text-center">
+          <img
+            src="/images/frostallion-noct.webp"
+            alt="Frostallion Noct — Legendary Dark Pal, now spawning wild in Palworld 1.0"
+            width="128" height="128"
+            class="w-32 h-32 object-contain mx-auto mb-3 rounded bg-[#141414]"
+            loading="lazy"
+          />
+          <p class="text-xs text-[#898989] font-semibold mb-1">Dark</p>
+          <p class="text-xs text-[#898989]">Breed Only → <span class="text-green-400 font-semibold">65</span></p>
+          <p class="text-xs text-[#898989]">Palpedia: 110b → <span class="text-amber-400">200b</span></p>
+          <span class="inline-block mt-2 text-[10px] bg-[#f59e0b]/20 text-[#f59e0b] border border-[#f59e0b]/30 rounded-full px-2 py-0.5 font-semibold">BIGGEST 1.0 CHANGE</span>
+        </div>
+      </div>
+      <div class="flex-1 space-y-4 text-[15px] text-[#b4b4b4] leading-relaxed max-w-3xl">
+        <p>
+          This is the single biggest Pal change in the 1.0 update. Frostallion Noct went from <strong class="text-[#fafafa]">breeding-only</strong> to a wild Alpha spawn at No. 3 Wildlife Sanctuary. For players who spent dozens of hours breeding Frostallion + Helzephyr to get one, this is both vindication (you were right to want it) and a new shortcut (now you can just catch one).
+        </p>
+
+        <h3 class="text-[16px] font-normal text-[#fafafa] mt-5">The Big Change: Now a Wild Alpha Pal</h3>
+        <p>
+          Frostallion Noct now spawns as an Alpha at <strong class="text-[#fafafa]">No. 3 Wildlife Sanctuary</strong>, coordinates <code class="text-[#3ecf8e] bg-[#0a0a0a] px-1.5 py-0.5 rounded text-xs">(689, 648)</code>, at level <strong class="text-[#fafafa]">65</strong>. Prior to version 0.4.11, it could only be obtained through breeding Frostallion + Helzephyr. The 1.0 update solidifies this as a permanent wild encounter.
+        </p>
+        <p>
+          The breeding combo still works (<strong class="text-[#fafafa]">Frostallion + Helzephyr = Frostallion Noct</strong>), and breeding is still the better route if you want specific passives. But if you just need a Frostallion Noct for your collection or as a Dark-type mount, catching the Alpha is significantly faster.
+        </p>
+
+        <h3 class="text-[16px] font-normal text-[#fafafa] mt-5">Stat & Skill Changes</h3>
+        <ul class="list-disc list-inside space-y-1 text-sm">
+          <li><strong class="text-[#fafafa]">Level:</strong> New wild Alpha at level 65</li>
+          <li><strong class="text-[#fafafa]">Passives:</strong> Legend + Lord of the Underworld. Both buffed — Legend ATK 20%→25%, Lord of the Underworld elemental damage increased</li>
+          <li><strong class="text-[#fafafa]">Base Stats:</strong> HP 140, ATK 140, DEF 135. Unchanged — Frostallion Noct remains one of the tankiest legendary mounts</li>
+          <li><strong class="text-[#fafafa]">Black Steed:</strong> Partner skill converts player attacks to Dark element and boosts Dark attack damage up to +100% at max condensation</li>
+        </ul>
+
+        <h3 class="text-[16px] font-normal text-[#fafafa] mt-5">Work Suitability</h3>
+        <p>
+          <strong>Gathering:</strong> <span class="text-[#898989] line-through">4</span> → <span class="text-green-400 font-semibold">7</span>. Frostallion Noct is now one of the best dedicated Gathering Pals in the game. Its high movement speed means it covers large plantations faster than smaller Pals, and with no other work suitabilities, it won't get distracted by other tasks.
+        </p>
+
+        <div class="bg-[#0d0d0d] border-l-2 border-[#f59e0b] rounded-r-lg p-4 mt-3">
+          <p class="text-sm text-[#fafafa] font-semibold mb-1">Catch vs Breed decision</p>
+          <p class="text-xs text-[#898989] leading-relaxed">
+            Catch the Alpha if you just need a Frostallion Noct now. Breed if you want specific passives (Swift, Runner, Serenity). The Alpha comes with Legend + Lord of the Underworld guaranteed, but its other two passive slots are random. For a competitive build, breeding is still the way to go.
+          </p>
+        </div>
+
+        <p class="text-sm mt-3">
+          <a href="/pals/frostallion-noct/" class="text-[#3ecf8e] hover:text-[#00c573] transition-colors">Full Frostallion Noct location & capture guide →</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Frostallion -->
+  <section id="frostallion" class="mb-12 scroll-mt-24">
+    <h2 class="text-[20px] font-normal text-[#fafafa] mb-4 pb-2 border-b border-[#2e2e2e]">
+      Frostallion — Ice Emperor Buffed, Cooling Upgraded
+    </h2>
+    <div class="flex flex-col lg:flex-row gap-6 mb-6">
+      <div class="lg:w-48 flex-shrink-0">
+        <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl p-4 text-center">
+          <img
+            src="/images/frostallion.webp"
+            alt="Frostallion — Legendary Ice Pal in Palworld 1.0"
+            width="128" height="128"
+            class="w-32 h-32 object-contain mx-auto mb-3 rounded bg-[#141414]"
+            loading="lazy"
+          />
+          <p class="text-xs text-[#3ecf8e] font-semibold mb-1">Ice</p>
+          <p class="text-xs text-[#898989]">Lv. 60 (unchanged)</p>
+          <p class="text-xs text-[#898989]">Palpedia: 110 → <span class="text-amber-400">200</span></p>
+          <span class="inline-block mt-2 text-[10px] bg-green-400/20 text-green-300 border border-green-400/30 rounded-full px-2 py-0.5 font-semibold">BEST DEDICATED COOLER</span>
+        </div>
+      </div>
+      <div class="flex-1 space-y-4 text-[15px] text-[#b4b4b4] leading-relaxed max-w-3xl">
+        <p>
+          Frostallion's location and level stayed the same — still at Astral Mountains (-357, 509) at level 60 — but its role as a base Pal got a huge upgrade. The Cooling work suitability jump from 4 to 7 makes it the best dedicated cooler in the game, and the Ice Emperor passive buff compounds with the Legend buff for a noticeable combat improvement.
+        </p>
+
+        <h3 class="text-[16px] font-normal text-[#fafafa] mt-5">Location & Level</h3>
+        <p>
+          <strong>Unchanged.</strong> Frostallion still spawns as a level 60 Alpha at the Astral Mountains, coordinates <code class="text-[#3ecf8e] bg-[#0a0a0a] px-1.5 py-0.5 rounded text-xs">(-357, 509)</code>. It was raised from 55 to 60 in patch 0.4.11 and stayed at 60 in 1.0. Bring Dragon-type Pals — Frostallion's Ice attacks hit hard against anything that isn't Fire or Dragon.
+        </p>
+
+        <h3 class="text-[16px] font-normal text-[#fafafa] mt-5">Stat & Skill Changes</h3>
+        <ul class="list-disc list-inside space-y-1 text-sm">
+          <li><strong class="text-[#fafafa]">Ice Emperor Passive:</strong> Elemental damage increased. Combined with Legend's ATK buff (20%→25%), Frostallion hits harder than pre-1.0</li>
+          <li><strong class="text-[#fafafa]">Base Stats:</strong> HP 140, ATK 140, DEF 120 — unchanged</li>
+          <li><strong class="text-[#fafafa]">Ice Steed:</strong> Partner skill still converts player attacks to Ice, boosts Ice attack up to +100%, and increases player ATK up to +40% at max condensation</li>
+        </ul>
+
+        <h3 class="text-[16px] font-normal text-[#fafafa] mt-5">Work Suitability — The Meta Shift</h3>
+        <p>
+          <strong>Cooling:</strong> <span class="text-[#898989] line-through">4</span> → <span class="text-green-400 font-semibold">7</span>. This is the change that matters most for base builders. At Cooling 7, Frostallion is the best dedicated cooling Pal available. Unlike Whalaska (which splits attention across multiple work types), Frostallion has only Cooling — it will stay on your fridge or cooler 24/7 without wandering off to do other tasks.
+        </p>
+
+        <div class="bg-[#0d0d0d] border-l-2 border-[#3ecf8e] rounded-r-lg p-4 mt-3">
+          <p class="text-sm text-[#fafafa] font-semibold mb-1">Base builder tip</p>
+          <p class="text-xs text-[#898989] leading-relaxed">
+            Post-1.0, a single Frostallion with Cooling 7 can maintain multiple refrigerated structures simultaneously. Pre-1.0 you needed two or three cooling Pals for a large base — now one Frostallion handles it all. This frees up a base slot for another worker.
+          </p>
+        </div>
+
+        <p class="text-sm mt-3">
+          <a href="/pals/frostallion/" class="text-[#3ecf8e] hover:text-[#00c573] transition-colors">Full Frostallion location & capture guide →</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Necromus -->
+  <section id="necromus" class="mb-12 scroll-mt-24">
+    <h2 class="text-[20px] font-normal text-[#fafafa] mb-4 pb-2 border-b border-[#2e2e2e]">
+      Necromus — Level 60, Desiccated Desert, Work Skills Massively Upgraded
+    </h2>
+    <div class="flex flex-col lg:flex-row gap-6 mb-6">
+      <div class="lg:w-48 flex-shrink-0">
+        <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl p-4 text-center">
+          <img
+            src="/images/necromus.webp"
+            alt="Necromus — Legendary Dark Pal in Palworld 1.0"
+            width="128" height="128"
+            class="w-32 h-32 object-contain mx-auto mb-3 rounded bg-[#141414]"
+            loading="lazy"
+          />
+          <p class="text-xs text-[#898989] font-semibold mb-1">Dark</p>
+          <p class="text-xs text-[#898989]">Lv. 60 (unchanged)</p>
+          <p class="text-xs text-[#898989]">Palpedia: 109 → <span class="text-amber-400">199</span></p>
+          <span class="inline-block mt-2 text-[10px] bg-green-400/20 text-green-300 border border-green-400/30 rounded-full px-2 py-0.5 font-semibold">FROM ZERO TO HERO</span>
+        </div>
+      </div>
+      <div class="flex-1 space-y-4 text-[15px] text-[#b4b4b4] leading-relaxed max-w-3xl">
+        <p>
+          Necromus went from a decorative base Pal to a genuinely useful dual-worker. Both Lumbering and Mining jumped from 2 to 6 — a 3x improvement in each. It still spawns at the Desiccated Desert alongside Paladius, and the dual-boss encounter remains one of the most challenging and rewarding fights in the game.
+        </p>
+
+        <h3 class="text-[16px] font-normal text-[#fafafa] mt-5">Location & Level</h3>
+        <p>
+          <strong>Unchanged.</strong> Necromus spawns as a level 60 Alpha at the Desiccated Desert, coordinates <code class="text-[#3ecf8e] bg-[#0a0a0a] px-1.5 py-0.5 rounded text-xs">(447, 679)</code>. It spawns alongside Paladius — you'll be fighting both legendary centaur Pals simultaneously. Bring Neutral-type Pals for Paladius and Dragon-types for Necromus.
+        </p>
+
+        <h3 class="text-[16px] font-normal text-[#fafafa] mt-5">Stat & Skill Changes</h3>
+        <ul class="list-disc list-inside space-y-1 text-sm">
+          <li><strong class="text-[#fafafa]">Lord of the Underworld:</strong> Dark-element damage buffed — compounds with Legend's ATK increase</li>
+          <li><strong class="text-[#fafafa]">Base Stats:</strong> HP 130, ATK 145, DEF 120. Necromus has the <strong class="text-[#fafafa]">highest base Attack</strong> among all legendary Pals at 145</li>
+          <li><strong class="text-[#fafafa]">Dark Knight of the Abyss:</strong> Partner skill enables double-jump while mounted, with movement speed increasing up to +20% at max condensation</li>
+        </ul>
+
+        <h3 class="text-[16px] font-normal text-[#fafafa] mt-5">Work Suitability — The Game Changer</h3>
+        <p>
+          Both work skills got massive upgrades:
+        </p>
+        <ul class="list-disc list-inside space-y-1 text-sm">
+          <li><strong>Lumbering:</strong> <span class="text-[#898989] line-through">2</span> → <span class="text-green-400 font-semibold">6</span></li>
+          <li><strong>Mining:</strong> <span class="text-[#898989] line-through">2</span> → <span class="text-green-400 font-semibold">6</span></li>
+        </ul>
+        <p>
+          At level 6 in both Lumbering and Mining, Necromus is now a viable dual-worker for your base. Pre-1.0, its work skills were too low to justify using a legendary Pal at base. Post-1.0, it's competitive with mid-tier dedicated workers — and it brings the Legend and Lord of the Underworld passives as a bonus.
+        </p>
+
+        <p class="text-sm mt-3">
+          <a href="/pals/necromus/" class="text-[#3ecf8e] hover:text-[#00c573] transition-colors">Full Necromus location & capture guide →</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paladius -->
+  <section id="paladius" class="mb-12 scroll-mt-24">
+    <h2 class="text-[20px] font-normal text-[#fafafa] mb-4 pb-2 border-b border-[#2e2e2e]">
+      Paladius — Level 60, Highest Defense Unchanged, Work Skills Upgraded
+    </h2>
+    <div class="flex flex-col lg:flex-row gap-6 mb-6">
+      <div class="lg:w-48 flex-shrink-0">
+        <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl p-4 text-center">
+          <img
+            src="/images/paladius.webp"
+            alt="Paladius — Legendary Neutral Pal in Palworld 1.0"
+            width="128" height="128"
+            class="w-32 h-32 object-contain mx-auto mb-3 rounded bg-[#141414]"
+            loading="lazy"
+          />
+          <p class="text-xs text-[#898989] font-semibold mb-1">Neutral</p>
+          <p class="text-xs text-[#898989]">Lv. 60 (unchanged)</p>
+          <p class="text-xs text-[#898989]">Palpedia: 108 → <span class="text-amber-400">198</span></p>
+          <span class="inline-block mt-2 text-[10px] bg-sky-400/20 text-sky-300 border border-sky-400/30 rounded-full px-2 py-0.5 font-semibold">STILL THE TANK</span>
+        </div>
+      </div>
+      <div class="flex-1 space-y-4 text-[15px] text-[#b4b4b4] leading-relaxed max-w-3xl">
+        <p>
+          Paladius shares the Desiccated Desert spawn with Necromus and received the same work skill upgrades — Lumbering and Mining both from 2 to 6. Its defining trait remains unchanged: Paladius still has the <strong class="text-[#fafafa]">highest base Defense in the game</strong> at 145. Nothing else comes close.
+        </p>
+
+        <h3 class="text-[16px] font-normal text-[#fafafa] mt-5">Location & Level</h3>
+        <p>
+          <strong>Unchanged.</strong> Paladius spawns as a level 60 Alpha at the Desiccated Desert, coordinates <code class="text-[#3ecf8e] bg-[#0a0a0a] px-1.5 py-0.5 rounded text-xs">(447, 679)</code>. It spawns alongside Necromus — prepare for a dual-boss fight. Necromus is aggressive and fast; Paladius is slow but tanky. Take out Necromus first.
+        </p>
+
+        <h3 class="text-[16px] font-normal text-[#fafafa] mt-5">Stat & Skill Changes</h3>
+        <ul class="list-disc list-inside space-y-1 text-sm">
+          <li><strong class="text-[#fafafa]">Celestial Emperor Passive:</strong> Neutral-element damage buffed. Combined with Legend's buff, Paladius hits harder</li>
+          <li><strong class="text-[#fafafa]">Defense:</strong> 145 base — <strong class="text-[#fafafa]">still the highest in the game</strong>. No change needed</li>
+          <li><strong class="text-[#fafafa]">Base Stats:</strong> HP 130, ATK 120, DEF 145 — the classic tank stat spread</li>
+          <li><strong class="text-[#fafafa]">Holy Knight of the Firmament:</strong> Partner skill enables triple-jump while mounted, movement speed up to +20% at max condensation</li>
+        </ul>
+
+        <h3 class="text-[16px] font-normal text-[#fafafa] mt-5">Work Suitability</h3>
+        <p>
+          Same upgrades as Necromus:
+        </p>
+        <ul class="list-disc list-inside space-y-1 text-sm">
+          <li><strong>Lumbering:</strong> <span class="text-[#898989] line-through">2</span> → <span class="text-green-400 font-semibold">6</span></li>
+          <li><strong>Mining:</strong> <span class="text-[#898989] line-through">2</span> → <span class="text-green-400 font-semibold">6</span></li>
+        </ul>
+        <p>
+          Paladius is now a viable dual-worker, though its slower movement speed (800 run speed vs Necromus's 1,300) means Necromus is still the faster base worker of the duo. Paladius compensates with its legendary tankiness — it won't get knocked out by random raids while working.
+        </p>
+
+        <div class="bg-[#0d0d0d] border-l-2 border-[#3ecf8e] rounded-r-lg p-4 mt-3">
+          <p class="text-sm text-[#fafafa] font-semibold mb-1">Dual Encounter Strategy</p>
+          <p class="text-xs text-[#898989] leading-relaxed">
+            Paladius and Necromus spawn together in the Desiccated Desert. Necromus is the priority target — it's faster and hits harder. Use Neutral-type attacks against Paladius (it resists nothing but has high DEF). Dragon-types handle Necromus. Bring both element types and focus Necromus down first.
+          </p>
+        </div>
+
+        <p class="text-sm mt-3">
+          <a href="/pals/paladius/" class="text-[#3ecf8e] hover:text-[#00c573] transition-colors">Full Paladius location & capture guide →</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Neptilius -->
+  <section id="neptilius" class="mb-12 scroll-mt-24">
+    <h2 class="text-[20px] font-normal text-[#fafafa] mb-4 pb-2 border-b border-[#2e2e2e]">
+      Neptilius — The First New Legendary Since Early Access
+    </h2>
+    <div class="flex flex-col lg:flex-row gap-6 mb-6">
+      <div class="lg:w-48 flex-shrink-0">
+        <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl p-4 text-center">
+          <img
+            src="/images/neptilius.webp"
+            alt="Neptilius — Legendary Water Pal, added in Palworld 0.6.0"
+            width="128" height="128"
+            class="w-32 h-32 object-contain mx-auto mb-3 rounded bg-[#141414]"
+            loading="lazy"
+          />
+          <p class="text-xs text-[#3ecf8e] font-semibold mb-1">Water</p>
+          <p class="text-xs text-[#898989]">Lv. 60 (unchanged)</p>
+          <p class="text-xs text-[#898989]">Palpedia: 155 → <span class="text-amber-400">201</span></p>
+          <span class="inline-block mt-2 text-[10px] bg-sky-400/20 text-sky-300 border border-sky-400/30 rounded-full px-2 py-0.5 font-semibold">THE NEW KID</span>
+        </div>
+      </div>
+      <div class="flex-1 space-y-4 text-[15px] text-[#b4b4b4] leading-relaxed max-w-3xl">
+        <p>
+          Neptilius is the <strong class="text-[#fafafa]">first new legendary Pal</strong> added to the game since the Early Access launch. Introduced in patch 0.6.0 and carried into the 1.0 release, it's the newest face in the legendary lineup — and the best aquatic mount period. With 1,800 swim speed and 2,000 dash speed, it outruns every other Pal in water.
+        </p>
+
+        <h3 class="text-[16px] font-normal text-[#fafafa] mt-5">Location & Level</h3>
+        <p>
+          Neptilius spawns as a level 60 Alpha at the <strong class="text-[#fafafa]">Isle of the Glacial Core</strong>, coordinates <code class="text-[#3ecf8e] bg-[#0a0a0a] px-1.5 py-0.5 rounded text-xs">(139, 651)</code>. The Isle of the Glacial Core is a snowy island surrounded by water — fitting for a Water-type legendary. Bring Electric-type Pals for the elemental advantage.
+        </p>
+
+        <h3 class="text-[16px] font-normal text-[#fafafa] mt-5">Stat & Skill Changes</h3>
+        <ul class="list-disc list-inside space-y-1 text-sm">
+          <li><strong class="text-[#fafafa]">Base Stats:</strong> HP 105, ATK 145, DEF 125. Shares Necromus's title for highest attack among legendaries at 145</li>
+          <li><strong class="text-[#fafafa]">Lunker Passive:</strong> Neptilius's unique passive. Boosts certain stats — combined with Legend for a strong dual-passive core</li>
+          <li><strong class="text-[#fafafa]">Sentinel of the Great Sea:</strong> Partner skill enables rideable water travel, spear-strike follow-up attacks, and high jumps over water. Swim speed increases up to +25% at max condensation, with spear strike cooldown decreasing from 3.6s to 1s</li>
+        </ul>
+
+        <h3 class="text-[16px] font-normal text-[#fafafa] mt-5">Work Suitability</h3>
+        <p>
+          <strong>Watering:</strong> <span class="text-[#898989] line-through">4</span> → <span class="text-green-400 font-semibold">7</span>. At Watering 7, Neptilius is competitive with Jormuntide and Ghangler for watering tasks. However, since Jormuntide is much easier to obtain (and also has Watering 4 in the old scale), most players will stick with Jormuntide for base watering. Neptilius's real value is as an aquatic mount, not a base worker.
+        </p>
+
+        <div class="bg-[#0d0d0d] border-l-2 border-[#3ecf8e] rounded-r-lg p-4 mt-3">
+          <p class="text-sm text-[#fafafa] font-semibold mb-1">Best aquatic mount in the game</p>
+          <p class="text-xs text-[#898989] leading-relaxed">
+            Neptilius's 1,800 swim speed and 2,000 dash speed make it unmatched in water travel. The high-jump ability while swimming lets you clear islands and obstacles that other water mounts can't. If you spend significant time on Palpagos's oceans, Neptilius is a must-have.
+          </p>
+        </div>
+
+        <p class="text-sm mt-3">
+          <a href="/pals/neptilius/" class="text-[#3ecf8e] hover:text-[#00c573] transition-colors">Full Neptilius location & capture guide →</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION: META IMPLICATIONS ===== -->
+  <section id="meta" class="mb-12 scroll-mt-24">
+    <h2 class="text-[20px] font-normal text-[#fafafa] mb-4 pb-2 border-b border-[#2e2e2e]">
+      How These Changes Affect the Meta — Tier Implications
+    </h2>
+    <p class="text-[15px] text-[#b4b4b4] leading-relaxed mb-5 max-w-3xl">
+      Raw stat buffs are one thing. How they shift the meta is another. Here's how the 1.0 legendary changes ripple through mount tiers, combat viability, base building, and breeding strategy.
+    </p>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <!-- Mount Tier -->
+      <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl p-5">
+        <h3 class="text-[16px] font-normal text-[#fafafa] mb-3">Mount Tier</h3>
+        <ul class="space-y-2 text-sm text-[#b4b4b4]">
+          <li>• <strong class="text-[#fafafa]">Jetragon</strong> still the fastest flyer (3,300 sprint). Legend buff makes it faster. Xenolord now lets you use weapons while mounted — Jetragon still doesn't.</li>
+          <li>• <strong class="text-[#fafafa]">Frostallion / Frostallion Noct</strong> share 1,800 sprint speed. Elemental choice matters more than speed delta between them.</li>
+          <li>• <strong class="text-[#fafafa]">Neptilius</strong> is the undisputed aquatic speed king at 1,800 swim / 2,000 dash. No other water mount competes.</li>
+          <li>• <strong class="text-[#fafafa]">Necromus</strong> (1,900 sprint) is the fastest ground legendary, edging out Paladius (1,800) for land traversal.</li>
+        </ul>
+      </div>
+
+      <!-- Combat Tier -->
+      <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl p-5">
+        <h3 class="text-[16px] font-normal text-[#fafafa] mb-3">Combat Tier</h3>
+        <ul class="space-y-2 text-sm text-[#b4b4b4]">
+          <li>• <strong class="text-[#fafafa]">Legend buff (+20%→+25% ATK)</strong> means every legendary hits ~5% harder than pre-1.0.</li>
+          <li>• <strong class="text-[#fafafa]">Necromus</strong> (145 ATK) and <strong class="text-[#fafafa]">Neptilius</strong> (145 ATK) tie for highest legendary attack stat.</li>
+          <li>• <strong class="text-[#fafafa]">Paladius</strong> (145 DEF) remains the tankiest Pal in the game — no competition.</li>
+          <li>• <strong class="text-[#fafafa]">Elemental Emperor buffs</strong> compound with Legend buff: Ice/Fire/Dark/Dragon legendaries all hit meaningfully harder.</li>
+        </ul>
+      </div>
+
+      <!-- Base Worker Tier -->
+      <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl p-5">
+        <h3 class="text-[16px] font-normal text-[#fafafa] mb-3">Base Worker Tier</h3>
+        <ul class="space-y-2 text-sm text-[#b4b4b4]">
+          <li>• <strong class="text-[#fafafa]">Frostallion</strong> (Cooling 7) — best dedicated cooler. No distractions, 24/7 fridge duty.</li>
+          <li>• <strong class="text-[#fafafa]">Necromus / Paladius</strong> — viable dual-workers (Lumbering 6 + Mining 6). From useless to useful.</li>
+          <li>• <strong class="text-[#fafafa]">Jetragon</strong> (Gathering 8) — surprisingly good gatherer now, though most will use it as a mount.</li>
+          <li>• <strong class="text-[#fafafa]">Frostallion Noct</strong> (Gathering 7) — high movement speed makes it excellent for large plantation layouts.</li>
+        </ul>
+      </div>
+
+      <!-- Breeding Meta -->
+      <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl p-5">
+        <h3 class="text-[16px] font-normal text-[#fafafa] mb-3">Breeding Meta</h3>
+        <ul class="space-y-2 text-sm text-[#b4b4b4]">
+          <li>• <strong class="text-[#fafafa]">Frostallion Noct</strong> now catchable — eliminates the breeding gate for Dark-type chains.</li>
+          <li>• <strong class="text-[#fafafa]">Condensation reduction</strong> (116→48) means max-ranking a legendary is 59% faster. Speed breeding + condensing is the new endgame loop.</li>
+          <li>• <strong class="text-[#fafafa]">Legend passive inheritance</strong> is now higher-value (25% ATK) — makes it worth breeding onto non-legendary Pals via chain breeding.</li>
+          <li>• <strong class="text-[#fafafa]">Philanthropist</strong> passive makes mass breeding viable. Pair with the empty-slot strategy from the <a href="/breeding-how-to/" class="text-[#3ecf8e] hover:text-[#00c573] transition-colors">speed breeding guide</a>.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION: FAQ ===== -->
+  <section id="faq" class="mb-12 scroll-mt-24">
+    <h2 class="text-[20px] font-normal text-[#fafafa] mb-4 pb-2 border-b border-[#2e2e2e]">
+      FAQ — Common Questions About Legendary Pals in 1.0
+    </h2>
+    <div class="space-y-3">
+      {faqItems.map((item) => (
+        <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-lg p-5">
+          <h3 class="text-[16px] font-normal text-[#fafafa] mb-2">{item.question}</h3>
+          <p class="text-sm text-[#b4b4b4] leading-relaxed">{item.answer}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- ===== FOOTER CTAs ===== -->
+  <section class="mt-10 border-t border-[#2e2e2e] pt-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+      <a href="/pals/" class="block bg-[#1a1a1a] border border-[#2e2e2e] rounded-lg p-5 hover:border-[#3ecf8e]/30 hover:bg-[#1e1e1e] transition-all group">
+        <p class="text-sm font-semibold text-[#fafafa] group-hover:text-[#3ecf8e] transition-colors mb-1">
+          Browse All 6 Legendary Pal Guides →
+        </p>
+        <p class="text-xs text-[#898989] leading-relaxed">
+          Individual location guides, full stats, drops, breeding combinations, and optimal builds for every legendary Pal.
+        </p>
+      </a>
+      <a href="/breeding-how-to/" class="block bg-[#1a1a1a] border border-[#2e2e2e] rounded-lg p-5 hover:border-[#3ecf8e]/30 hover:bg-[#1e1e1e] transition-all group">
+        <p class="text-sm font-semibold text-[#fafafa] group-hover:text-[#3ecf8e] transition-colors mb-1">
+          Speed Breeding Guide: Fastest Legendary Mounts →
+        </p>
+        <p class="text-xs text-[#898989] leading-relaxed">
+          Learn the Philanthropist strategy, passive inheritance mechanics, and step-by-step legendary breeding paths.
+        </p>
+      </a>
+    </div>
+
+    <!-- Final CTA Banner -->
+    <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl p-6 text-center">
+      <p class="text-sm font-semibold text-[#fafafa] mb-2">Which legendary Pal got the biggest buff in 1.0?</p>
+      <p class="text-xs text-[#b4b4b4] leading-relaxed mb-3 max-w-lg mx-auto">
+        Frostallion Noct — went from breeding-only to wild Alpha spawn at level 65. Gathering upgraded from 4 to 7. Lord of the Underworld passive buffed. This is the single biggest change to any legendary Pal in Palworld 1.0.
+      </p>
+      <a href="#frostallion-noct" class="inline-block text-xs text-[#3ecf8e] hover:text-[#00c573] transition-colors font-medium">Read the full Frostallion Noct breakdown ↑</a>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -24,6 +24,11 @@ This is a tough fight. Paladius is level 60 and hits hard. Bring a team of high-
 
 These are base stats. Paladius is tanky with high defense, so expect a longer fight.
 
+## Work Suitability
+
+- **Lumbering Lv 6** — Strong woodcutting for your logging site.
+- **Mining Lv 6** — Solid mining capability for ore and stone.
+
 ## Paladius Weakness
 
 Paladius is a Neutral-type Pal. Neutral Pals have **no elemental weaknesses** — no type deals extra damage against them, and no type is resisted by them. All attacks hit for the standard **1× damage**. This makes Paladius a pure stat-check fight: bring your strongest Pals and focus on raw damage output to win.
@@ -77,3 +82,11 @@ Paladius follows standard legendary breeding rules: same species only. The egg t
 - **Celestial Emperor** — 20% increase to Neutral attack damage. Stacks with Legend for 40% total Attack on Neutral moves. Exclusive to Paladius.
 
 Both passives are guaranteed on wild Alpha catches. Paladius has the highest base Defense in the game (145), so Legend's 20% Defense boost makes it an absolute wall. Pair with Burly Body or Stronghold Strategist through breeding for an unkillable tank.
+
+## 1.0 Update Changes
+
+- **Celestial Emperor** passive buffed
+- Lumbering work suitability increased from 2 → 6
+- Mining work suitability increased from 2 → 6
+
+→ [View full 1.0 Update notes →](/1.0-update/)

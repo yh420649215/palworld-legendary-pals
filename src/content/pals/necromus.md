@@ -30,6 +30,11 @@ Status effects help a lot. Freeze or stun it with a Pal like Blizzard Spike or a
 
 Necromus has high attack and decent defense, but its HP is a bit low for a legendary. That's good news for you — it goes down faster than some other field bosses. Just don't let it hit you more than a couple times.
 
+## Work Suitability
+
+- **Lumbering Lv 6** — Excellent woodcutting for your logging site.
+- **Mining Lv 6** — Strong mining capability for ore and stone.
+
 ## Necromus Weakness
 
 Necromus is a Dark-type Pal, making it weak to Dragon-type attacks. Dragon attacks deal **2× damage** to Dark Pals. Dark attacks deal only **0.5× damage** to Dragon Pals, so your Dragon counters absorb far less punishment while dealing double damage back.
@@ -84,3 +89,11 @@ Necromus follows the standard legendary breeding restriction: same species pairs
 - **Lord of the Underworld** — 20% increase to Dark attack damage. Stacks with Legend for 40% Attack on Dark moves. Shared with Frostallion Noct.
 
 Both passives are guaranteed on wild-caught Alpha Necromus. Its 145 base Attack combined with Legend and Lord of the Underworld makes it one of the hardest-hitting Dark-types in the game. Breed for Ferocious or Musclehead if you want to push the damage even higher.
+
+## 1.0 Update Changes
+
+- **Lord of the Underworld** passive buffed
+- Lumbering work suitability increased from 2 → 6
+- Mining work suitability increased from 2 → 6
+
+→ [View full 1.0 Update notes →](/1.0-update/)

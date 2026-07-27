@@ -83,3 +83,9 @@ Neptilius follows standard legendary breeding: same species only. It produces a 
 - **Lunker** — 20% increase to Water attack damage, 20% increase to Ice attack damage, and 20% increase to Defense. One of the strongest hybrid passives in the game. Exclusive to Neptilius.
 
 Both passives are guaranteed on every wild-caught Neptilius. Lunker is exceptional: it buffs two elements and Defense at the same time. Combined with Legend, Neptilius gets a 40% Water/Ice damage boost and a 40% total Defense increase. That makes it tanky and hard-hitting right out of the egg.
+
+## 1.0 Update Changes
+
+- **Palpedia renumbered** for 1.0 — Neptilius is now Paldeck No. 201
+
+→ [View full 1.0 Update notes →](/1.0-update/)

@@ -28,6 +28,10 @@ Weaken Jetragon to low HP without killing it. Use status effects like freeze or 
 
 Jetragon hits hard and can take a beating. Its Attack stat is stand-out, making it a top-tier damage dealer.
 
+## Work Suitability
+
+- **Gathering Lv 8** — Excellent for harvesting crops and collecting resources at base.
+
 ## Jetragon Weakness
 
 Jetragon is a Dragon-type Pal, making it weak to Ice-type attacks. Ice attacks deal **2× damage** to Dragon Pals, and Ice Pals naturally resist Dragon attacks — meaning they take only **0.5× damage** in return. This double advantage makes Ice-types the safest and fastest way to bring Jetragon down.
@@ -85,3 +89,12 @@ Jetragon sits at the top of the breeding chain. You can't crossbreed it with any
 - **Divine Dragon** — 20% increase to Dragon attack damage. Stacks with Legend for a total 40% Attack boost on Dragon-type moves. Exclusive to Jetragon.
 
 Both passives come guaranteed on every wild-caught Jetragon. You can breed to replace them with other passives like Ferocious or Musclehead, but you'd lose the unique Dragon damage bonus.
+
+## 1.0 Update Changes
+
+- **Aerial Missile** partner skill buffed
+- **Legend** passive enhanced
+- Gathering work suitability increased from 3 → 8
+- Location changed to Sunreach (-553, -1332), level increased to 70
+
+→ [View full 1.0 Update notes →](/1.0-update/)
