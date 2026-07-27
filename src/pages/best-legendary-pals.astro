@@ -1,0 +1,516 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ShareButtons from '../modules/seo/ShareButtons.astro';
+
+const typeColors: Record<string, string> = {
+  Dragon: 'border-[#3ecf8e]/30 bg-[#3ecf8e]/10 text-[#3ecf8e]',
+  Ice: 'border-[#7dd3fc]/30 bg-[#7dd3fc]/10 text-[#7dd3fc]',
+  Dark: 'border-[#a78bfa]/30 bg-[#a78bfa]/10 text-[#a78bfa]',
+  Neutral: 'border-[#facc15]/30 bg-[#facc15]/10 text-[#facc15]',
+  Water: 'border-[#38bdf8]/30 bg-[#38bdf8]/10 text-[#38bdf8]',
+};
+
+const tierColors: Record<string, { border: string; bg: string; text: string; label: string }> = {
+  S: { border: 'border-[#3ecf8e]/30', bg: 'bg-[#3ecf8e]/10', text: 'text-[#3ecf8e]', label: 'S-TIER' },
+  A: { border: 'border-[#7dd3fc]/20', bg: 'bg-[#7dd3fc]/5', text: 'text-[#7dd3fc]', label: 'A-TIER' },
+  B: { border: 'border-[#facc15]/20', bg: 'bg-[#facc15]/5', text: 'text-[#facc15]', label: 'B-TIER' },
+};
+
+const pals = [
+  {
+    name: 'Jetragon',
+    slug: 'jetragon',
+    type: 'Dragon',
+    level: 70,
+    hp: 110,
+    attack: 140,
+    defense: 110,
+    tier: 'S',
+    tierReason: 'Fastest mount in the game (3300 sprint speed). Aerial Missile partner skill shreds everything. Divine Dragon + Legend stack for +40% Dragon damage. Level 70 Alpha — the apex legendary. No other Pal competes for raw speed-to-power ratio.',
+    verdict: 'Jetragon is the undisputed king of Palworld legendaries. It\'s the fastest mount by a wide margin, the only flying Dragon legendary, and its Aerial Missile partner skill turns every aerial encounter into a turkey shoot. If you catch only one legendary, make it Jetragon. Its 3300 sprint speed means you cross the map in seconds, and the missile launcher makes short work of tower bosses and wild Alphas alike. The lower HP and Defense are irrelevant when nothing can catch you.',
+    partnerSkill: 'Aerial Missile',
+    partnerSkillDesc: 'Rapid-fire missile launcher while mounted',
+    passive: 'Divine Dragon',
+    passiveDesc: '+20% Dragon damage (stacks with Legend for +40% total)',
+    breedPower: 90,
+    speedScore: '10/10',
+    combatScore: '9/10',
+    utilityScore: '10/10',
+    bestFor: 'Speed travel, aerial combat, boss farming',
+  },
+  {
+    name: 'Frostallion',
+    slug: 'frostallion',
+    type: 'Ice',
+    level: 60,
+    hp: 140,
+    attack: 140,
+    defense: 120,
+    tier: 'A',
+    tierReason: 'Top-tier stats across the board (400 total). Ice Emperor passive delivers +40% Ice damage with Legend. Ice Steed gives double jump and converts attacks to Ice — counters Jetragon hard. Best Ice-type in the game by a long shot.',
+    verdict: 'Frostallion is the most well-rounded legendary. 140 HP, 140 Attack, 120 Defense — no weak spots. Its Ice typing gives it a decisive edge against Dragon Pals (including Jetragon), and Ice Steed\'s double jump makes it a top-tier exploration mount. The guaranteed Ice Emperor + Legend combo means it hits like a truck with Blizzard Spike and Crystal Wing right out of the catch. It\'s not as fast as Jetragon, but it counters Jetragon. That alone keeps it in A-tier.',
+    partnerSkill: 'Ice Steed',
+    partnerSkillDesc: 'Ride mount with double jump; attacks deal Ice damage',
+    passive: 'Ice Emperor',
+    passiveDesc: '+20% Ice damage (stacks with Legend for +40% total)',
+    breedPower: 120,
+    speedScore: '8/10',
+    combatScore: '9/10',
+    utilityScore: '8/10',
+    bestFor: 'Ice-type DPS, Dragon counter, cold biome exploration',
+  },
+  {
+    name: 'Frostallion Noct',
+    slug: 'frostallion-noct',
+    type: 'Dark',
+    level: 65,
+    hp: 140,
+    attack: 140,
+    defense: 135,
+    tier: 'A',
+    tierReason: 'Highest total stats of any legendary (415). Lord of the Underworld passive gives +40% Dark damage. Only legendary that can inherit Lucky through breeding (Frostallion + Helzephyr). Black Steed converts attacks to Dark element.',
+    verdict: 'Frostallion Noct edges out its Ice counterpart on raw stats — 135 Defense is the second-highest among all legendaries, behind only Paladius. The unique breeding mechanic (Frostallion + Helzephyr) is a double-edged sword: you can\'t breed two FN\'s together, but you CAN inherit Lucky from the Helzephyr parent, something no other legendary can do. Black Steed\'s Dark conversion gives it strong neutral coverage, and it shreds Neutral-type Pals like Paladius. The only reason it\'s not S-tier: Dark doesn\'t counter the meta\'s top threats the way Ice and Dragon do.',
+    partnerSkill: 'Black Steed',
+    partnerSkillDesc: 'Ride mount; attacks deal Dark damage, Dark attacks enhanced',
+    passive: 'Lord of the Underworld',
+    passiveDesc: '+20% Dark damage (stacks with Legend for +40% total)',
+    breedPower: 100,
+    speedScore: '8/10',
+    combatScore: '8/10',
+    utilityScore: '7/10',
+    bestFor: 'Dark-type DPS, Neutral-type counter, Lucky passive breeding',
+  },
+  {
+    name: 'Necromus',
+    slug: 'necromus',
+    type: 'Dark',
+    level: 60,
+    hp: 130,
+    attack: 145,
+    defense: 120,
+    tier: 'B',
+    tierReason: 'Tied for highest Attack (145) with Neptilius. Lord of the Underworld passive boosts Dark damage. Dark Knight of the Abyss gives double jump. But it\'s overshadowed by Frostallion Noct — same element, lower stats, no unique breeding edge.',
+    verdict: 'Necromus hits hard — 145 base Attack with Lord of the Underworld makes it one of the hardest-hitting Dark-types. Dark Knight of the Abyss provides a solid double-jump mount. The problem is Frostallion Noct exists. FN does everything Necromus does but better: same element, same passive, higher HP (+10), higher Defense (+15), and the unique Lucky breeding trick. Necromus has the lowest breed power (70) among legendaries, which is only relevant for breeding calculations — not combat. Solid Pal, just outclassed within its own element.',
+    partnerSkill: 'Dark Knight of the Abyss',
+    partnerSkillDesc: 'Ride mount with double jump; speed increases with condensation',
+    passive: 'Lord of the Underworld',
+    passiveDesc: '+20% Dark damage (stacks with Legend for +40% total)',
+    breedPower: 70,
+    speedScore: '7/10',
+    combatScore: '8/10',
+    utilityScore: '6/10',
+    bestFor: 'Dark-type DPS, dual boss farming (with Paladius)',
+  },
+  {
+    name: 'Paladius',
+    slug: 'paladius',
+    type: 'Neutral',
+    level: 60,
+    hp: 130,
+    attack: 120,
+    defense: 145,
+    tier: 'B',
+    tierReason: 'Highest Defense in the game (145). Celestial Emperor passive boosts Neutral damage. Triple jump mount (Holy Knight of the Firmament) is unique. But 120 Attack is the lowest among legendaries, and Neutral type has zero type advantages.',
+    verdict: 'Paladius is a wall. 145 Defense with Legend\'s 20% Defense boost makes it the tankiest legendary by far — it soaks damage that would one-shot other Pals. Holy Knight of the Firmament gives a triple jump, which is genuinely useful for reaching high terrain. The problem: 120 Attack is the lowest among all legendaries, and Neutral type means it never hits for super-effective damage. Celestial Emperor + Legend gives +40% Neutral damage, but that\'s still just neutral damage. Great if you want an unkillable tank. Not great if you want to kill things quickly.',
+    partnerSkill: 'Holy Knight of the Firmament',
+    partnerSkillDesc: 'Ride mount with triple jump; speed increases with condensation',
+    passive: 'Celestial Emperor',
+    passiveDesc: '+20% Neutral damage (stacks with Legend for +40% total)',
+    breedPower: 80,
+    speedScore: '6/10',
+    combatScore: '6/10',
+    utilityScore: '6/10',
+    bestFor: 'Tanking, terrain traversal (triple jump), duo boss fights',
+  },
+  {
+    name: 'Neptilius',
+    slug: 'neptilius',
+    type: 'Water',
+    level: 60,
+    hp: 105,
+    attack: 145,
+    defense: 125,
+    tier: 'B',
+    tierReason: 'Glass cannon: 145 Attack but only 105 HP. Lunker passive is the strongest hybrid passive (+20% Water, +20% Ice, +20% Defense). Water mount with leap. Fragile and situational — dies fast if caught out.',
+    verdict: 'Neptilius is the wildcard legendary. Lunker is unquestionably the best hybrid passive in the game — it buffs two elements AND Defense simultaneously, giving +40% Water/Ice damage and +40% Defense when stacked with Legend. That 145 Attack combined with Lunker means its Water and Ice moves hit brutally hard. The catch: 105 HP. Neptilius is the glassiest of all legendaries. It folds under focused fire, and its Water typing is matchup-dependent. Added in 0.6.0, it\'s the newest legendary and hasn\'t displaced any of the established meta Pals. Sentinel of the Great Sea\'s water leap is nice for ocean traversal, but how often are you fighting in water?',
+    partnerSkill: 'Sentinel of the Great Sea',
+    partnerSkillDesc: 'Water mount with high leap; follows up attacks with spear strikes',
+    passive: 'Lunker',
+    passiveDesc: '+20% Water, +20% Ice, +20% Defense (stacks with Legend)',
+    breedPower: 90,
+    speedScore: '6/10',
+    combatScore: '7/10',
+    utilityScore: '5/10',
+    bestFor: 'Water/Ice hybrid DPS, ocean traversal, crafting material farming',
+  },
+];
+
+const faqItems = [
+  {
+    question: 'Which legendary Pal is the best in Palworld 1.0?',
+    answer: 'Jetragon is the best legendary Pal overall. It has the fastest sprint speed in the game (3300), the Aerial Missile partner skill that fires homing missiles while mounted, and the Divine Dragon passive that stacks with Legend for +40% Dragon damage. It\'s the only S-tier legendary and the first one you should prioritize catching.'
+  },
+  {
+    question: 'What makes Jetragon S-tier above all other legendaries?',
+    answer: 'Three factors: speed, combat utility, and type coverage. Jetragon\'s 3300 sprint speed is unmatched — no other Pal comes close for map traversal. Its Aerial Missile partner skill lets you rain homing missiles from the air, melting bosses and wild Alphas. As a Dragon-type, it counters Dark legendaries (Frostallion Noct and Necromus) for 2x damage. The lower HP (110) and Defense (110) don\'t matter when nothing can catch you.'
+  },
+  {
+    question: 'Is Frostallion better than Frostallion Noct?',
+    answer: 'They\'re very close — both are A-tier. Frostallion has better type coverage: Ice counters Dragon (including Jetragon) and is only weak to Fire, while Dark is weak to Dragon. Frostallion Noct wins on raw stats (415 total vs 400) and has the unique Lucky breeding interaction. For general use, Frostallion\'s Ice typing is more valuable. For breeding optimization, Frostallion Noct has the edge.'
+  },
+  {
+    question: 'Why is Necromus ranked below Frostallion Noct?',
+    answer: 'They share the same Dark type and Lord of the Underworld passive, but Frostallion Noct has higher HP (140 vs 130), higher Defense (135 vs 120), and the unique ability to inherit Lucky through breeding. Necromus ties for highest Attack (145), but Frostallion Noct\'s superior bulk and breeding utility make it the better Dark legendary overall.'
+  },
+  {
+    question: 'Which legendary Pal should I catch first?',
+    answer: 'Jetragon. It requires the highest level to catch (70), but its speed alone transforms how you play. Once you have Jetragon as a mount, farming the other 5 legendaries becomes dramatically faster. If Jetragon is too high-level, start with Frostallion (level 60) — Fire-type counters like Faleris make it the easiest legendary fight, and Frostallion then hard-counters Jetragon.'
+  },
+  {
+    question: 'Do all legendary Pals have the same breeding rules?',
+    answer: 'No. Five of six legendaries follow the same-species rule (e.g. Jetragon + Jetragon = Jetragon). Frostallion Noct is the exception — it requires Frostallion + Helzephyr to breed. This unique combo means Frostallion Noct is the only legendary that can inherit the Lucky passive naturally from a Helzephyr parent. All legendary eggs take approximately 2 hours to hatch on normal settings.'
+  },
+];
+
+const scoreBar = (score: string, isHigh: boolean, tier: string) => {
+  const num = parseInt(score);
+  const pct = num * 10;
+  const barColor = tier === 'S' ? 'bg-[#3ecf8e]' : tier === 'A' ? 'bg-[#7dd3fc]' : 'bg-[#facc15]';
+  return `<div class="flex items-center gap-2"><span class="text-xs font-mono font-semibold text-[#fafafa] w-8">${score}</span><div class="flex-1 h-1.5 bg-[#2e2e2e] rounded-full"><div class="h-1.5 ${barColor} rounded-full" style="width:${pct}%"></div></div></div>`;
+};
+---
+
+<BaseLayout
+  title="Palworld Legendary Pals Tier List: All 6 Ranked (1.0)"
+  description="Which legendary Pal is the best? Compare Jetragon, Frostallion, Necromus, Paladius, Neptilius & Frostallion Noct side-by-side with stats, combat rankings, speed tiers & utility scores."
+  ogImage="/images/jetragon.webp"
+  faqItems={faqItems}
+>
+  <!-- HEADER -->
+  <section class="text-center mb-10">
+    <h1 class="text-3xl md:text-4xl font-normal mb-4 tracking-tight">
+      Best Legendary Pals in Palworld 1.0 &mdash; <span class="text-[#3ecf8e]">Ranked</span>
+    </h1>
+    <p class="text-[#b4b4b4] max-w-2xl mx-auto leading-relaxed text-sm md:text-base">
+      All 6 legendary Pals ranked by combat power, speed, utility, and real game impact.
+      Data-backed rankings using in-game stats — not opinions.
+    </p>
+    <div class="flex justify-center gap-2 mt-5 text-[10px] font-medium">
+      <span class="border border-[#3ecf8e]/20 bg-[#3ecf8e]/10 text-[#3ecf8e] px-2.5 py-1 rounded-full">Updated for 1.0</span>
+      <span class="border border-[#2e2e2e] bg-[#1a1a1a] text-[#898989] px-2.5 py-1 rounded-full">6 Legendary Pals</span>
+      <span class="border border-[#2e2e2e] bg-[#1a1a1a] text-[#898989] px-2.5 py-1 rounded-full">Data-Backed</span>
+    </div>
+  </section>
+
+  <!-- TL;DR VERDICT -->
+  <div class="bg-[#1a1a1a] border-l-2 border-[#3ecf8e] rounded-r-lg p-6 mb-10">
+    <p class="text-sm font-semibold text-[#fafafa] mb-2">TL;DR &mdash; The Verdict</p>
+    <p class="text-[#b4b4b4] text-sm leading-relaxed">
+      <span class="text-[#3ecf8e] font-semibold">Jetragon is S-tier. It's not close.</span>
+      The fastest mount in the game (3300 sprint speed), the only flying Dragon legendary, and Aerial Missile makes
+      every fight trivial. Frostallion and Frostallion Noct round out A-tier with excellent stat totals and type coverage.
+      Necromus, Paladius, and Neptilius are B-tier — each has a specific niche but comes with real trade-offs that
+      keep them out of the top ranks. <a href="/pals/jetragon/" class="text-[#3ecf8e] underline underline-offset-2 hover:text-[#00c573]">Full Jetragon guide &rarr;</a>
+    </p>
+  </div>
+
+  <!-- TIER CARDS -->
+  <section class="mb-12">
+    <h2 class="text-xl font-normal text-[#fafafa] mb-6 tracking-tight">Tier Rankings</h2>
+
+    <!-- S-TIER -->
+    <div class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class={`text-xs font-bold tracking-widest px-3 py-1 rounded border ${tierColors.S.border} ${tierColors.S.bg} ${tierColors.S.text}`}>{tierColors.S.label}</span>
+        <span class="text-xs text-[#898989]">The undisputed best. Catch this first.</span>
+      </div>
+      {pals.filter(p => p.tier === 'S').map(pal => (
+        <div class="bg-[#1a1a1a] border border-[#3ecf8e]/20 rounded-xl overflow-hidden">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+            <div class="bg-[#141414] p-6 flex items-center justify-center border-b md:border-b-0 md:border-r border-[#2e2e2e]">
+              <div class="text-center">
+                <img
+                  src={`/images/${pal.slug}.webp`}
+                  alt={pal.name}
+                  class="w-24 h-24 mx-auto mb-3 object-contain"
+                  loading="lazy"
+                  onerror="this.style.display='none'"
+                />
+                <p class="text-xl font-normal text-[#fafafa]">{pal.name}</p>
+                <div class="flex items-center justify-center gap-2 mt-1.5">
+                  <span class={`text-[10px] px-2 py-0.5 rounded-full border font-medium ${typeColors[pal.type]}`}>{pal.type}</span>
+                  <span class="text-[10px] text-[#898989] font-medium">Lv. {pal.level}</span>
+                </div>
+              </div>
+            </div>
+            <div class="md:col-span-2 p-6 flex flex-col justify-between">
+              <div>
+                <p class="text-sm text-[#fafafa] font-semibold mb-2">
+                  {pal.partnerSkill} &mdash; <span class="font-normal text-[#b4b4b4]">{pal.partnerSkillDesc}</span>
+                </p>
+                <p class="text-xs text-[#b4b4b4] leading-relaxed mb-3">
+                  <span class="text-[#3ecf8e] font-semibold">{pal.passive}</span>: {pal.passiveDesc}
+                </p>
+                <p class="text-sm text-[#b4b4b4] leading-relaxed">{pal.tierReason}</p>
+              </div>
+              <div class="mt-4 flex items-center gap-2">
+                <a href={`/pals/${pal.slug}/`} class="text-xs text-[#3ecf8e] border border-[#3ecf8e]/30 px-3 py-1.5 rounded hover:bg-[#3ecf8e]/10 transition-colors">Full Guide &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- A-TIER -->
+    <div class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class={`text-xs font-bold tracking-widest px-3 py-1 rounded border ${tierColors.A.border} ${tierColors.A.bg} ${tierColors.A.text}`}>{tierColors.A.label}</span>
+        <span class="text-xs text-[#898989]">Excellent Pals. Meta-relevant with strong type coverage.</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {pals.filter(p => p.tier === 'A').map(pal => (
+          <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl overflow-hidden hover:border-[#7dd3fc]/20 transition-colors">
+            <div class="p-5">
+              <div class="flex items-center gap-3 mb-3">
+                <img
+                  src={`/images/${pal.slug}.webp`}
+                  alt={pal.name}
+                  class="w-12 h-12 object-contain bg-[#141414] rounded-lg"
+                  loading="lazy"
+                  onerror="this.style.display='none'"
+                />
+                <div>
+                  <p class="text-base font-normal text-[#fafafa]">{pal.name}</p>
+                  <div class="flex items-center gap-1.5 mt-0.5">
+                    <span class={`text-[10px] px-1.5 py-0.5 rounded-full border font-medium ${typeColors[pal.type]}`}>{pal.type}</span>
+                    <span class="text-[10px] text-[#898989]">Lv. {pal.level}</span>
+                  </div>
+                </div>
+              </div>
+              <p class="text-xs text-[#b4b4b4] leading-relaxed mb-3">{pal.tierReason}</p>
+              <div class="flex items-center gap-2">
+                <a href={`/pals/${pal.slug}/`} class="text-[10px] text-[#3ecf8e] border border-[#3ecf8e]/20 px-2 py-1 rounded hover:bg-[#3ecf8e]/10 transition-colors">Full Guide &rarr;</a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- B-TIER -->
+    <div>
+      <div class="flex items-center gap-3 mb-4">
+        <span class={`text-xs font-bold tracking-widest px-3 py-1 rounded border ${tierColors.B.border} ${tierColors.B.bg} ${tierColors.B.text}`}>{tierColors.B.label}</span>
+        <span class="text-xs text-[#898989]">Specialized Pals. Good at one thing, but outclassed in general use.</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {pals.filter(p => p.tier === 'B').map(pal => (
+          <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl overflow-hidden hover:border-[#facc15]/20 transition-colors">
+            <div class="p-5">
+              <div class="flex items-center gap-3 mb-3">
+                <img
+                  src={`/images/${pal.slug}.webp`}
+                  alt={pal.name}
+                  class="w-10 h-10 object-contain bg-[#141414] rounded-lg"
+                  loading="lazy"
+                  onerror="this.style.display='none'"
+                />
+                <div>
+                  <p class="text-sm font-normal text-[#fafafa]">{pal.name}</p>
+                  <div class="flex items-center gap-1.5 mt-0.5">
+                    <span class={`text-[10px] px-1.5 py-0.5 rounded-full border font-medium ${typeColors[pal.type]}`}>{pal.type}</span>
+                    <span class="text-[10px] text-[#898989]">Lv. {pal.level}</span>
+                  </div>
+                </div>
+              </div>
+              <p class="text-xs text-[#b4b4b4] leading-relaxed mb-3">{pal.tierReason}</p>
+              <a href={`/pals/${pal.slug}/`} class="text-[10px] text-[#3ecf8e] border border-[#3ecf8e]/20 px-2 py-1 rounded hover:bg-[#3ecf8e]/10 transition-colors">Full Guide &rarr;</a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE -->
+  <section class="mb-12">
+    <h2 class="text-xl font-normal text-[#fafafa] mb-4 tracking-tight">Stat Comparison Table</h2>
+    <p class="text-sm text-[#898989] mb-5 leading-relaxed">
+      Side-by-side stats for all 6 legendary Pals. Sorted by tier ranking. Use this to compare before you choose which to catch.
+    </p>
+    <div class="overflow-x-auto rounded-xl border border-[#2e2e2e] bg-[#1a1a1a]">
+      <table class="w-full text-sm text-left border-collapse">
+        <thead>
+          <tr class="bg-[#3ecf8e] text-[#0a0a0a]">
+            <th class="px-4 py-3 font-semibold text-xs uppercase tracking-wider whitespace-nowrap">Rank</th>
+            <th class="px-4 py-3 font-semibold text-xs uppercase tracking-wider whitespace-nowrap">Pal</th>
+            <th class="px-4 py-3 font-semibold text-xs uppercase tracking-wider whitespace-nowrap">Tier</th>
+            <th class="px-4 py-3 font-semibold text-xs uppercase tracking-wider whitespace-nowrap">Type</th>
+            <th class="px-4 py-3 font-semibold text-xs uppercase tracking-wider whitespace-nowrap">Level</th>
+            <th class="px-4 py-3 font-semibold text-xs uppercase tracking-wider whitespace-nowrap">HP</th>
+            <th class="px-4 py-3 font-semibold text-xs uppercase tracking-wider whitespace-nowrap">ATK</th>
+            <th class="px-4 py-3 font-semibold text-xs uppercase tracking-wider whitespace-nowrap">DEF</th>
+            <th class="px-4 py-3 font-semibold text-xs uppercase tracking-wider whitespace-nowrap">Total</th>
+            <th class="px-4 py-3 font-semibold text-xs uppercase tracking-wider whitespace-nowrap">Speed</th>
+            <th class="px-4 py-3 font-semibold text-xs uppercase tracking-wider whitespace-nowrap">Combat</th>
+            <th class="px-4 py-3 font-semibold text-xs uppercase tracking-wider whitespace-nowrap">Utility</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-[#2e2e2e]">
+          {pals.map((pal, i) => {
+            const total = pal.hp + pal.attack + pal.defense;
+            return (
+              <tr class={`${i % 2 === 0 ? 'bg-[#1a1a1a]' : 'bg-[#1e1e1e]'} hover:bg-[#252525] transition-colors`}>
+                <td class="px-4 py-3 text-[#898989] font-mono text-xs">{i + 1}</td>
+                <td class="px-4 py-3 font-medium text-[#fafafa] whitespace-nowrap">
+                  <div class="flex items-center gap-2">
+                    <img
+                      src={`/images/${pal.slug}.webp`}
+                      alt={pal.name}
+                      class="w-7 h-7 rounded object-contain bg-[#141414]"
+                      loading="lazy"
+                      onerror="this.style.display='none'"
+                    />
+                    <span>{pal.name}</span>
+                  </div>
+                </td>
+                <td class="px-4 py-3 whitespace-nowrap">
+                  <span class={`text-[10px] font-bold tracking-wider px-2 py-0.5 rounded border ${tierColors[pal.tier].border} ${tierColors[pal.tier].bg} ${tierColors[pal.tier].text}`}>
+                    {pal.tier}
+                  </span>
+                </td>
+                <td class="px-4 py-3 whitespace-nowrap">
+                  <span class={`text-[10px] px-1.5 py-0.5 rounded-full border font-medium ${typeColors[pal.type]}`}>
+                    {pal.type}
+                  </span>
+                </td>
+                <td class="px-4 py-3 text-[#b4b4b4] font-mono text-xs">{pal.level}</td>
+                <td class="px-4 py-3 text-[#fafafa] font-mono text-sm font-semibold">{pal.hp}</td>
+                <td class="px-4 py-3 text-[#fafafa] font-mono text-sm font-semibold">{pal.attack}</td>
+                <td class="px-4 py-3 text-[#fafafa] font-mono text-sm font-semibold">{pal.defense}</td>
+                <td class="px-4 py-3 font-mono text-sm font-semibold whitespace-nowrap">
+                  {total >= 410 ? (
+                    <span class="text-[#3ecf8e]">{total}</span>
+                  ) : total >= 395 ? (
+                    <span class="text-[#7dd3fc]">{total}</span>
+                  ) : (
+                    <span class="text-[#facc15]">{total}</span>
+                  )}
+                </td>
+                <td class="px-4 py-3 text-[#fafafa] font-mono text-xs font-semibold">{pal.speedScore}</td>
+                <td class="px-4 py-3 text-[#fafafa] font-mono text-xs font-semibold">{pal.combatScore}</td>
+                <td class="px-4 py-3 text-[#fafafa] font-mono text-xs font-semibold">{pal.utilityScore}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-[10px] text-[#4d4d4d] mt-2">Stats from Palworld 1.0 base values. Speed, Combat, and Utility scores are on a 1-10 scale relative to the 6 legendary Pals only.</p>
+  </section>
+
+  <!-- INDIVIDUAL VERDICTS -->
+  <section class="mb-12">
+    <h2 class="text-xl font-normal text-[#fafafa] mb-6 tracking-tight">Individual Verdicts</h2>
+    <div class="space-y-5">
+      {pals.map(pal => (
+        <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl p-5">
+          <div class="flex items-center gap-3 mb-3">
+            <img
+              src={`/images/${pal.slug}.webp`}
+              alt={pal.name}
+              class="w-10 h-10 object-contain bg-[#141414] rounded-lg"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+            <div class="flex-1">
+              <div class="flex items-center gap-2 flex-wrap">
+                <p class="text-sm font-semibold text-[#fafafa]">{pal.name}</p>
+                <span class={`text-[10px] font-bold tracking-wider px-1.5 py-0.5 rounded border ${tierColors[pal.tier].border} ${tierColors[pal.tier].bg} ${tierColors[pal.tier].text}`}>
+                  {pal.tier}-TIER
+                </span>
+                <span class={`text-[10px] px-1.5 py-0.5 rounded-full border font-medium ${typeColors[pal.type]}`}>{pal.type}</span>
+              </div>
+              <p class="text-[10px] text-[#898989] mt-0.5">{pal.partnerSkill} | {pal.passive} | Breed Power: {pal.breedPower}</p>
+            </div>
+          </div>
+          <p class="text-sm text-[#b4b4b4] leading-relaxed mb-3">{pal.verdict}</p>
+          <div class="flex items-center gap-2 text-[10px]">
+            <span class="text-[#898989]">Best for:</span>
+            <span class="text-[#fafafa]">{pal.bestFor}</span>
+          </div>
+          <div class="mt-3">
+            <a href={`/pals/${pal.slug}/`} class="text-xs text-[#3ecf8e] border border-[#3ecf8e]/20 px-2.5 py-1 rounded hover:bg-[#3ecf8e]/10 transition-colors">
+              {pal.name} Full Guide &rarr;
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- INTERNAL LINKS: ALL PAL PAGES + GUIDES -->
+  <section class="mb-12">
+    <h2 class="text-xl font-normal text-[#fafafa] mb-5 tracking-tight">All Legendary Pal Guides</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      {pals.map(pal => (
+        <a
+          href={`/pals/${pal.slug}/`}
+          class="block bg-[#1a1a1a] border border-[#2e2e2e] rounded-lg p-4 hover:border-[#3ecf8e]/30 hover:bg-[#1e1e1e] transition-all duration-200 group"
+        >
+          <div class="flex items-center gap-3">
+            <img
+              src={`/images/${pal.slug}.webp`}
+              alt={pal.name}
+              class="w-10 h-10 object-contain bg-[#141414] rounded-lg shrink-0"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+            <div class="min-w-0">
+              <p class="text-sm font-medium text-[#fafafa] group-hover:text-[#3ecf8e] transition-colors truncate">
+                {pal.name}
+              </p>
+              <p class="text-[10px] text-[#898989] mt-0.5">
+                Location, stats, weakness &amp; breeding
+              </p>
+            </div>
+            <span class={`text-[10px] font-bold tracking-wider px-1.5 py-0.5 rounded border ml-auto shrink-0 ${tierColors[pal.tier].border} ${tierColors[pal.tier].bg} ${tierColors[pal.tier].text}`}>
+              {pal.tier}
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+    <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <a href="/breeding-cheat-sheet/" class="block bg-[#1a1a1a] border-l-2 border-[#3ecf8e] rounded-r-lg p-4 hover:border-l-[#00c573] transition-colors group">
+        <p class="text-sm font-medium text-[#fafafa] group-hover:text-[#3ecf8e] transition-colors">Breeding Cheat Sheet &rarr;</p>
+        <p class="text-xs text-[#898989] leading-relaxed mt-0.5">Breed power, rules, and exclusive passives for all 6 legendaries</p>
+      </a>
+      <a href="/breeding-how-to/" class="block bg-[#1a1a1a] border-l-2 border-[#3ecf8e] rounded-r-lg p-4 hover:border-l-[#00c573] transition-colors group">
+        <p class="text-sm font-medium text-[#fafafa] group-hover:text-[#3ecf8e] transition-colors">Speed Breeding Guide &rarr;</p>
+        <p class="text-xs text-[#898989] leading-relaxed mt-0.5">How to breed max-speed legendary mounts with Swift + Runner + Legend</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- SHARE -->
+  <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-xl p-8 text-center">
+    <h2 class="text-lg font-normal mb-2">Agree with the rankings?</h2>
+    <p class="text-sm text-[#898989] mb-5">Share this tier list with your Palworld crew.</p>
+    <div class="flex justify-center">
+      <ShareButtons title="Palworld Legendary Pals Tier List: All 6 Ranked (1.0)" />
+    </div>
+    <p class="text-[10px] text-[#4d4d4d] mt-4">All rankings backed by in-game stats and community consensus. Disagree? We update as the meta shifts.</p>
+  </div>
+
+  <!-- RELATED: QUICK NAV -->
+  <div class="mt-8 bg-[#0d0d0d] border border-[#3ecf8e]/30 rounded-xl p-6">
+    <p class="text-sm font-semibold text-[#fafafa] mb-3">More Palworld Legendary Resources</p>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+      <a href="/pals/" class="text-[#3ecf8e] hover:text-[#00c573] transition-colors">All 6 Legendary Pals &rarr;</a>
+      <a href="/breeding-cheat-sheet/" class="text-[#3ecf8e] hover:text-[#00c573] transition-colors">Breeding Cheat Sheet &rarr;</a>
+      <a href="/breeding-how-to/" class="text-[#3ecf8e] hover:text-[#00c573] transition-colors">Speed Breeding Guide &rarr;</a>
+    </div>
+  </div>
+</BaseLayout>
